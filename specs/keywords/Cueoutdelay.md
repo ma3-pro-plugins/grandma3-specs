@@ -1,5 +1,5 @@
 ---
-keyword: "CueOutDelay Keywords"
+keyword: "CueOutDelay"
 kind: general
 shortcuts: ["Cueoutd"]
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/keyword_cueoutdelay.html"
