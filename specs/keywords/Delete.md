@@ -31,13 +31,15 @@ The Delete keyword uses the following option keywords:
 
   * To delete group 1 in the group pool, type:
 
-| User name[Fixture]> Delete Group 1 |
-| --- |
+```
+Delete Group 1
+```
 
   * To delete cue 2 in the selected sequence, type:
 
-| User name[Fixture]>Delete Cue 2 |
-| --- |
+```
+Delete Cue 2
+```
 
 For information on the key and its location see [Delete key](https://help.malighting.com/grandMA3/2.5/HTML/key_delete.html).
 

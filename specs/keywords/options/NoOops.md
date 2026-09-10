@@ -28,8 +28,9 @@ Almost all of the keywords in the grandMA3 software can be combined with the /No
 
   * To store a new dimmer preset without creating an oops event for this action, type:
 
-| User name[Fixture]>Store Preset 1.4 /NoOops |
-| --- |
+```
+Store Preset 1.4 /NoOops
+```
 
 ## Extra
 

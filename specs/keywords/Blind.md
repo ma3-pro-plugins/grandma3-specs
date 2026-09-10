@@ -31,8 +31,9 @@ Blind (On or Off)
 
   * To enable Blind and to disable the output of the programmer in return, type:
 
-| User name[Fixture]>Blind |
-| --- |
+```
+Blind
+```
 
 For information on the key and its location see [Blind key](https://help.malighting.com/grandMA3/2.5/HTML/key_blind.html).
 

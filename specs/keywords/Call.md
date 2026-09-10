@@ -31,13 +31,15 @@ The Call keyword uses the following option keywords:
 
   * To call view button 2.1, type:
 
-| User name[Fixture]>Call ViewButton 2.1 |
-| --- |
+```
+Call ViewButton 2.1
+```
 
   * To call macro 2, type:
 
-| User name[Fixture]>Call Macro 2 |
-| --- |
+```
+Call Macro 2
+```
 
 ## Extra
 
