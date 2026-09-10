@@ -1,3 +1,7 @@
+---
+source: mixed
+---
+
 # PhaserRecipe (MA ≥ 2.4)
 
 Cue-part / preset **PhaserRecipe** objects (violet recipe lines) hold phaser steps, value sources, and MAtricks-like props on one object. They are **not** StandardRecipe (`HRecipe`): Cmd `Store Recipe` creates a StandardRecipe.

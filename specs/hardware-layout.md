@@ -1,3 +1,7 @@
+---
+source: lab
+---
+
 # Hardware Layout
 
 ## Executors

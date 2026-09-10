@@ -93,12 +93,51 @@ Keywords are Target Specs, not a versioned dump. History lives **on the file**:
 
 Archive keeps Official + Extra so old shows can still be decoded. Do not load `archive/` when writing new macros/OSC for Target. Git tag `ma-<version>` is how to recover the whole Spec tree as of an older Target, including keywords that were current then.
 
+
+### Topic Specs, Concepts, and provenance
+
+The repo has **three agent-facing layers**. Do not collapse them into one folder.
+
+| Layer | Path | Job |
+| --- | --- | --- |
+| **Map** | [`specs/concepts/`](specs/concepts/) | System overview + subsystem pages. Thin: what it is, boundaries, **pointers** to Topic Specs and keyword clusters. Not a second copy of deep notes. |
+| **Topic Specs** | [`specs/*.md`](specs/) (flat) | Curated automation behavior: plugins, OSC, macros, long command patterns, lab conclusions. Stay flat — **do not mass-move** into `concepts/`. |
+| **Keyword Specs** | [`specs/keywords/`](specs/keywords/) | One CLI token each (Official from manual + Extra). |
+
+Also: **grammar** — [`specs/command-line.md`](specs/command-line.md) (to be added): pools, handles, quotes, thru/at, how options attach. Not a keyword list and not a subsystem essay.
+
+**Audience split:** The official HTML manual is operator/GUI-first. Topic Specs and Keyword Extra are **automation/syntax-first**. Same MA topic can appear in both places for different jobs.
+
+**Provenance (`source`)** on Topic Specs and Concept pages (YAML frontmatter when present; omit if unknown):
+
+| Value | Meaning |
+| --- | --- |
+| `manual` | Drawn primarily from the Target user manual (possibly summarized) |
+| `observed` | Confirmed on console / onPC / logs in real use |
+| `lab` | Bench layout or convenience note (e.g. hardware rows) — not claimed as a manual chapter |
+| `mixed` | Manual + observed/lab combined |
+
+Optional: `manual_url` when a specific manual page backs the Spec.
+
+**Syntax-first enrichment (later track):** GUI how-tos in the manual can be rewritten as **command recipes** (using Keyword Specs) for plugins/OSC. Those recipes belong in Topic Spec Extra / Concept “Syntax” sections — **never invent commands**; only map steps that keywords and observed behavior support. Do not replace Keyword `## Official` with a guessed GUI→CLI translation.
+
+**Agent load order:**
+
+1. [`specs/versions.md`](specs/versions.md) → Target
+2. [`specs/concepts/`](specs/concepts/) if the subsystem is unfamiliar
+3. Topic Spec for automation depth
+4. [`specs/keywords/_index.md`](specs/keywords/_index.md) → one keyword file
+5. Help Dump when a Lua/API listing is needed
+6. [`specs/ma-bugs.md`](specs/ma-bugs.md) for open Target bugs
+
 ### What is versioned
 
 | Kind | Where | Rule |
 | --- | --- | --- |
 | Target pointer | `specs/versions.md` | Single source of Target + Lua engine |
 | Help Dumps | Today: `specs/lua-functions/` (version in filename). Intended: `specs/raw/<version>/lua-functions.txt` | Immutable; keep old builds |
+| Topic Specs | `specs/*.md` (flat) | Target only; automation-first curated notes |
+| Concept map | `specs/concepts/` | Target only; thin overview + pointers |
 | Keyword Specs (live) | `specs/keywords/` (+ `options/`) | Target only; Extra preserved across crawls |
 | Keyword Specs (archived) | `specs/keywords/archive/` | Deprecated ≥ 24 months, or gone from Target |
 | Crawl snapshots (optional) | `specs/raw/<version>/manual-crawl/` | Provenance; agents do not load these as docs |
@@ -123,8 +162,9 @@ That tag freezes Specs **as they were when that build was Target**. Use it to re
 ### Agent flow
 
 1. Read `specs/versions.md` → Target
-2. Treat Specs and live Keyword Specs as Target truth
-3. Open the Help Dump for that Target (or the closest dump we have) when you need the Lua/API listing
-4. For command syntax, open `specs/keywords/_index.md` then the one keyword file (include option keywords). Skip `archive/` unless decoding old syntax.
-5. If `deprecated` is set, do not use that keyword in new commands unless matching existing show syntax.
-6. Use `ma-bugs.md` for open issues; ignore or archive entries with **Fixed in** on or before Target when advising for current Target
+2. If the subsystem is unfamiliar, open [`specs/concepts/`](specs/concepts/) (map), then the Topic Spec it points to
+3. Treat Topic Specs and live Keyword Specs as Target truth (automation/syntax-first)
+4. Open the Help Dump for that Target (or the closest dump we have) when you need the Lua/API listing
+5. For command tokens, open `specs/keywords/_index.md` then the one keyword file (include option keywords). Skip `archive/` unless decoding old syntax.
+6. If `deprecated` is set, do not use that keyword in new commands unless matching existing show syntax.
+7. Use `ma-bugs.md` for open issues; ignore or archive entries with **Fixed in** on or before Target when advising for current Target
