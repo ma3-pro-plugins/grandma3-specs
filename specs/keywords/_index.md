@@ -1,29 +1,30 @@
 # Keyword Specs
 
-The **only** command-syntax dictionary for agents. General keywords and option keywords both live here. Target: see [`../versions.md`](../versions.md).
+Sample crawl: **10 general** + **10 option** keywords from the grandMA3 **2.5** HTML manual.
+Target: [`../versions.md`](../versions.md). Layout: [`CONTEXT.md`](../../CONTEXT.md).
 
-- General keywords: `specs/keywords/<Name>.md` (this folder, besides `_index.md`)
-- Option keywords: [`options/`](options/)
-- Archived: [`archive/`](archive/) — do not use for new Target commands
+## General (sample)
 
-Each file is a Keyword Spec:
+| Keyword | File | Shortcuts |
+| --- | --- | --- |
+| `Assign` | [`Assign.md`](Assign.md) | `As` |
+| `At` | [`At.md`](At.md) | `A` |
+| `Blind` | [`Blind.md`](Blind.md) | `B` |
+| `Call` | [`Call.md`](Call.md) | `Cal` |
+| `Copy` | [`Copy.md`](Copy.md) | `Co` |
+| `Cue` | [`Cue.md`](Cue.md) | `C` |
+| `Delete` | [`Delete.md`](Delete.md) | `D` |
+| `Fixture` | [`Fixture.md`](Fixture.md) | `F`, `Fi` |
+| `Group` | [`Group.md`](Group.md) | `G` |
+| `Store` | [`Store.md`](Store.md) | `S` |
 
-```yaml
----
-keyword: Store
-kind: general   # or option
-shortcuts: [Sto]
-manual_url: https://help.malighting.com/grandMA3/2.5/HTML/…
-introduced: 1.0.0.1   # omit if unknown; never guess
-# deprecated: 2.3.0.0  # omit if current
----
-```
+## Option keywords
 
-1. `## Official` — from the Target user manual (crawler may replace this section and may update `shortcuts` / `manual_url` / `deprecated`)
-2. `## Extra` — contributor notes (crawler must keep; never blank `introduced`)
+See [`options/_index.md`](options/_index.md).
 
-**Lifecycle:** deprecated-but-still-on-Target stays here (do not suggest for new commands). Move to `archive/` when gone from Target, or ≥ 24 months after the deprecation release. Details: [`CONTEXT.md`](../../CONTEXT.md).
+## Archive
 
-Do not load `specs/raw/` as a second keyword list. Grammar (how the command line works) will live in `specs/command-line.md`, not here.
+[`archive/`](archive/) — empty until lifecycle applies.
 
-Keyword files are not crawled yet — this index is the layout lock.
+Each file: frontmatter (`keyword`, `kind`, `shortcuts`, `manual_url`, optional `introduced` / `deprecated`) + `## Official` + `## Extra`.
+Crawler replaces **Official** only; never blanks Extra or `introduced`.
