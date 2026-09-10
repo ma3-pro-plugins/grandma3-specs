@@ -17,6 +17,8 @@ Seed or refresh **Official** text for Keyword Specs. Never invent shortcuts or `
 
 **Output tree:** `specs/keywords/` and `specs/keywords/options/` (see [`CONTEXT.md`](../../../CONTEXT.md)).
 
+**Filenames:** PascalCase from the manual HTML stem — `keyword_store.html` → `Store.md`, `ok_no_oops.html` → `NoOops.md` (split on `_`). Do not use the display title when it contains `*` `/` or spaces.
+
 ## Hard rules
 
 1. **One tree** — write Keyword Specs under `specs/keywords/`, not `raw/…/keywords/`.
