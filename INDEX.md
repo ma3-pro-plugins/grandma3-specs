@@ -34,6 +34,7 @@ Open the smallest file that fits the task. Specs are facts. Skills are procedure
 
 ## Sources
 
+- External GitHub inventory (for future extraction): [`specs/external-github-sources.md`](specs/external-github-sources.md)
 - Help Dumps (pick the suffix that matches [`versions.md`](specs/versions.md)): [`specs/lua-functions/`](specs/lua-functions/)
 - Release-notes Markdown (grep/diff): [`specs/release-notes/`](specs/release-notes/)
 - Original release-notes PDFs: [`specs/release-notes-pdf/`](specs/release-notes-pdf/)
