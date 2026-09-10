@@ -1,80 +1,105 @@
 # External GitHub sources
 
-Inventory of third-party repositories (and a few non-GitHub mirrors) that gather grandMA3 knowledge. Use this list later to extract and consolidate into `specs/`.
+Inventory of third-party repositories that gather grandMA3 knowledge. Use later to extract into `specs/`.
 
-This file is a **source map**, not a Spec. Facts extracted from these repos should land in topic specs after verification against a target software version in `versions.md`.
+This is a **source map**, not a Spec. Verify anything extracted against the target software version in `versions.md` and against our Help Dumps under `specs/lua-functions/`.
 
-Gathered: 2026-09-10. **Last commit** is the tip commit date on the default branch (not GitHub’s repo `updated_at`, which also moves on stars/wiki/issues). Confidence is about extractable docs, not code quality.
+**Last commit** = tip of the default branch (not GitHub `updated_at`).
 
-## Plugin / API / developer sources
+**Audience**
+- **Lua** — plugin / scripting developers
+- **Operator** — console users who work in the command line, macros, playback, OSC — not writing Lua plugins
 
-| Repo | Stars | Last commit | Why useful | Confidence |
-| --- | ---: | --- | --- | --- |
-| [hossimo/GMA3Plugins](https://github.com/hossimo/GMA3Plugins) | 111 | 2024-05 | Plugins plus an [unofficial API documentation wiki](https://github.com/hossimo/GMA3Plugins/wiki) — long-running community Lua reference | high |
-| [MacTirney/GrandMA3-API-Documentation](https://github.com/MacTirney/GrandMA3-API-Documentation) | 58 | 2024-03 | Structured Lua API docs: Object API / Object-Free API modules, helpful keywords, plugin basics under `Docs/` and `modules/` | high |
-| [jefffarrow/grandMA3_lua_functions](https://github.com/jefffarrow/grandMA3_lua_functions) | 51 | 2026-04 | VS Code / LuaLS definition library of in-built functions and enums (HelpLua-style dump shaped for editors) | high |
-| [DeeeLight/FromDarkToLightTutorials](https://github.com/DeeeLight/FromDarkToLightTutorials) | 41 | 2025-04 | Worked Lua tutorial examples from a YouTube series — good for patterns and teaching notes | medium |
-| [patopesto/GrandMA3-Plugins](https://github.com/patopesto/GrandMA3-Plugins) | 20 | 2025-10 | Plugins + docs site; includes `APIDump` used to generate [grandma3.bambinito.net](https://grandma3.bambinito.net) Lua reference | high |
-| [ma3-pro-plugins/grandma3-ts-types](https://github.com/ma3-pro-plugins/grandma3-ts-types) | 20 | 2026-08 | TypeScript definitions for the grandMA3 Lua API (org sibling) | high |
-| [LightYourWay/grandMA3-types](https://github.com/LightYourWay/grandMA3-types) | 14 | 2026-07 | Earlier / alternate TS defs for the Lua API | medium |
-| [ma3-pro-plugins/ma3-pro-plugins-lib](https://github.com/ma3-pro-plugins/ma3-pro-plugins-lib) | 14 | 2025-02 | TypeScript library for grandMA3 plugins (org sibling) | medium |
-| [ma3-pro-plugins/ma3-ts-plugin-template](https://github.com/ma3-pro-plugins/ma3-ts-plugin-template) | 14 | 2024-11 | TS plugin template + build script (org sibling) | low (tooling) |
-| [LightYourWay/grandMA3-cli-tools](https://github.com/LightYourWay/grandMA3-cli-tools) | 9 | 2026-07 | TS utilities aimed at making Lua easier for operators | medium |
-| [apoxhu/MA3-Lua-API](https://github.com/apoxhu/MA3-Lua-API) | 8 | 2019-12 | Early unofficial Lua API documentation repo (thin README; check wiki/history) | medium |
-| [MayBeLinux/requirements_Lua-grandMA3](https://github.com/MayBeLinux/requirements_Lua-grandMA3) | 3 | 2025-10 | "Requirements" / Lua defs shaped for grandMA3 | medium |
-| [PeramatoG/gma3-lua-snippets](https://github.com/PeramatoG/gma3-lua-snippets) | 4 | 2025-12 | Reusable Lua snippets and components | medium |
-| [enlore/grandma3-stuff](https://github.com/enlore/grandma3-stuff) | 3 | 2026-02 | Research notes: Lua, GDTF, media-server integration | medium |
-| [imhofroger/GMA3_LUA](https://github.com/imhofroger/GMA3_LUA) | 48 | 2020-02 | Collection of Lua scripts — examples more than prose docs | low–medium |
-| [bootsie123/ma3-plugin-action](https://github.com/bootsie123/ma3-plugin-action) | 7 | 2026-09 | GitHub Action that generates plugin XML — useful for packaging conventions | low (tooling) |
-| [LightYourWay/grandMA3-tstl-plugin](https://github.com/LightYourWay/grandMA3-tstl-plugin) | 6 | 2026-06 | TypeScriptToLua export to grandMA3-compatible Lua | low (tooling) |
-| [LightYourWay/grandMA3-plugin-starter](https://github.com/LightYourWay/grandMA3-plugin-starter) | 5 | 2026-07 | TS plugin starter project | low (tooling) |
-| [ma3-pro-plugins/ma3-plugin-issues](https://github.com/ma3-pro-plugins/ma3-plugin-issues) | 3 | 2023-06 | Issue tracker / repro notes (org sibling) | medium |
-| [ma3-pro-plugins/MA3ProPluginsPublic](https://github.com/ma3-pro-plugins/MA3ProPluginsPublic) | 6 | 2023-05 | Misc shared public material (org sibling) | low |
+**Depth** (how much *new explanatory knowledge* we can extract)
+- **prose** — written explanations, syntax notes, worked examples beyond a dump
+- **typed-dump** — HelpLua / API list reshaped for an editor (EmmyLua / TypeScript). Little or no behavior text. Usually redundant with our Help Dumps
+- **examples** — plugins/macros/scripts to reverse-engineer; little standalone docs
+- **encoded** — knowledge buried in integration code (Companion actions, OSC maps)
+- **empty** — claim without content
 
-### Non-GitHub developer references tied to the above
+Gathered 2026-09-10; depth audit 2026-09-10.
 
-- [grandma3.bambinito.net](https://grandma3.bambinito.net) — generated Lua API reference (from patopesto `APIDump`)
-- [hossimo/GMA3Plugins wiki](https://github.com/hossimo/GMA3Plugins/wiki) — unofficial API wiki (wiki edits are not reflected in the Last commit column above)
-- Official: [help.malighting.com grandMA3](https://help.malighting.com/grandMA3/) (Lua Object API, HelpLua, command keywords)
+---
 
-## Command syntax / OSC / user-oriented sources
+## Lua / plugin audience
 
-True "command-line syntax" dumps on GitHub are thinner than plugin/API material. Best bets:
+| Repo | Stars | Last commit | What's actually in it | Depth | Extract? |
+| --- | ---: | --- | --- | --- | --- |
+| [MacTirney/GrandMA3-API-Documentation](https://github.com/MacTirney/GrandMA3-API-Documentation) | 58 | 2024-03 | Markdown API reference: Object-Free + Object API with About / Syntax / Args / Return / example links; plus a short "Helpful Keywords" and "Basic Plugin Information". Content is largely official-help style, frozen around MA ~1.9 | prose (dated) | **Yes** — cross-check gaps vs official help + our dumps; do not treat as current |
+| [hossimo/GMA3Plugins](https://github.com/hossimo/GMA3Plugins) | 111 | 2024-05 | Released Lua plugins in-repo; points to an [unofficial API wiki](https://github.com/hossimo/GMA3Plugins/wiki) (wiki edits ≠ git last commit) | prose (wiki) + examples | **Yes** — wiki first; plugins only when a behavior isn't documented elsewhere |
+| [patopesto/GrandMA3-Plugins](https://github.com/patopesto/GrandMA3-Plugins) | 20 | 2025-10 | Plugins + `APIDump` tooling; generated site [grandma3.bambinito.net](https://grandma3.bambinito.net) claims Lua engine/API reference | prose (site) + examples | **Yes** — site reference vs our Help Dumps; note version skew |
+| [DeeeLight/FromDarkToLightTutorials](https://github.com/DeeeLight/FromDarkToLightTutorials) | 41 | 2025-04 | Folder of Lua tutorial plugins ("Lua for GrandMA3", Custom UI, etc.) for a YouTube series — code samples, not a written API book | examples | Maybe — patterns / UI recipes, not reference |
+| [PeramatoG/gma3-lua-snippets](https://github.com/PeramatoG/gma3-lua-snippets) | 4 | 2025-12 | Reusable Lua components (e.g. PIN keypad UI) | examples | Maybe — component patterns |
+| [enlore/grandma3-stuff](https://github.com/enlore/grandma3-stuff) | 3 | 2026-02 | Short overview notes + GDTF media-server fixture example + AI-oriented `CLAUDE.md`. Notes mostly link out to official help / MacTirney / hossimo | thin prose | Low — little unique console knowledge |
+| [imhofroger/GMA3_LUA](https://github.com/imhofroger/GMA3_LUA) | 48 | 2020-02 | Early Lua script collection | examples (stale) | Low |
+| [ma3-pro-plugins/ma3-plugin-issues](https://github.com/ma3-pro-plugins/ma3-plugin-issues) | 3 | 2023-06 | Repro notes / issues for plugin edge cases (org sibling) | thin prose | Maybe — bug/behavior tickets |
 
-| Repo | Stars | Last commit | Why useful | Confidence |
-| --- | ---: | --- | --- | --- |
-| [MacTirney/GrandMA3-API-Documentation](https://github.com/MacTirney/GrandMA3-API-Documentation) (`Docs/Helpful Keywords.md`) | 58 | 2024-03 | Keyword list for Lua/`Lua` command-line use — overlaps user command vocabulary | high |
-| [bitfocus/companion-module-malighting-grandma3](https://github.com/bitfocus/companion-module-malighting-grandma3) | 17 | 2026-09 | Companion actions encode many real console commands / OSC paths — good for mining syntax | medium |
-| [yastefan/grandMA3-Chataigne-Module](https://github.com/yastefan/grandMA3-Chataigne-Module) | 36 | 2026-09 | OSC control surface for grandMA3 — command/OSC mapping examples | medium |
-| [xxpasixx/pam-osc](https://github.com/xxpasixx/pam-osc) | 52 | 2025-11 | MIDI → Open Stage Control → grandMA3 with feedback plugin — OSC/command patterns | medium |
-| [ArtGateOne/MA3_OSC_FEEDBACK](https://github.com/ArtGateOne/MA3_OSC_FEEDBACK) | 18 | 2023-06 | OSC feedback plugin | medium |
-| [stoatworks-labs/mynah](https://github.com/stoatworks-labs/mynah) | 0 | 2026-09 | "grandMA3 grammar" applied to another product — interesting for how people model MA3 command grammar | low |
-| [sonext-software/spresenter-plugin-grandma3](https://github.com/sonext-software/spresenter-plugin-grandma3) | 0 | 2026-08 | OSC automation nodes: cmdline, executors, faders, macros, sequences | medium |
+### Typed dumps / IDE helpers (Lua audience — poor Spec sources)
 
-Primary command-syntax source remains **official MA help** (Command Syntax and Keywords), not GitHub. Community repos mostly encode syntax indirectly via OSC modules, Companion actions, and macros.
+These reshape HelpLua (or similar) into editor stubs. **We already keep versioned Help Dumps** — do not extract "docs" from these unless we need enum names or annotation quirks.
 
-## Adjacent (MA2, show files, low priority for extraction)
+| Repo | Stars | Last commit | What's actually in it | Depth | Extract? |
+| --- | ---: | --- | --- | --- | --- |
+| [jefffarrow/grandMA3_lua_functions](https://github.com/jefffarrow/grandMA3_lua_functions) | 51 | 2026-04 | Only `definitions/grandMA3_lua_functions.lua` + `grandMA3_lua_enums.lua` — EmmyLua `---@` stubs from HelpLua; no per-function explanations | typed-dump | **No** for Specs (redundant with `specs/lua-functions/`) |
+| [ma3-pro-plugins/grandma3-ts-types](https://github.com/ma3-pro-plugins/grandma3-ts-types) | 20 | 2026-08 | TypeScript `.d.ts` for the Lua API (org sibling) | typed-dump | No for Specs; useful for TS plugin builds |
+| [LightYourWay/grandMA3-types](https://github.com/LightYourWay/grandMA3-types) | 14 | 2026-07 | Alternate / earlier TS defs | typed-dump | No for Specs |
+| [MayBeLinux/requirements_Lua-grandMA3](https://github.com/MayBeLinux/requirements_Lua-grandMA3) | 3 | 2025-10 | Despite the name: vendored Lua libs (`socket`, `http`, `json`, debuggee, …) plus small `gma3_*.lua` helpers — not an API textbook | examples / libs | Low for Specs |
+| [apoxhu/MA3-Lua-API](https://github.com/apoxhu/MA3-Lua-API) | 8 | 2019-12 | README one-liner only — no API pages in the repo | empty | **No** |
 
-| Repo | Last commit | Notes |
-| --- | --- | --- |
-| [Hobadee/grandMA2_LUA_ldoc](https://github.com/Hobadee/grandMA2_LUA_ldoc) | 2023-03 | MA2 Lua LDoc — historical patterns only |
-| [MacTirney/GrandMA2-API-Documentation](https://github.com/MacTirney/GrandMA2-API-Documentation) | 2024-03 | MA2 counterpart of the MA3 API docs |
-| [aGuyNamedJonas/grandma2-snippets](https://github.com/aGuyNamedJonas/grandma2-snippets) | 2019-03 | MA2 macros/snippets |
-| [FlorianANAYA/GrandMA2-help](https://github.com/FlorianANAYA/GrandMA2-help) | 2024-11 | MA2 programming tips / macros |
-| [exscriber/Ma2-API](https://github.com/exscriber/Ma2-API) | 2025-03 | MA2 Lua typedefs |
-| [MichaelGreenNZ/MG_MA3_StartShow](https://github.com/MichaelGreenNZ/MG_MA3_StartShow) | 2026-06 | Popular start-show file — little prose |
-| Most `*Plugins` Lua repos (BakaCowpoke, 4ubiks, PeramatoG, etc.) | — | Example plugins; extract only when a behavior isn't documented elsewhere |
+### Plugin tooling (Lua audience — packaging, not knowledge)
 
-## Suggested next extractions (top 5)
+| Repo | Stars | Last commit | What's actually in it | Depth | Extract? |
+| --- | ---: | --- | --- | --- | --- |
+| [ma3-pro-plugins/ma3-pro-plugins-lib](https://github.com/ma3-pro-plugins/ma3-pro-plugins-lib) | 14 | 2025-02 | TS library for plugins | examples / lib | Low for Specs |
+| [ma3-pro-plugins/ma3-ts-plugin-template](https://github.com/ma3-pro-plugins/ma3-ts-plugin-template) | 14 | 2024-11 | TS plugin template | tooling | No |
+| [LightYourWay/grandMA3-cli-tools](https://github.com/LightYourWay/grandMA3-cli-tools) | 9 | 2026-07 | TS utilities around Lua workflows | tooling | Low |
+| [LightYourWay/grandMA3-tstl-plugin](https://github.com/LightYourWay/grandMA3-tstl-plugin) | 6 | 2026-06 | TypeScriptToLua → MA3 Lua | tooling | No |
+| [LightYourWay/grandMA3-plugin-starter](https://github.com/LightYourWay/grandMA3-plugin-starter) | 5 | 2026-07 | TS starter | tooling | No |
+| [bootsie123/ma3-plugin-action](https://github.com/bootsie123/ma3-plugin-action) | 7 | 2026-09 | GitHub Action → plugin XML | tooling | Maybe packaging conventions only |
+| [ma3-pro-plugins/MA3ProPluginsPublic](https://github.com/ma3-pro-plugins/MA3ProPluginsPublic) | 6 | 2023-05 | Misc shared bits | mixed | Low |
 
-1. **hossimo/GMA3Plugins wiki** — crawl wiki pages into draft topic notes; diff against existing `specs/` and Help Dumps. (Repo code last commit 2024-05; wiki may be newer.)
-2. **MacTirney/GrandMA3-API-Documentation** — ingest `Docs/` + `modules/` Object / Object-Free docs; map each function to Help Dump + `object-api.md`. (Last commit 2024-03 — treat as dated relative to current MA.)
-3. **patopesto / grandma3.bambinito.net** — compare generated API reference to our Help Dumps; note version skew. (Repo last commit 2025-10.)
-4. **jefffarrow/grandMA3_lua_functions** `definitions/` — use as a cross-check for enums and free functions vs `specs/lua-functions/`. (Last commit 2026-04.)
-5. **bitfocus Companion MA3 module + Chataigne/pam-osc** — mine command strings and OSC addresses to grow user-oriented command/OSC coverage beyond `specs/osc.md`. (Actively maintained 2025–2026.)
+---
 
-## Search notes
+## Operator / non-Lua audience
 
-Queries used on GitHub (2026-09-10): `grandma3 lua`, `grandMA3 plugin`, `grandma3 documentation OR cheatsheet OR syntax OR commands`, org `ma3-pro-plugins`, plus README skims of the highest-star doc repos. Many hits are single-purpose plugins without extractable prose; they are omitted unless they encode OSC/command mappings or API dumps.
+Console command syntax, macros, playback, OSC — useful without writing plugins. GitHub is weak here; **official MA help (Command Syntax and Keywords)** remains the primary source.
 
-Last-commit audit: 2026-09-10 via `list_commits` (default branch tip) for every named repo in the tables above.
+| Repo | Stars | Last commit | What's actually in it | Depth | Extract? |
+| --- | ---: | --- | --- | --- | --- |
+| [MacTirney/GrandMA3-API-Documentation](https://github.com/MacTirney/GrandMA3-API-Documentation) `Docs/Helpful Keywords.md` | 58 | 2024-03 | Small set of keywords (Lua, LuaFile, HelpLua, Mode2 switch, GetUser/GlobalVariable) with syntax/examples; then links to official keyword lists | thin prose | Low — incomplete; prefer official keyword chapters |
+| [bitfocus/companion-module-malighting-grandma3](https://github.com/bitfocus/companion-module-malighting-grandma3) | 17 | 2026-09 | Companion module: `src/actions.ts` etc. encode real console commands / OSC for buttons | encoded | **Yes** — mine action strings for command/OSC coverage |
+| [yastefan/grandMA3-Chataigne-Module](https://github.com/yastefan/grandMA3-Chataigne-Module) | 36 | 2026-09 | Chataigne ↔ grandMA3 OSC control (updated for 2.5 pools) | encoded | **Yes** — OSC/command maps |
+| [xxpasixx/pam-osc](https://github.com/xxpasixx/pam-osc) | 52 | 2025-11 | MIDI → Open Stage Control → MA3 + feedback plugin | encoded + examples | **Yes** — OSC/feedback patterns |
+| [ArtGateOne/MA3_OSC_FEEDBACK](https://github.com/ArtGateOne/MA3_OSC_FEEDBACK) | 18 | 2023-06 | OSC feedback plugin | examples | Maybe |
+| [sonext-software/spresenter-plugin-grandma3](https://github.com/sonext-software/spresenter-plugin-grandma3) | 0 | 2026-08 | Spresenter nodes: cmdline, executors, faders, macros, sequences over OSC | encoded | Maybe |
+| [stoatworks-labs/mynah](https://github.com/stoatworks-labs/mynah) | 0 | 2026-09 | Uses "grandMA3 grammar" for a video switcher CLI — not MA docs | n/a | **No** for Specs |
+
+---
+
+## Adjacent (MA2 / show files — low priority)
+
+| Repo | Last commit | Audience | Notes |
+| --- | --- | --- | --- |
+| [Hobadee/grandMA2_LUA_ldoc](https://github.com/Hobadee/grandMA2_LUA_ldoc) | 2023-03 | Lua (MA2) | Historical LDoc only |
+| [MacTirney/GrandMA2-API-Documentation](https://github.com/MacTirney/GrandMA2-API-Documentation) | 2024-03 | Lua (MA2) | MA2 counterpart |
+| [aGuyNamedJonas/grandma2-snippets](https://github.com/aGuyNamedJonas/grandma2-snippets) | 2019-03 | Operator (MA2) | Macros/snippets |
+| [FlorianANAYA/GrandMA2-help](https://github.com/FlorianANAYA/GrandMA2-help) | 2024-11 | Operator (MA2) | Programming tips / macros |
+| [exscriber/Ma2-API](https://github.com/exscriber/Ma2-API) | 2025-03 | Lua (MA2) | Typedefs |
+| [MichaelGreenNZ/MG_MA3_StartShow](https://github.com/MichaelGreenNZ/MG_MA3_StartShow) | 2026-06 | Operator | Popular show file — almost no prose |
+
+---
+
+## Suggested next extractions (revised)
+
+1. **hossimo wiki** — only if pages still have unique behavior notes after skimming; git tree alone is mostly plugins.
+2. **MacTirney Object-Free / Object API Markdown** — diff against official help + Help Dumps for gaps; mark version (~1.9).
+3. **patopesto / bambinito Lua reference** — compare to current Help Dumps.
+4. **Companion + Chataigne + pam-osc** — mine command/OSC strings for operator-facing `specs/` (biggest non-Lua GitHub signal).
+5. **Skip** jefffarrow, apoxhu, TS type packages, and mynah as Spec sources.
+
+## Audit notes
+
+- **jefffarrow**: confirmed stubs only (`---@param` / `function Foo() end`), no narrative docs — matches user observation; demoted from extract candidate.
+- **apoxhu**: empty beyond README claim.
+- **MayBeLinux "requirements"**: not HelpLua docs; mostly third-party Lua libraries.
+- **Operator knowledge on GitHub** is mostly *encoded* in show-control integrations, not cheatsheets.
