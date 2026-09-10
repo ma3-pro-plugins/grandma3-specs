@@ -61,6 +61,16 @@ Each keyword file:
 
 Agents read Official + Extra as one Spec. There is no duplicate “enriched” tree.
 
+**Official examples (AI-friendly):** The HTML manual shows commands inside the console CLI chrome, e.g. `User name[Fixture]>Group 3`. That prefix is the input-box label, not part of the command. Keyword Specs must store **only the command after `>`** (no `User name[…]`, no `>`). Prefer a fenced code block:
+
+```
+Group 3
+```
+
+The crawl-keywords skill (`scripts/extract_keyword.py`) strips this chrome automatically.
+
+**Crawler:** Prefer [`.agents/skills/crawl-keywords/`](.agents/skills/crawl-keywords/) — a reusable HTML→Spec script — over one-off parsing. The skill replaces `## Official` only and preserves Extra / `introduced`.
+
 Optional crawl snapshots (HTML/JSON for diffing a new manual) may live under `specs/raw/<version>/manual-crawl/`. Those are provenance, not the reference.
 
 Command-line **grammar** (pools, handles, quotes, thru/at, how options attach) is a Target Spec: `specs/command-line.md` (to be added). That file is not a keyword list.
