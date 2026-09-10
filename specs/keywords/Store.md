@@ -15,7 +15,7 @@ To enter the **Store** keyword in the command line, use one of the options:
 
 ### Description
 
-The Store keyword is a function keyword which is used to store objects in the show file.
+The Store keyword is a function keyword which is used to store objects in the show file. 
 
 If no object type or destination is given, the object type **Cue** will be used in the selected sequence.
 
@@ -67,65 +67,95 @@ The Store keyword uses the following option keywords:
 
 For more information see [Store Options and Store Preferences](https://help.malighting.com/grandMA3/2.5/HTML/cue_store_settings_preferences.html).
 
-### Examples
+### Examples  
+  
 
-  * To store cue 2 in the selected sequence, type:
+  * To store cue 2 in the selected sequence, type: 
 
-| User name[Fixture]>Store 2 |
-| --- |
-
+```
+Store 2
+```
+---|---  
+  
 For more information see [Store Cues](https://help.malighting.com/grandMA3/2.5/HTML/cue_store.html).
 
   * To store the programmer values as cue 1 through cue 10 and cue 20 through cue 30, type:
 
-| User name[Fixture]>Store Cue 1 Thru 10 + 20 Thru 30 |
-| --- |
-
+```
+Store Cue 1 Thru 10 + 20 Thru 30
+```
+---|---  
+  
   * To store the programmer values as cue 42 of the selected sequence and directly label it, type:
 
-| User name[Fixture]>Store Cue 42 "Return of the Paranoid Android" |
-| --- |
-
+```
+Store Cue 42 "Return of the Paranoid Android"
+```
+---|---  
+  
   * To store a new group to the first free spot in the groups pool, type:
 
-| User name[Fixture]>Store Group |
-| --- |
+```
+Store Group
+```
+---|---  
+  
+  
 
-  * To store new values to the already existing cue 5 in the selected sequence, while cue 4 is active, type:
+  * To store new values to the already existing cue 5 in the selected sequence, whlile cue 4 is active, type:
 
-| User name[Fixture]>Store Cue Next |
-| --- |
-
+```
+Store Cue Next
+```
+---|---  
+  
 The Store Cue pop-up opens and you can now define how the values will be stored into the cue.
+
+  
 
   * To store values to the second next existing cue, type:
 
-| User name[Fixture]>Store Cue Next 2 |
-| --- |
+```
+Store Cue Next 2
+```
+---|---  
+  
+  
 
-| **Important:** |
-| --- |
-| The examples that use **Next** can use **Previous** to **do the opposite**. |
+|  **Important:**  
+---|---  
+The examples that use **Next** can use **Previous** to **do the opposite**.  
+  
+  
+  * To store vaues to the cue that is one digit apart from the curent cue in the selected sequence, type:
 
-  * To store values to the cue that is one digit apart from the current cue in the selected sequence, type:
-
-| User name[Fixture]>Store Cue + 1 |
-| --- |
-
+```
+Store Cue + 1
+```
+---|---  
+  
   * To store values to the cue that is 0.1 digits from the current cue in the selected sequence, type:
 
-| User name[Fixture]>Store Cue + 0.1 |
-| --- |
+```
+Store Cue + 0.1
+```
+---|---  
+  
 
   * To store a new cue in the cue list while the focus is in cue 4, type:
 
-| User name[Fixture]>Store Cue + |
-| --- |
+```
+Store Cue +
+```
+---|---  
+  
+  
 
-| **Important:** |
-| --- |
-| The examples that use **+** can use **-** to **do the opposite**. |
-
+|  **Important:**  
+---|---  
+The examples that use **+** can use **-** to **do the opposite**.  
+  
+  
 For information on the key and its location see [Store key](https://help.malighting.com/grandMA3/2.5/HTML/key_store.html).
 
 ## Extra
