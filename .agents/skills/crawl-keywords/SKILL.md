@@ -56,7 +56,13 @@ python3 -m venv .venv-kw
 1. Read `specs/versions.md` for Target; pick the matching manual major.minor (e.g. Target `2.5.0.3` → `/grandMA3/2.5/HTML/`).
 2. Download index HTML; collect `keyword_*.html` / `ok_*.html` hrefs.
 3. For each page (or a batch): download HTML → run `extract_keyword.py` → write/merge Spec.
-4. Rebuild `specs/keywords/_index.md` and `specs/keywords/options/_index.md`.
+4. Rebuild indexes (Keyword + short Official description, **no** shortcuts column):
+
+   ```bash
+   python3 .agents/skills/crawl-keywords/scripts/rebuild_keyword_index.py
+   ```
+
+   Descriptions come from each Spec’s `### Description` (brief first sentence / summary).
 5. Apply keyword lifecycle (deprecated / archive) per CONTEXT.
 6. Commit on `main` unless the user asked for a PR.
 
