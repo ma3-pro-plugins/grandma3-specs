@@ -1,8 +1,10 @@
 # External GitHub sources
 
-Inventory of third-party repositories that gather grandMA3 knowledge. Use later to extract into `specs/`.
+Inventory of third-party repositories that gather **grandMA3** knowledge. Use later to extract into `specs/`.
 
 This is a **source map**, not a Spec. Verify anything extracted against the target software version in `versions.md` and against our Help Dumps under `specs/lua-functions/`.
+
+**Scope:** grandMA3 only. Do **not** list grandMA2 / MA2 repositories.
 
 **Last commit** = tip of the default branch (not GitHub `updated_at`).
 
@@ -17,7 +19,7 @@ This is a **source map**, not a Spec. Verify anything extracted against the targ
 - **encoded** — knowledge buried in integration code (Companion actions, OSC maps)
 - **empty** — claim without content
 
-Gathered 2026-09-10; depth audit 2026-09-10.
+Gathered 2026-09-10; depth audit 2026-09-10; MA2 sources removed 2026-09-10.
 
 ---
 
@@ -76,19 +78,6 @@ Console command syntax, macros, playback, OSC — useful without writing plugins
 
 ---
 
-## Adjacent (MA2 / show files — low priority)
-
-| Repo | Last commit | Audience | Notes |
-| --- | --- | --- | --- |
-| [Hobadee/grandMA2_LUA_ldoc](https://github.com/Hobadee/grandMA2_LUA_ldoc) | 2023-03 | Lua (MA2) | Historical LDoc only |
-| [MacTirney/GrandMA2-API-Documentation](https://github.com/MacTirney/GrandMA2-API-Documentation) | 2024-03 | Lua (MA2) | MA2 counterpart |
-| [aGuyNamedJonas/grandma2-snippets](https://github.com/aGuyNamedJonas/grandma2-snippets) | 2019-03 | Operator (MA2) | Macros/snippets |
-| [FlorianANAYA/GrandMA2-help](https://github.com/FlorianANAYA/GrandMA2-help) | 2024-11 | Operator (MA2) | Programming tips / macros |
-| [exscriber/Ma2-API](https://github.com/exscriber/Ma2-API) | 2025-03 | Lua (MA2) | Typedefs |
-| [MichaelGreenNZ/MG_MA3_StartShow](https://github.com/MichaelGreenNZ/MG_MA3_StartShow) | 2026-06 | Operator | Popular show file — almost no prose |
-
----
-
 ## Suggested next extractions (revised)
 
 1. **hossimo wiki** — only if pages still have unique behavior notes after skimming; git tree alone is mostly plugins.
@@ -103,3 +92,4 @@ Console command syntax, macros, playback, OSC — useful without writing plugins
 - **apoxhu**: empty beyond README claim.
 - **MayBeLinux "requirements"**: not HelpLua docs; mostly third-party Lua libraries.
 - **Operator knowledge on GitHub** is mostly *encoded* in show-control integrations, not cheatsheets.
+- **MA2 permanently excluded** from this inventory and from future scans.
