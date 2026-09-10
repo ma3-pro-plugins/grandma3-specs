@@ -1,7 +1,14 @@
-# Option keywords
+# Option keywords (sample)
 
-Option keywords (`/If`, `/Overwrite`, …) for Target. Same Keyword Spec format as general keywords: Official + Extra, plus `introduced` / `deprecated` when known.
-
-Archived option keywords: [`../archive/options/`](../archive/options/).
-
-Listed from [`../_index.md`](../_index.md) once crawled.
+| Keyword | File | Shortcuts |
+| --- | --- | --- |
+| `/All` | [`All.md`](All.md) | `/Al` |
+| `/Ask` | [`Ask.md`](Ask.md) | `/A` |
+| `/CueOnly` | [`CueOnly.md`](CueOnly.md) | `/CO`, `/Cu` |
+| `/Global` | [`Global.md`](Global.md) | `/G` |
+| `/Look` | [`Look.md`](Look.md) | `/L` |
+| `/Merge` | [`Merge.md`](Merge.md) | `/M` |
+| `/NoOops` | [`NoOops.md`](NoOops.md) | `/NU`, `/Noo` |
+| `/Overwrite` | [`Overwrite.md`](Overwrite.md) | `/O` |
+| `/Selective` | [`Selective.md`](Selective.md) | `/Se` |
+| `/Universal` | [`Universal.md`](Universal.md) | `/U` |
