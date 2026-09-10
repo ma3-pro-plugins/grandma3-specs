@@ -5,6 +5,7 @@ Open the smallest file that fits the task. Specs are facts. Skills are procedure
 ## Skills
 
 - Convert an official release-notes PDF to searchable Markdown: [`.agents/skills/convert-release-notes/SKILL.md`](.agents/skills/convert-release-notes/SKILL.md)
+- Commit changes (message, file kinds, hierarchy): [`.agents/skills/commit/SKILL.md`](.agents/skills/commit/SKILL.md)
 - Send OSC, prove it landed, dump logs: [`.agents/skills/ma3-osc/SKILL.md`](.agents/skills/ma3-osc/SKILL.md)
 - Write a standalone Lua plugin XML + Lua: [`.agents/skills/write-plugin/SKILL.md`](.agents/skills/write-plugin/SKILL.md)
 - Write a macro XML file: [`.agents/skills/write-macro/SKILL.md`](.agents/skills/write-macro/SKILL.md)
