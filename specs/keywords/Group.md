@@ -38,13 +38,15 @@ The Group keyword uses the following option keywords:
 
   * To select the fixtures stored in group 3, type:
 
-| User name[Fixture]>Group 3 |
-| --- |
+```
+Group 3
+```
 
   * To list all stored groups of the group pool in the command line history, type:
 
-| User name[Fixture]>List Group |
-| --- |
+```
+List Group
+```
 
 For information on the key and its location see [Group key](https://help.malighting.com/grandMA3/2.5/HTML/key_group.html).
 

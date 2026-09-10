@@ -28,3 +28,5 @@ See [`options/_index.md`](options/_index.md).
 
 Each file: frontmatter (`keyword`, `kind`, `shortcuts`, `manual_url`, optional `introduced` / `deprecated`) + `## Official` + `## Extra`.
 Crawler replaces **Official** only; never blanks Extra or `introduced`.
+
+**Examples:** bare commands only (strip `User name[Fixture]>`). Crawler: [`.agents/skills/crawl-keywords/`](../../.agents/skills/crawl-keywords/).
