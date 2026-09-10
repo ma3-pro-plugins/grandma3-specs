@@ -5,4 +5,40 @@ source: mixed
 
 # Plugins & Lua
 
-Plugin lifecycle and Lua API orientation: [`../plugins.md`](../plugins.md), [`../object-api.md`](../object-api.md), [`../hooks.md`](../hooks.md), [`../message-queue.md`](../message-queue.md), [`../addonvars.md`](../addonvars.md). Help Dumps under `../lua-functions/`.
+Plugins are show objects in the **Plugins** pool (inside a DataPool). Each station runs plugin code in its **own Lua VM** against the shared object model.
+
+## Depth Specs
+
+| Topic Spec | Covers |
+| --- | --- |
+| [`../plugins.md`](../plugins.md) | Lifecycle, where `Plugin N` runs, ~16K Cmd string limit, quoting JSON args |
+| [`../object-api.md`](../object-api.md) | How to pick Help Dumps / API surface |
+| [`../hooks.md`](../hooks.md) | Hooks (incl. Group vs Universal SpecialPurpose) |
+| [`../message-queue.md`](../message-queue.md) | `OpenMessageQueue` / `SendLuaMessage` |
+| [`../addonvars.md`](../addonvars.md) | AddonVariables |
+| [`../lua-5.4-to-5.5.md`](../lua-5.4-to-5.5.md) | Migration Spec (2.4→2.5 engine) |
+
+Target Lua version: [`../versions.md`](../versions.md).
+
+## Calling plugins from the CLI
+
+```text
+Plugin 1
+Call Plugin "MyPlugin" '{\"ok\":true}'
+```
+
+- Default call path and station (local vs master) depend on CmdLine vs Macro vs Cue Command — see plugins Spec.
+- Prefer **single-quoted** wrappers for JSON arguments; double-quoted wrappers break on embedded `"` — plugins Spec.
+- Near size limits, prefer `SendLuaMessage` / queues over stuffing huge args into `Cmd()`.
+
+## Hooks & startup
+
+Register hooks on startup / show load so every station’s VM is wired. Exact APIs: Help Dump for Target + hooks Spec.
+
+## Import
+
+```text
+Import Plugin Library "FileName.xml" At Plugin "" /o
+```
+
+Prove via DumpLog (`OK:` / `Failed:`) — [`osc-remote.md`](osc-remote.md).
