@@ -48,12 +48,15 @@ Topic Specs under `specs/*.md` and Keyword Specs under `specs/keywords/` always 
 
 ### Keywords: one tree
 
-Path: `specs/keywords/` (general) and `specs/keywords/options/` (option keywords). One `_index.md` lists both.
+Path: `specs/keywords/` (general) and `specs/keywords/options/` (option keywords). One `_index.md` lists both. Archived keywords: [`specs/keywords/archive/`](specs/keywords/archive/).
 
 Each keyword file:
 
-- Frontmatter: `keyword`, `kind` (`general` | `option`), `shortcuts`, `manual_url`
-- `## Official` — seeded/updated from the Target user manual. A crawler may replace this section.
+- Frontmatter:
+  - `keyword`, `kind` (`general` | `option`), `shortcuts`, `manual_url`
+  - `introduced` — first MA version known to have it (`X.Y.Z.W` or `X.Y`). **Omit if unknown; never guess.**
+  - `deprecated` — MA version that deprecated it. Omit if it is current.
+- `## Official` — seeded/updated from the Target user manual. A crawler may replace this section and may update `shortcuts` / `manual_url` / `deprecated` when the manual states them. A crawler must not blank `introduced` or Extra.
 - `## Extra` — contributor knowledge (when to use, gotchas, OSC, examples from shows). **Crawlers must not overwrite Extra.**
 
 Agents read Official + Extra as one Spec. There is no duplicate “enriched” tree.
@@ -62,13 +65,32 @@ Optional crawl snapshots (HTML/JSON for diffing a new manual) may live under `sp
 
 Command-line **grammar** (pools, handles, quotes, thru/at, how options attach) is a Target Spec: `specs/command-line.md` (to be added). That file is not a keyword list.
 
+### Keyword lifecycle
+
+Keywords are Target Specs, not a versioned dump. History lives **on the file**:
+
+| Field | Meaning |
+| --- | --- |
+| `introduced` | First version that had this keyword, when we have evidence |
+| `deprecated` | Version that marked it deprecated. File stays in the live tree while Target still documents or accepts it |
+
+**While deprecated but still on Target:** keep the file in `specs/keywords/` (or `options/`). Agents must not suggest it for new commands unless the user is matching existing syntax.
+
+**Archive (move, do not delete)** to `specs/keywords/archive/` (options: `archive/options/`) when either:
+
+1. **Gone from Target** — a crawl of the Target manual no longer lists it (treat as removed; do not wait), or
+2. **Deprecated ≥ 24 months** — 24 months after the deprecation release’s date (use [`specs/release-notes/`](specs/release-notes/) for that date). If the calendar date is unknown, keep it live until the date is known.
+
+Archive keeps Official + Extra so old shows can still be decoded. Do not load `archive/` when writing new macros/OSC for Target. Git tag `ma-<version>` is how to recover the whole Spec tree as of an older Target, including keywords that were current then.
+
 ### What is versioned
 
 | Kind | Where | Rule |
 | --- | --- | --- |
 | Target pointer | `specs/versions.md` | Single source of Target + Lua engine |
 | Help Dumps | Today: `specs/lua-functions/` (version in filename). Intended: `specs/raw/<version>/lua-functions.txt` | Immutable; keep old builds |
-| Keyword Specs | `specs/keywords/` | Target only; Extra preserved across crawls |
+| Keyword Specs (live) | `specs/keywords/` (+ `options/`) | Target only; Extra preserved across crawls |
+| Keyword Specs (archived) | `specs/keywords/archive/` | Deprecated ≥ 24 months, or gone from Target |
 | Crawl snapshots (optional) | `specs/raw/<version>/manual-crawl/` | Provenance; agents do not load these as docs |
 | Release-notes Markdown | `specs/release-notes/` | One file per MA release |
 | Release-notes PDFs | `specs/release-notes-pdf/` | Source PDFs |
@@ -81,15 +103,18 @@ When this repo adopts a new MA release (Target bumps):
 
 1. Update `specs/versions.md`
 2. Add the matching Help Dump (and release notes)
-3. Re-crawl keywords into `specs/keywords/` (replace Official, keep Extra); rewrite other Specs that changed
-4. Tag `main` as `ma-<version>` (e.g. `ma-2.5.0.3`)
+3. Re-crawl keywords into `specs/keywords/` (replace Official, keep Extra; do not blank `introduced`)
+4. Apply keyword lifecycle (set `deprecated`, archive gone / ≥ 24 months)
+5. Rewrite other Specs that changed
+6. Tag `main` as `ma-<version>` (e.g. `ma-2.5.0.3`)
 
 That tag freezes Specs **as they were when that build was Target**. Use it to recover old behavior; do not maintain a second Spec tree on `main`.
 
 ### Agent flow
 
 1. Read `specs/versions.md` → Target
-2. Treat Specs and Keyword Specs as Target truth
+2. Treat Specs and live Keyword Specs as Target truth
 3. Open the Help Dump for that Target (or the closest dump we have) when you need the Lua/API listing
-4. For command syntax, open `specs/keywords/_index.md` then the one keyword file (include option keywords)
-5. Use `ma-bugs.md` for open issues; ignore or archive entries with **Fixed in** on or before Target when advising for current Target
+4. For command syntax, open `specs/keywords/_index.md` then the one keyword file (include option keywords). Skip `archive/` unless decoding old syntax.
+5. If `deprecated` is set, do not use that keyword in new commands unless matching existing show syntax.
+6. Use `ma-bugs.md` for open issues; ignore or archive entries with **Fixed in** on or before Target when advising for current Target

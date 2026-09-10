@@ -6,13 +6,14 @@
 - Last 2.4 line we keep dumps for: **2.4.2.2** (Lua 5.4.8)
 - Git tag when this Target was adopted: `ma-2.5.0.3` (create/update the tag when adopting a release)
 
-Agents must treat topic Specs and Keyword Specs as truth for **Target** only. Older behavior is not mirrored in parallel Spec files — use a `ma-<version>` git tag or versioned Help Dumps.
+Agents must treat topic Specs and live Keyword Specs as truth for **Target** only. Older behavior is not mirrored in parallel Spec files — use a `ma-<version>` git tag or versioned Help Dumps. Keyword history is `introduced` / `deprecated` on each file; archived keywords live under [`keywords/archive/`](keywords/archive/).
 
 ## Matching references
 
 | Kind | Path for Target |
 | --- | --- |
-| Keyword Specs (general + option) | [`keywords/`](keywords/) — only dictionary; Official + Extra in each file |
+| Keyword Specs (general + option) | [`keywords/`](keywords/) — only live dictionary; Official + Extra in each file |
+| Archived keywords | [`keywords/archive/`](keywords/archive/) — gone from Target, or deprecated ≥ 24 months |
 | Help Dump (current layout) | [`lua-functions/grandMA3_lua_functions 2.5.0.3.txt`](lua-functions/grandMA3_lua_functions%202.5.0.3.txt) |
 | Help Dump (intended layout) | `raw/2.5.0.3/lua-functions.txt` (not migrated yet) |
 | Release notes (MD) | [`release-notes/Release_Notes_v2.5.0.3.md`](release-notes/Release_Notes_v2.5.0.3.md) |
@@ -35,5 +36,7 @@ Plugin TypeScript is still transpiled with TSTL’s Lua **5.4** emit, but it **r
 
 1. Set **Target** in this file (full `X.Y.Z.W` when known).
 2. Add Help Dump + release-notes for that build.
-3. Re-crawl general **and** option keywords into `keywords/` (replace Official, keep Extra); rewrite Specs that changed; refresh [`ma-bugs.md`](ma-bugs.md).
-4. Tag `main` as `ma-X.Y.Z.W`.
+3. Re-crawl general **and** option keywords into `keywords/` (replace Official, keep Extra; do not blank `introduced`).
+4. Apply keyword lifecycle: set `deprecated` when known; move gone keywords and those deprecated ≥ 24 months into `keywords/archive/`.
+5. Rewrite Specs that changed; refresh [`ma-bugs.md`](ma-bugs.md).
+6. Tag `main` as `ma-X.Y.Z.W`.
