@@ -15,10 +15,11 @@ To enter the Cue keyword in the command line, use one of the options:
 
 ### Description
 
-| **Important:** |
-| --- |
-| Cue is the only object type that accepts numerical IDs as decimal fractions. The ID which is allowed for cues ranges from 0.001 to 9999.999. In all other objects, a dot indicates the ID of a parent or a child object. |
-
+|  **Important:**  
+---|---  
+Cue is the only object type that accepts numerical IDs as decimal fractions. The ID which is allowed for cues ranges from 0.001 to 9999.999. In all other objects, a dot indicates the ID of a parent or a child object.  
+  
+  
 **Cue** is an object type holding a look on stage.
 
 Cues are arranged in sequences and are divided into parts.
@@ -37,7 +38,7 @@ If a sequence is not specified, then the selected sequence is used in the comman
 
 [Function] Sequence ["Sequence_Name" or Sequence_Number] Cue ["Cue_Name" or Cue_Number] ([Setting] ["Setting_Value"] (/Option)
 
-Assign [Object] ["Object_Name" or Object_Number] At (Sequence ["Sequence_Name" or Sequence_Number]) Cue ["Cue_Name" or Cue_Number]
+Assign [Object] ["Object_Name" or Object_Number] At (Sequence ["Sequence_Name" or Sequence_Number]) Cue ["Cue_Name" or Cue_Number] 
 
 ### Settings
 
@@ -73,29 +74,41 @@ The Cue keyword uses the following option keywords:
   * [/Release](https://help.malighting.com/grandMA3/2.5/HTML/ok_release.html)
   * [/Remove](https://help.malighting.com/grandMA3/2.5/HTML/ok_remove.html)
 
-### Examples
+### Examples  
+  
 
   * To select the fixtures with values stored in cue 3 of a selected sequence, type:
 
-| User name[Fixture]>Cue 3 |
-| --- |
-
+```
+Cue 3
+```
+---|---  
+  
 The default function for **Cue** is **SelFix** so Cue 3 is the same as SelFix Cue 3.
 
-  * To delete cue 2.5 in the selected sequence, type:
+  * To delete cue 2.5 in the selected sequence, type: 
 
-| User name[Fixture]>Delete Cue 2.5 |
-| --- |
+```
+Delete Cue 2.5
+```
+---|---  
+  
 
-  * To store cue 2 in sequence 5, type:
+  * To store cue 2 in sequence 5, type: 
 
-| User name[Fixture]>Store Sequence 5 Cue 2 |
-| --- |
+```
+Store Sequence 5 Cue 2
+```
+---|---  
+  
 
-  * To store cue 3 in sequence 5 with a cue fade time of 7 seconds and an outfade of 11, type:
+  * To store cue 3 in sequence 5 with a cue fade time of 7 seconds and an outfade of 11, type: 
 
-| User name[Fixture]>Store Sequence 5 Cue 3 CueFade 7/11 |
-| --- |
+```
+Store Sequence 5 Cue 3 CueFade 7/11
+```
+---|---  
+  
 
 For information on the key and its location see [Cue key](https://help.malighting.com/grandMA3/2.5/HTML/key_cue.html).
 
