@@ -9,7 +9,7 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/ok_merge.html"
 
 To enter the **/Merge** option keyword in the command line, use one of these options:
 
-  * Type **/Merge**
+  * Type /**Merge**
   * Type the shortcut **/M**
 
 ### Description
@@ -39,13 +39,15 @@ General keywords that use the /Merge option keyword:
   * [Store keyword](https://help.malighting.com/grandMA3/2.5/HTML/keyword_store.html)
   * [World keyword](https://help.malighting.com/grandMA3/2.5/HTML/keyword_world.html)
 
-### Example
+### Example  
+  
 
   * To merge the values of cue 1, type:
 
 ```
 Store Cue 1 /Merge
 ```
+---|---
 
 ## Extra
 

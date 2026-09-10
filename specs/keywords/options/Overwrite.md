@@ -10,11 +10,11 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/ok_overwrite.html"
 To enter the **/Overwrite** option keyword in the command line, use one of the options:
 
   * Type **/Overwrite**
-  * Type the shortcut **/O**
+  * Type the shortcut**/O**
 
 ### Description
 
-The /Overwrite option keyword is used to overwrite existing values.
+The /Overwrite option keyword is used to overwrite existing values. 
 
 ### Syntax
 
@@ -36,19 +36,22 @@ General keywords that use the /Overwrite option keyword:
   * [Store keyword](https://help.malighting.com/grandMA3/2.5/HTML/keyword_store.html)
   * [World keyword](https://help.malighting.com/grandMA3/2.5/HTML/keyword_world.html)
 
-### Examples
+### Examples  
+  
 
   * To overwrite the existing values of cue 5 in sequence 1, type:
 
 ```
 Store Sequence 1 Cue 5 /Overwrite
 ```
-
+---|---  
+  
   * To clone the programmer data of fixture 1 to fixture 2 and overwrite all the data of fixture 2 in the programmer, type:
 
 ```
 Clone Fixture 1 At Fixture 2 /Overwrite
 ```
+---|---
 
 ## Extra
 

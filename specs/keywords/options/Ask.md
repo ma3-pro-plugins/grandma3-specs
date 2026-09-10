@@ -10,11 +10,11 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/ok_ask.html"
 To enter the **/Ask** option keyword in the command line, use one of the options:
 
   * Type **/Ask**
-  * Type the shortcut **/A**
+  * Type the shortcut**/A**
 
 ### Description
 
-The /Ask option keyword is a default setting which is used to define the store option in an object that already has values. The /Ask option keyword triggers a pop-up where it is possible to set the store options.
+The /Ask option keyword is a default setting which is used to define the store option in an object that already has values. The /Ask option keyword triggers a pop-up where it is possible to set the store options. 
 
 ### Syntax
 
@@ -35,13 +35,14 @@ General keywords that use the /Ask option keyword:
 
 ### Example
 
-**Requirement:** An existing cue
+**Requirement:** An existing cue 
 
   * To store the new value to the existing cue and define how to store data to the destination, type:
 
 ```
 Store Sequence 3 Cue 1 /Ask
 ```
+---|---
 
 ## Extra
 

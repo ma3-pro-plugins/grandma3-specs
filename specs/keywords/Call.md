@@ -11,7 +11,7 @@ To enter the Call keyword in the command line, use one of the options:
 
   * Press `On` `On`
   * Type **Call**
-  * Type the shortcut **Cal**
+  * Type the shortcut**Cal**
 
 ### Description
 
@@ -23,23 +23,27 @@ Call [Object] ["Object_Name" or Object_Number] **(/Option)**
 
 ### Option Keywords
 
-The Call keyword uses the following option keywords:
+The Call keyword uses the following option keywords: 
 
   * [/Screen](https://help.malighting.com/grandMA3/2.5/HTML/ok_screen.html)
 
-### Examples
+### Examples  
+  
 
   * To call view button 2.1, type:
 
 ```
 Call ViewButton 2.1
 ```
+---|---  
+  
 
   * To call macro 2, type:
 
 ```
 Call Macro 2
 ```
+---|---
 
 ## Extra
 

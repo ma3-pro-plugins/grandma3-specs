@@ -10,11 +10,11 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/ok_universal.html"
 To enter the **/Universal** option keyword in the command line, use one of the options:
 
   * Type **/Universal**
-  * Type the shortcut **/U**
+  * Type the shortcut**/U**
 
 ### Description
 
-The /Universal option keyword is used to store or update universal data into presets regardless their mode.
+The /Universal option keyword is used to store or update universal data into presets regardless their mode. 
 
 ### Syntax
 
@@ -28,13 +28,15 @@ General keywords that use the /Universal option keyword:
   * [Store keyword](https://help.malighting.com/grandMA3/2.5/HTML/keyword_store.html)
   * [Update keyword](https://help.malighting.com/grandMA3/2.5/HTML/keyword_update.html)
 
-### Example
+### Example  
+  
 
   * To store the current programmer content as universal data in the second dimmer preset, type:
 
 ```
 Store Preset 1.2 /Universal
 ```
+---|---
 
 ## Extra
 

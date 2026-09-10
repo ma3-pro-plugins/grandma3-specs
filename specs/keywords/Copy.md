@@ -46,29 +46,42 @@ The Copy keyword uses the following option keywords:
 ```
 Copy Group 1 At 5
 ```
+---|---  
+  
+
   * To copy group 1 to group 11; group 2 to group 12; and group 3 to group 13, type:
 
 ```
 Copy Group 1 Thru 3 At 11
 ```
+---|---  
+  
+
   * To copy group 2 to group 6, 7, and 8, type:
 
 ```
 Copy Group 2 At 6 Thru 8
 ```
+---|---  
+  
+
   * To copy cue 2 to cue 6 of the selected sequence, type:
 
 ```
 Copy Cue 2 At 6
 ```
+---|---  
+  
+
   * To copy macro 2 to macro 6, type:
 
 ```
 Copy Macro 2 At 6
 ```
-For information on the key and its location see [Copy key](https://help.malighting.com/grandMA3/2.5/HTML/key_copy.html). 
+---|---  
+  
 
-#####
+For information on the key and its location see [Copy key](https://help.malighting.com/grandMA3/2.5/HTML/key_copy.html).
 
 ## Extra
 

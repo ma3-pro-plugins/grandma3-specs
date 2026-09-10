@@ -10,11 +10,11 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/ok_global.html"
 To enter the **/Global** option keyword in the command line, use one of the options:
 
   * Type **/Global**
-  * Type the shortcut **/G**
+  * Type the shortcut**/G**
 
 ### Description
 
-The /Global option keyword is used to store or update global data into presets regardless their mode.
+The /Global option keyword is used to store or update global data into presets regardless their mode. 
 
 ### Syntax
 
@@ -28,13 +28,15 @@ General keywords that use the /Global option keyword:
   * [Store keyword](https://help.malighting.com/grandMA3/2.5/HTML/keyword_store.html)
   * [Update keyword](https://help.malighting.com/grandMA3/2.5/HTML/keyword_update.html)
 
-### Example
+### Example  
+  
 
   * To store the current programmer content as global data in the second dimmer preset, type:
 
 ```
 Store Preset 1.2 /Global
 ```
+---|---
 
 ## Extra
 

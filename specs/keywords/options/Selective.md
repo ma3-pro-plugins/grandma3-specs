@@ -10,11 +10,11 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/ok_selective.html"
 To enter the **/Selective** option keyword in the command line, use one of the options:
 
   * Type **/Selective**
-  * Type the shortcut **/Se**
+  * Type the shortcut**/Se**
 
 ### Description
 
-The /Selective option keyword is used to store or update selective data into presets regardless their mode.
+The /Selective option keyword is used to store or update selective data into presets regardless their mode. 
 
 ### Syntax
 
@@ -29,19 +29,22 @@ General keywords that use the /Selective option keyword:
   * [Store keyword](https://help.malighting.com/grandMA3/2.5/HTML/keyword_store.html)
   * [Update keyword](https://help.malighting.com/grandMA3/2.5/HTML/keyword_update.html)
 
-### Examples
+### Examples  
+  
 
   * To store the current programmer content as selective data in the second dimmer preset, type:
 
 ```
 Store Preset 1.2 /Selective
 ```
-
+---|---  
+  
   * To remove selective data in the first color preset, type:
 
 ```
 Cleanup Preset 4.1 /Selective
 ```
+---|---
 
 ## Extra
 
