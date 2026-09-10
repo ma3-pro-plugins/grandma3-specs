@@ -1,8 +1,8 @@
 # MA Bugs
 
-Known grandMA3 console issues that affect plugins or show files. One file for now; split later if a grouping becomes obvious.
+Known grandMA3 console issues that still matter for **Target** (see [`versions.md`](versions.md)). One file for open bugs; when a bug is fixed in a release we have adopted, add **Fixed in** and move the entry to `bugs/fixed/` (create that folder on first archive).
 
-Each entry should say the version where it was **encountered**, and the version it was **introduced** when that is known.
+Each entry should say the version where it was **encountered**, the version it was **introduced** when known, and **Fixed in** when resolved.
 
 ---
 
@@ -10,6 +10,7 @@ Each entry should say the version where it was **encountered**, and the version 
 
 - **Encountered in:** 2.5.x
 - **Introduced in:** 2.5 (works in 2.4; same show file fails in 2.5)
+- **Fixed in:** (open on Target)
 
 Cue / Off Cue **command syntax** that runs because a sequence’s **Auto Start** / **Auto Stop** was triggered by a **DMX Remote** writing that sequence’s master is rejected with **“Not allowed”**.
 
@@ -31,6 +32,7 @@ Typical chain: a source sequence’s fixture DMX drives a DMX Remote → target 
 
 - **Encountered in:** 2.3.2
 - **Introduced in:** unknown (seen on 2.3.2)
+- **Fixed in:** unknown (still listed until confirmed fixed on Target)
 
 There is a bug in MA3 v2.3.2 where both DMXRemote and Agenda Startup event solutions don't reliably work when a master station loads a new show file. We sometimes get a “Not Allowed” error for the triggering of the startup Macro/Plugin.
 

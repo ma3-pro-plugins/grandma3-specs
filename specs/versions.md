@@ -1,15 +1,38 @@
 # GrandMA3 versions
 
-- Latest version tracked here: 2.5.0.x (Lua 5.5.0). 2.4.2.2 remains the last 2.4 line.
+**Target** (what Specs on `main` describe): **2.5.0.3**
+
+- Lua engine on Target: **5.5.0**
+- Last 2.4 line we keep dumps for: **2.4.2.2** (Lua 5.4.8)
+- Git tag when this Target was adopted: `ma-2.5.0.3` (create/update the tag when adopting a release)
+
+Agents must treat topic Specs as truth for **Target** only. Older behavior is not mirrored in parallel Spec files — use a `ma-<version>` git tag or versioned raw dumps.
+
+## Matching raw references
+
+| Kind | Path for Target |
+| --- | --- |
+| Help Dump (current layout) | [`lua-functions/grandMA3_lua_functions 2.5.0.3.txt`](lua-functions/grandMA3_lua_functions%202.5.0.3.txt) |
+| Help Dump (intended layout) | `raw/2.5.0.3/lua-functions.txt` (not migrated yet) |
+| Release notes (MD) | [`release-notes/Release_Notes_v2.5.0.3.md`](release-notes/Release_Notes_v2.5.0.3.md) |
+
+Other Help Dumps in [`lua-functions/`](lua-functions/) are historical raw references, not the Spec baseline.
 
 ## Lua engine
 
 Each station runs plugin code in its own Lua VM (see [`plugins.md`](plugins.md)).
 
-| grandMA3 release | Lua version                                            |
-| ---------------- | ------------------------------------------------------ |
-| **2.5.x**        | **5.5.0** (MA: “Lua Core has been updated to Lua v5.5.0”) |
-| **2.4.x**        | **5.4.8**                                              |
-| Before 2.4.x     | Earlier Lua 5.4.x (exact patch level not tracked here) |
+| grandMA3 release | Lua version |
+| --- | --- |
+| **2.5.x** | **5.5.0** (MA: “Lua Core has been updated to Lua v5.5.0”) |
+| **2.4.x** | **5.4.8** |
+| Before 2.4.x | Earlier Lua 5.4.x (exact patch level not tracked here) |
 
-Plugin TypeScript is still transpiled with TSTL’s Lua **5.4** emit, but it **runs** on the engine above. Breaking 5.4 → 5.5 behavior (immutable `for` control variables, `#` on sparse arrays): [`lua-5.4-to-5.5.md`](lua-5.4-to-5.5.md).
+Plugin TypeScript is still transpiled with TSTL’s Lua **5.4** emit, but it **runs** on the engine above. Breaking 5.4 → 5.5 behavior (immutable `for` control variables, `#` on sparse arrays): [`lua-5.4-to-5.5.md`](lua-5.4-to-5.5.md) (a **Migration Spec**, not a substitute for Target Specs).
+
+## Adopting a new MA release
+
+1. Set **Target** in this file (full `X.Y.Z.W` when known).
+2. Add Help Dump + release-notes for that build.
+3. Rewrite any Specs that changed; refresh open bugs in [`ma-bugs.md`](ma-bugs.md).
+4. Tag `main` as `ma-X.Y.Z.W`.
