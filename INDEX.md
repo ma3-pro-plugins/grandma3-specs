@@ -13,7 +13,7 @@ Open the smallest file that fits the task. Specs are facts. Skills are procedure
 ## Specs — start here
 
 - Current target software / Lua engine version: [`specs/versions.md`](specs/versions.md)
-- OSC input (`/gma3/cmd`), DumpLog, import, Echo proof: [`specs/osc.md`](specs/osc.md)
+- OSC input (`/gma3/cmd`), DumpLog, import, Echo proof, session master from logs: [`specs/osc.md`](specs/osc.md)
 - Official Help Dumps and how to pick one: [`specs/object-api.md`](specs/object-api.md)
 - Plugin lifecycle (Lua VM, ReloadUI, signalTable, show load): [`specs/plugins.md`](specs/plugins.md)
 - RemoteCommand behavior and quoting: [`specs/remote-command.md`](specs/remote-command.md)

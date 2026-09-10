@@ -1,7 +1,7 @@
 ---
 name: ma3-osc
 description: >-
-  Drive grandMA3 over OSC (UDP /gma3/cmd), prove commands with Echo and DumpLog,
+  Drive grandMA3 over OSC (UDP /cmd), prove commands with Echo and DumpLog,
   import plugins, and run remote Lua. Use when sending console commands from an
   agent, preflighting OSC, or checking system-monitor logs. Not for Pro Plugins
   framework install actions or project-specific helpers.
@@ -11,7 +11,19 @@ description: >-
 
 Facts live in [`specs/osc.md`](../../../specs/osc.md). Also read [`specs/remote-command.md`](../../../specs/remote-command.md) and [`specs/plugins.md`](../../../specs/plugins.md) when relaying or calling plugins.
 
-This skill is the procedure. Do not invent a transport script; use whatever OSC sender the user or host project already has.
+This skill is the procedure. Sender (no npm install): [`scripts/ma3-cmd.js`](scripts/ma3-cmd.js). A consuming repo may keep its own helper; do not invent a second protocol.
+
+## Sender
+
+From the `grandma3-specs` repo root (Node only; default host `127.0.0.1`, port `8000`):
+
+```bash
+node .agents/skills/ma3-osc/scripts/ma3-cmd.js "DumpLog /nc"
+node .agents/skills/ma3-osc/scripts/ma3-cmd.js "Echo cursor_osc_${stamp}"
+node .agents/skills/ma3-osc/scripts/ma3-cmd.js --host <user-named-ip> "DumpLog /nc"
+```
+
+`Sent OSC command to …` is not proof. Continue with Echo + DumpLog below.
 
 ## Before any command
 
@@ -40,4 +52,4 @@ If the stamp is missing, stop and fix OSC. “Packet sent” is not proof.
 
 ## Out of scope
 
-Project-specific senders, log-copy scripts, HTTP log servers, framework `__install` / `__uninstall`, and per-plugin test actions belong in the consuming repo.
+Log-copy scripts, HTTP log servers, framework `__install` / `__uninstall`, and per-plugin test actions belong in the consuming repo.

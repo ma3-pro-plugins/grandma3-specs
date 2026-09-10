@@ -5,9 +5,10 @@ How a station accepts command input over OSC, how to prove a command ran, and ho
 ## OSC command input
 
 - Protocol: **UDP OSC**, not TCP.
-- Address: `/gma3/cmd`
+- Address: `/cmd` (desk **In & Out → OSC** command input; some docs write `/gma3/cmd`)
 - Default port: **8000** (match **In & Out → OSC** on the desk).
 - Payload: one grandMA3 command string (the same text you would type on the command line).
+- A zero-dependency sender lives in [`.agents/skills/ma3-osc/scripts/ma3-cmd.js`](../.agents/skills/ma3-osc/scripts/ma3-cmd.js) (`node … "DumpLog /nc"`). It sends UDP OSC to `/cmd`.
 
 Enable on the station:
 
@@ -25,6 +26,16 @@ Sending a UDP packet only proves the packet left this machine. End-to-end proof 
 Default to **`127.0.0.1`** when the agent and onPC share a machine. Do not guess LAN IPs or “the master.” Use another host only when the user names it.
 
 On a **non-master** station in a session, direct OSC is unreliable. Send OSC to the **current master** and relay with `RemoteCommand IP <target-ip> "<command>"`. See [`remote-command.md`](remote-command.md). Master can flip (`MasterPriority`); do not hard-code a lab IP as master.
+
+How to tell which station is master (from that station’s DumpLog):
+
+| Source | What to look for |
+| --- | --- |
+| **Master** system monitor | `Station Status: GlobalMaster` (in session), or `IdleMaster` / `Standalone` when alone |
+| **Non-master** system monitor | `Station Status: Connected` while in session |
+| ManetSocket / peer lines | `master = …` or a peer `Changed Status:GlobalMaster` |
+
+`IdleMaster` on a **follower’s** log does not mean that host is session master. Ask the user, or read the **master station’s own** log.
 
 ## DumpLog and the system monitor
 
