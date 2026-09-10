@@ -32,8 +32,9 @@ General keywords that use the /Universal option keyword:
 
   * To store the current programmer content as universal data in the second dimmer preset, type:
 
-| User name[Fixture]>Store Preset 1.2 /Universal |
-| --- |
+```
+Store Preset 1.2 /Universal
+```
 
 ## Extra
 

@@ -33,13 +33,15 @@ General keywords that use the /Selective option keyword:
 
   * To store the current programmer content as selective data in the second dimmer preset, type:
 
-| User name[Fixture]>Store Preset 1.2 /Selective |
-| --- |
+```
+Store Preset 1.2 /Selective
+```
 
   * To remove selective data in the first color preset, type:
 
-| User name[Fixture]>Cleanup Preset 4.1 /Selective |
-| --- |
+```
+Cleanup Preset 4.1 /Selective
+```
 
 ## Extra
 

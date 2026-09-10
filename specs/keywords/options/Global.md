@@ -32,8 +32,9 @@ General keywords that use the /Global option keyword:
 
   * To store the current programmer content as global data in the second dimmer preset, type:
 
-| User name[Fixture]>Store Preset 1.2 /Global |
-| --- |
+```
+Store Preset 1.2 /Global
+```
 
 ## Extra
 

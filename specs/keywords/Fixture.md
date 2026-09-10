@@ -33,23 +33,27 @@ The Fixture keyword uses the following option keywords:
 
   * To select fixture 2, type:
 
-| User name[Fixture]> Fixture 2 |
-| --- |
+```
+Fixture 2
+```
 
   * To select the fifth subfixture of fixture 10, type:
 
-| User name[Fixture]>Fixture 10.5 |
-| --- |
+```
+Fixture 10.5
+```
 
   * To call values of fixture 1 of the next cue in the selected sequence to programmer, type:
 
-| User name[Fixture]>Fixture 1 At Cue Next |
-| --- |
+```
+Fixture 1 At Cue Next
+```
 
   * To call values of fixture 5 of the previous cue in the selected sequence to programmer, type:
 
-| User name[Fixture]>Fixture 5 At Cue Previous |
-| --- |
+```
+Fixture 5 At Cue Previous
+```
 
 For information on the key and its location see [Fixture key](https://help.malighting.com/grandMA3/2.5/HTML/key_fixture.html).
 

@@ -39,8 +39,9 @@ General keywords that use the /Ask option keyword:
 
   * To store the new value to the existing cue and define how to store data to the destination, type:
 
-| User name[Fixture]>Store Sequence 3 Cue 1 /Ask |
-| --- |
+```
+Store Sequence 3 Cue 1 /Ask
+```
 
 ## Extra
 

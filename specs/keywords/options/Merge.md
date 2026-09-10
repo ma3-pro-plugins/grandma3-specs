@@ -43,8 +43,9 @@ General keywords that use the /Merge option keyword:
 
   * To merge the values of cue 1, type:
 
-| User name[Fixture]>Store Cue 1 /Merge |
-| --- |
+```
+Store Cue 1 /Merge
+```
 
 ## Extra
 

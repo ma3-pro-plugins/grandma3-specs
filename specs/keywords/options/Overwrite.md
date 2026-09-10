@@ -40,13 +40,15 @@ General keywords that use the /Overwrite option keyword:
 
   * To overwrite the existing values of cue 5 in sequence 1, type:
 
-| User name[Fixture]>Store Sequence 1 Cue 5 /Overwrite |
-| --- |
+```
+Store Sequence 1 Cue 5 /Overwrite
+```
 
   * To clone the programmer data of fixture 1 to fixture 2 and overwrite all the data of fixture 2 in the programmer, type:
 
-| User name[Fixture]>Clone Fixture 1 At Fixture 2 /Overwrite |
-| --- |
+```
+Clone Fixture 1 At Fixture 2 /Overwrite
+```
 
 ## Extra
 
