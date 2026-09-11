@@ -12,13 +12,31 @@ Using a group is a fast way to select those fixtures. Groups live in the **Group
 
 Cues and presets do **not** store a group reference; they store fixture values only.
 
+**Depth (store modes, merge/remove/overwrite, automation):** [`../groups.md`](../groups.md).
+
 ## Store a group from the programmer
 
-These commands create **Group 1** with fixtures 1 through 10 in it (order and grid from the current selection; no attribute values):
+Groups are built from the **current programmer selection** (fixtures selected in the programmer). `Store Group` writes that selection into the group — not dimmer/color values.
+
+These commands create **Group 1** with fixtures 1 through 10 in it:
 
 ```
 Fixture 1 Thru 10
 Store Group 1
+```
+
+Combine fixtures with `+`, then store. Creates **Group 2** with fixtures 1–5 and 10–12:
+
+```
+Fixture 1 Thru 5 + Fixture 10 Thru 12
+Store Group 2
+```
+
+Subtract from a selection with `-`, then store. Creates **Group 6** from group 5 without fixture 2:
+
+```
+Group 5 - Fixture 2
+Store Group 6
 ```
 
 Calling a group without a function **SelFix**es its fixtures (default function of [`Group`](../keywords/Group.md)). This selects the fixtures stored in group 3:
@@ -27,15 +45,9 @@ Calling a group without a function **SelFix**es its fixtures (default function o
 Group 3
 ```
 
-Other examples (`Store Group 5` stores the **current** programmer selection into group 5):
+For merge / remove / overwrite into an **existing** group, and `/NoConfirmation` for macros/plugins/OSC, use the Topic Spec: [`../groups.md`](../groups.md). Automation guide: [`../automation.md`](../automation.md).
 
-```
-Store Group 5
-List Group
-Delete Group 5
-```
-
-Confirm Store/Delete options on Keyword Specs: [`Store`](../keywords/Store.md), [`Delete`](../keywords/Delete.md). Groups do not store values — only selection, order, and grid (needed for ranged input and phasers).
+Keywords: [`Store`](../keywords/Store.md), [`Plus`](../keywords/Plus.md), [`Minus`](../keywords/Minus.md), [`Thru`](../keywords/Thru.md), [`Delete`](../keywords/Delete.md).
 
 ## Recipes
 
@@ -55,3 +67,4 @@ Groups can be assigned to executors as handles for that master level (see [`exec
 
 - Programmer / selection: [`programmer.md`](programmer.md), [`operate-fixtures.md`](operate-fixtures.md)
 - Data pools: [`datapools.md`](datapools.md)
+- Topic Spec: [`../groups.md`](../groups.md)

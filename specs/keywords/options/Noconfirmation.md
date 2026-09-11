@@ -66,3 +66,5 @@ Store Cue 2 /NoConfirmation
 ## Extra
 
 <!-- Contributor notes. Crawler must not overwrite this section. -->
+
+**Automation:** macros, plugin `Cmd`, and OSC command payloads that must not wait for a human should append `/NoConfirmation` on every command that can show a confirmation or store-mode pop-up. Prefer an explicit store mode (`/Merge`, `/Overwrite`, `/Remove`, …) plus `/NoConfirmation`. Guide: [`../../automation.md`](../../automation.md).

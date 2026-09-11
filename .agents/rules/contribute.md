@@ -27,12 +27,16 @@ Every **agent-relevant** concept page (not an explicit out-of-scope stub) must i
 
 1. **What it is** — a short description taken from the Target manual hub (or a labeled Curated fact). A list of child pool names or subtopic titles is **not** a description. If there is **no Topic Spec** for the hub, the concept page *must* carry this description.
 2. **Primary syntax** — at least one bare-command example of the basic action (store / select / run) when that action exists in Keyword Specs. Example: store a group from the programmer (`Fixture 1 Thru 10` then `Store Group 1`).
-3. **Examples state the result** — do not only describe the operator steps ("select fixtures, then store"). Say what object or state the commands produce (e.g. "creates Group 1 with fixtures 1 through 10 in it").
+3. **Examples state the result** — every command example (concepts, Topic Specs, Keyword Extra) needs a short line saying what the command **does** / what object or state it produces. Do not only describe operator steps ("select fixtures, then store"). Concept pages stay brief; Topic Specs may add more examples. Example: "creates Group 1 with fixtures 1 through 10 in it."
 4. **Subtopics** — distinct behaviors get their **own heading** (not a buried clause) plus links to sibling concepts, Topic Specs, and Keyword Specs. Example: Group Masters are a separate heading on [`groups.md`](../../specs/concepts/groups.md), affecting playback of fixtures in the group, with a link to [`masters.md`](../../specs/concepts/masters.md) and the Group Masters manual topic.
 
 When the user flags a missing description or a buried subtopic, fix that page **and audit the rest of `specs/concepts/`** for the same gap.
 
 Recipe rows: a recipe line's **Selection** must be a **group**. Record that on both [`groups.md`](../../specs/concepts/groups.md) and [`recipes.md`](../../specs/concepts/recipes.md).
+
+**Groups depth** (programmer selection → store, `+` / `-` selection builds, `/Merge` `/Remove` `/Overwrite` into an existing group) lives in Topic Spec [`specs/groups.md`](../../specs/groups.md). Keep [`specs/concepts/groups.md`](../../specs/concepts/groups.md) thin with a few primary examples and a pointer.
+
+**Automation** (macros, plugin `Cmd`, OSC — any unattended CLI): Topic Spec [`specs/automation.md`](../../specs/automation.md). Commands that can prompt must use [`/NoConfirmation`](../../specs/keywords/options/Noconfirmation.md); prefer explicit store modes plus `/NoConfirmation`. Do not bury this only on the option Keyword Spec.
 
 Do **not** mass-move Topic Specs into `concepts/`.
 

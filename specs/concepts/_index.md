@@ -28,7 +28,7 @@ Target: [`../versions.md`](../versions.md). Grammar: [`../command-line.md`](../c
 | Patch and Fixture Setup (`patch.html`) | [`patch.md`](patch.md) | — |
 | Operate Fixtures (`operate_fixtures.html`) | [`operate-fixtures.md`](operate-fixtures.md) | — |
 | The Programmer (`operate_programmer.html`) | [`programmer.md`](programmer.md) | — |
-| Groups (`group.html`) | [`groups.md`](groups.md) | — |
+| Groups (`group.html`) | [`groups.md`](groups.md) | [`../groups.md`](../groups.md) |
 | Presets (`presets.html`) | [`presets.md`](presets.md) | — |
 | Worlds / Filters (`worldfilter.html`) | [`worlds-filters.md`](worlds-filters.md) | — |
 | MAtricks (`matricks.html`) | [`matricks.md`](matricks.md) | — |

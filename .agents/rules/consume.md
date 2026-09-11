@@ -8,7 +8,8 @@ For agents **using** this repo to write OSC, macros, or Lua — not for editing 
 4. `specs/keywords/` is the only keyword dictionary. Skip `archive/` for new commands. Honor `deprecated`.
 5. Do not invent keywords, options, or GUI→CLI translations.
 6. Multi-station / master / where-commands-run → [`specs/multi-station.md`](../../specs/multi-station.md). Do not invent session behavior from memory.
-7. Do not write plugin/macro files until the user gives absolute `gma3_library`. Do not guess station IPs (default OSC `127.0.0.1`).
-8. Full agent checklist: [`AGENTS.md`](../../AGENTS.md). Vocabulary: [`CONTEXT.md`](../../CONTEXT.md).
+7. Unattended macros / plugin `Cmd` / OSC → [`specs/automation.md`](../../specs/automation.md): append `/NoConfirmation` on commands that can pop up; pass explicit store modes.
+8. Do not write plugin/macro files until the user gives absolute `gma3_library`. Do not guess station IPs (default OSC `127.0.0.1`).
+9. Full agent checklist: [`AGENTS.md`](../../AGENTS.md). Vocabulary: [`CONTEXT.md`](../../CONTEXT.md).
 
 Contribute / edit Specs? Use [`.agents/rules/contribute.md`](contribute.md) and the [contribute-specs](../skills/contribute-specs/SKILL.md) skill instead.
