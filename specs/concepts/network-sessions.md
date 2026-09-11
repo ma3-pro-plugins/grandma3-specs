@@ -5,4 +5,4 @@ source: mixed
 
 # Network & sessions
 
-Multi-station sessions: [`../multi-station-sessions.md`](../multi-station-sessions.md), [`../api-objects-network.md`](../api-objects-network.md).
+**Moved** to [`multi-station.md`](multi-station.md) (same topic). Network object API remains [`../api-objects-network.md`](../api-objects-network.md).

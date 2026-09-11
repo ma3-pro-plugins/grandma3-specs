@@ -26,7 +26,7 @@ A **station** (console or onPC) holds a show file:
 | **Data pools** | Named pools of objects (fixtures, presets, sequences, macros, plugins, …) |
 | **Programmer** | Live values for the current selection before Store/Update |
 | **Playback** | Sequences on executors; Go+/Go-/Goto drive cues |
-| **Session** | Optional multi-station link; one **GlobalMaster** owns some command paths |
+| **Session** | Optional multi-station link; one **GlobalMaster** — see [`multi-station.md`](multi-station.md) |
 
 Automation usually enters via:
 

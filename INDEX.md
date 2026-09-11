@@ -6,6 +6,9 @@ Open the smallest file that fits the task. Specs are facts for **Target**. Skill
 
 ## Skills
 
+- Use this repo as a reference (consume): [`.agents/skills/use-specs/SKILL.md`](.agents/skills/use-specs/SKILL.md)
+- Contribute Specs / concepts / rules: [`.agents/skills/contribute-specs/SKILL.md`](.agents/skills/contribute-specs/SKILL.md)
+- Consume vs contribute rules: [`.agents/rules/consume.md`](.agents/rules/consume.md), [`.agents/rules/contribute.md`](.agents/rules/contribute.md)
 - Crawl general/option keywords from the HTML manual into Keyword Specs: [`.agents/skills/crawl-keywords/SKILL.md`](.agents/skills/crawl-keywords/SKILL.md)
 - Adopt a new grandMA3 software release (Target bump, release notes, keyword re-crawl, tag): [`.agents/skills/adopt-ma-release/SKILL.md`](.agents/skills/adopt-ma-release/SKILL.md)
 - Convert an official release-notes PDF to searchable Markdown: [`.agents/skills/convert-release-notes/SKILL.md`](.agents/skills/convert-release-notes/SKILL.md)
@@ -28,7 +31,7 @@ Open the smallest file that fits the task. Specs are facts for **Target**. Skill
 ## Specs — by topic
 
 - Lua 5.4 → 5.5 / grandMA3 2.4 → 2.5 (`for` vars, `#` holes) — Migration Spec: [`specs/lua-5.4-to-5.5.md`](specs/lua-5.4-to-5.5.md)
-- Sessions / master election / show sync: [`specs/multi-station-sessions.md`](specs/multi-station-sessions.md)
+- Multi-station (sessions, master, where commands run): [`specs/multi-station.md`](specs/multi-station.md)
 - DMXRemote / Agenda startup: [`specs/startup-dmxremote-agenda.md`](specs/startup-dmxremote-agenda.md)
 - Hooks (including Group hooks vs Universal SpecialPurpose): [`specs/hooks.md`](specs/hooks.md)
 - Network/session object API (MAnetSocket / HostTypes): [`specs/api-objects-network.md`](specs/api-objects-network.md)

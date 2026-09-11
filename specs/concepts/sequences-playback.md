@@ -33,6 +33,6 @@ Playback keywords (see keyword index for Official text): `Go+`, `Go-`, `Goto`, `
 
 Cues can have **parts**; phaser content may use **PhaserRecipe** objects — automation depth in [`../phaser-recipe.md`](../phaser-recipe.md), map in [`phasers.md`](phasers.md).
 
-## Where commands run
+## Multi-station
 
-From [`../plugins.md`](../plugins.md) (observed): a plugin invoked from a **cue command** runs on the **master** station; CmdLine/Macro paths run **local**. Factor that into OSC/`RemoteCommand` design — [`osc-remote.md`](osc-remote.md).
+Cue-command plugins run on the **master**; CmdLine/Macro paths run **local**. Details: [`../multi-station.md`](../multi-station.md).

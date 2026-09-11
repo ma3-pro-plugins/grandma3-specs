@@ -12,6 +12,8 @@
 
 ## Calling a plugin directly (observations)
 
+Multi-station / master vs local: also summarized in [`multi-station.md`](multi-station.md).
+
 When calling a plugin directly (example: running the command `Plugin 1`), where it runs depends on how it is invoked:
 
 - CmdLine: Local station

@@ -130,6 +130,20 @@ Optional: `manual_url` when a specific manual page backs the Spec.
 5. Help Dump when a Lua/API listing is needed
 6. [`specs/ma-bugs.md`](specs/ma-bugs.md) for open Target bugs
 
+
+### Cross-cutting Topic Specs
+
+Some behavior spans many subsystems (today: **multi-station**). Put the **details** in one Topic Spec (`specs/multi-station.md`). Concepts and other Topic Specs only mention it briefly and link. Contribution rule: [`.agents/rules/contribute.md`](.agents/rules/contribute.md).
+
+### Consume vs contribute
+
+| Role | Rules | Skill |
+| --- | --- | --- |
+| Using Specs to automate a show | [`.agents/rules/consume.md`](.agents/rules/consume.md), [`AGENTS.md`](AGENTS.md) | [`.agents/skills/use-specs/`](.agents/skills/use-specs/) |
+| Editing this repo | [`.agents/rules/contribute.md`](.agents/rules/contribute.md) | [`.agents/skills/contribute-specs/`](.agents/skills/contribute-specs/) |
+
+When a human states a new contribution rule in chat, agents must write it into `.agents/rules/contribute.md` (and CONTEXT if structural) — not only into private memory.
+
 ### What is versioned
 
 | Kind | Where | Rule |

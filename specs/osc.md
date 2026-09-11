@@ -23,6 +23,8 @@ Sending a UDP packet only proves the packet left this machine. End-to-end proof 
 
 ## Host
 
+Session master / follower and OSC relay rules: [`multi-station.md`](multi-station.md).
+
 Default to **`127.0.0.1`** when the agent and onPC share a machine. Do not guess LAN IPs or “the master.” Use another host only when the user names it.
 
 On a **non-master** station in a session, direct OSC is unreliable. Send OSC to the **current master** and relay with `RemoteCommand IP <target-ip> "<command>"`. See [`remote-command.md`](remote-command.md). Master can flip (`MasterPriority`); do not hard-code a lab IP as master.

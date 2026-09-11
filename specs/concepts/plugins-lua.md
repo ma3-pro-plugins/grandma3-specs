@@ -27,13 +27,13 @@ Plugin 1
 Call Plugin "MyPlugin" '{\"ok\":true}'
 ```
 
-- Default call path and station (local vs master) depend on CmdLine vs Macro vs Cue Command — see plugins Spec.
+- Where a plugin runs (local vs master) depends on CmdLine / Macro / Cue Command — [`../multi-station.md`](../multi-station.md).
 - Prefer **single-quoted** wrappers for JSON arguments; double-quoted wrappers break on embedded `"` — plugins Spec.
 - Near size limits, prefer `SendLuaMessage` / queues over stuffing huge args into `Cmd()`.
 
 ## Hooks & startup
 
-Register hooks on startup / show load so every station’s VM is wired. Exact APIs: Help Dump for Target + hooks Spec.
+Register hooks on startup / show load so every station’s VM is wired (each station has its own Lua VM — [`../multi-station.md`](../multi-station.md)). Exact APIs: Help Dump for Target + hooks Spec.
 
 ## Import
 

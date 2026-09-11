@@ -18,7 +18,7 @@ How to get a command string onto a station and prove it ran. Depth: [`../osc.md`
 
 Enable **Enable Input** + **Receive Command** on the station. `nc`/TCP probes are not proof that OSC works.
 
-**Host:** default `127.0.0.1` when agent and onPC share a machine. Do not guess LAN IPs. In a session, send to the **current master**; use `RemoteCommand` to reach followers — see Topic Specs.
+**Host:** default `127.0.0.1` when agent and onPC share a machine. Session master / follower / `RemoteCommand` relay: [`../multi-station.md`](../multi-station.md).
 
 ## Proof loop
 

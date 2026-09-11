@@ -2,14 +2,20 @@
 
 This repository is a grandMA3 reference for coding agents.
 
-1. Open [`specs/versions.md`](specs/versions.md) first. That file states **Target** (the grandMA3 build Specs describe) and the Lua engine.
+**Consuming** Specs (write OSC/macros/Lua): follow [`.agents/rules/consume.md`](.agents/rules/consume.md) and skill [use-specs](.agents/skills/use-specs/SKILL.md).
+
+**Contributing** Specs (edit this repo): follow [`.agents/rules/contribute.md`](.agents/rules/contribute.md) and skill [contribute-specs](.agents/skills/contribute-specs/SKILL.md).
+
+## Consume checklist
+
+1. Open [`specs/versions.md`](specs/versions.md) first (Target + Lua engine).
 2. Open [INDEX.md](INDEX.md) and load only the file that matches the task.
-3. Unfamiliar subsystem → [`specs/concepts/`](specs/concepts/) (thin map + pointers). Depth is in flat Topic Specs under `specs/*.md` — concepts do not duplicate them.
-4. Specs under `specs/*.md` and Keyword Specs under `specs/keywords/` describe **Target only** (latest adopted). They are rewritten in place when MA changes. Skills under `.agents/skills/` are procedures.
-5. Command syntax: `specs/keywords/` is the **only** keyword tree (general + option). Each file is Official (from the manual) plus Extra (contributors). Frontmatter has `introduced` / `deprecated` when known. Do not look under `raw/` for keywords. Do not load `specs/keywords/archive/` when writing new commands. Do not emit a deprecated keyword unless matching existing syntax.
-6. For Lua/API surface dumps, use the Help Dump whose version matches Target (today under `specs/lua-functions/`; see `versions.md`). Release notes are versioned under `specs/release-notes/`.
-7. Open bugs that still affect Target live in `specs/ma-bugs.md`. Do not invent fixed-version behavior from stale Specs — use a git tag `ma-<version>` if you need the tree as it was when an older build was Target.
+3. Unfamiliar subsystem → [`specs/concepts/`](specs/concepts/) (thin map + pointers). Depth is in flat Topic Specs under `specs/*.md`.
+4. Multi-station / master / where commands run → [`specs/multi-station.md`](specs/multi-station.md).
+5. Specs under `specs/*.md` and Keyword Specs under `specs/keywords/` describe **Target only**. Skills under `.agents/skills/` are procedures.
+6. Command syntax: `specs/keywords/` is the **only** keyword tree. Skip `archive/` for new commands. Honor `deprecated`.
+7. Help Dump for Target: see `versions.md`. Open bugs: `specs/ma-bugs.md`.
 8. Do not write plugin or macro files until the user gives an absolute `gma3_library` path.
 9. Do not guess station IPs. Default OSC to `127.0.0.1` unless the user names a host.
 
-Versioning vocabulary and layout: [CONTEXT.md](CONTEXT.md). Topic Spec `source` provenance: `manual` | `observed` | `lab` | `mixed` (see CONTEXT).
+Versioning vocabulary and layout: [CONTEXT.md](CONTEXT.md). Provenance `source`: `manual` | `observed` | `lab` | `mixed`.

@@ -144,14 +144,14 @@ Empirical (MA 2.3.2 playground; treat as still relevant until re-measured on Tar
 
 ## 9. Where the command runs
 
+Cross-cutting rules (session master, Cue Command → master, OSC relay): [`multi-station.md`](multi-station.md).
+
 | Path | Typical station | Spec |
 | --- | --- | --- |
-| OSC `/cmd` to a host | That host (if it accepts OSC) | [`osc.md`](osc.md) |
+| OSC `/cmd` to a host | That host (if it accepts OSC); in a session prefer master | [`osc.md`](osc.md), [`multi-station.md`](multi-station.md) |
 | CmdLine / Macro local | Local station | [`plugins.md`](plugins.md) |
-| Cue command calling a plugin | **Master** | [`plugins.md`](plugins.md) |
+| Cue command calling a plugin | **Master** | [`multi-station.md`](multi-station.md) |
 | `RemoteCommand IP …` | Target IP (quoting rules apply) | [`remote-command.md`](remote-command.md) |
-
-In a session, prefer talking to the **current GlobalMaster** for OSC, then relay — do not hard-code lab IPs.
 
 ## 10. Proof
 

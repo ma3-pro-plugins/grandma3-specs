@@ -16,5 +16,5 @@ Overview: [`overview.md`](overview.md). Layout rules: [`CONTEXT.md`](../../CONTE
 | Macros & agendas | [`macros-agendas.md`](macros-agendas.md) | [`../startup-dmxremote-agenda.md`](../startup-dmxremote-agenda.md) | `Macro`, `Agenda`, … |
 | Plugins & Lua | [`plugins-lua.md`](plugins-lua.md) | [`../plugins.md`](../plugins.md), [`../object-api.md`](../object-api.md), [`../hooks.md`](../hooks.md), [`../message-queue.md`](../message-queue.md), [`../addonvars.md`](../addonvars.md) | — |
 | OSC & remote | [`osc-remote.md`](osc-remote.md) | [`../osc.md`](../osc.md), [`../remote-command.md`](../remote-command.md) | — |
-| Network & sessions | [`network-sessions.md`](network-sessions.md) | [`../multi-station-sessions.md`](../multi-station-sessions.md), [`../api-objects-network.md`](../api-objects-network.md) | — |
+| Multi-station | [`multi-station.md`](multi-station.md) | [`../multi-station.md`](../multi-station.md), [`../api-objects-network.md`](../api-objects-network.md) | — |
 | UI & hardware | [`ui-hardware.md`](ui-hardware.md) | [`../hardware-layout.md`](../hardware-layout.md), [`../user-attribute-encoder-resolution.md`](../user-attribute-encoder-resolution.md) | — |
