@@ -6,10 +6,21 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/recipes.html"
 
 # Recipes
 
-Cue recipes, preset recipes, recipe editor. Recipes can reference groups (see [`groups.md`](groups.md)).
+Recipes store reusable programming as **recipe lines** on cue parts or presets. Each line describes what to cook (selection, values, MAtricks, fade/delay/speed/phase). Cooking writes those values into the cue part, preset, or programmer.
+
+A recipe line's **Selection** is a **group**. Groups are a basic building block of recipes — see [`groups.md`](groups.md).
+
+Recipes can live in cue parts and in presets. Cue-part recipes must be cooked; preset recipes cook automatically. Values stored directly in a cue part outrank that part's recipe; values stored in a preset outrank that preset's recipe.
 
 ## PhaserRecipe depth
 
 Automation/API for PhaserRecipe (MA ≥ 2.4, distinct from StandardRecipe / `HRecipe`): **[`../phaser-recipe.md`](../phaser-recipe.md)**.
 
 Phaser editor orientation: [`phasers.md`](phasers.md).
+
+## Related
+
+- Groups (Selection): [`groups.md`](groups.md)
+- Presets: [`presets.md`](presets.md)
+- Cues / sequences: [`cues-sequences.md`](cues-sequences.md)
+- MAtricks: [`matricks.md`](matricks.md)

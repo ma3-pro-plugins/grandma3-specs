@@ -6,6 +6,6 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/shapes.html"
 
 # Shapes
 
-**Out of scope for most agents.** Out of scope for most agents.
+Shapes are Data Pool objects used with phaser/recipe value sources. **Out of scope for most agents** as a GUI topic; PhaserRecipe still names `shape` — see [`../phaser-recipe.md`](../phaser-recipe.md).
 
-See manual hub if needed. Prefer syntax-first Specs elsewhere in this map.
+Target 2.5: Shapes moved to destination 4 in the Data Pool (was 16). [`datapools.md`](datapools.md)

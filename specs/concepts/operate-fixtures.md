@@ -23,3 +23,4 @@ Align / Clone: open [`Align`](../keywords/Align.md) / [`Clone`](../keywords/Clon
 
 - Programmer values: [`programmer.md`](programmer.md)
 - Patch: [`patch.md`](patch.md)
+- Store selection as a group: [`groups.md`](groups.md)

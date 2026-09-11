@@ -21,6 +21,18 @@ Concept pages under `specs/concepts/` use **kebab filenames that mirror grandMA3
 2. **GUI → syntax** — rewrite operator/GUI how-tos as command-line examples using **only** tokens that exist under `specs/keywords/`. No images. Bare commands (strip CLI chrome). Never invent keywords or options.
 3. **Then integrate curated** — fold useful bits from `_legacy/` and from Topic Specs into short **Curated** / Extra-style sections on the matching new page. Do not invent facts; link Topic Specs for depth (especially multi-station, OSC, plugins, PhaserRecipe).
 
+### Concept page completeness
+
+Every **agent-relevant** concept page (not an explicit out-of-scope stub) must include:
+
+1. **What it is** — a short description taken from the Target manual hub (or a labeled Curated fact). A list of child pool names or subtopic titles is **not** a description. If there is **no Topic Spec** for the hub, the concept page *must* carry this description.
+2. **Primary syntax** — at least one bare-command example of the basic action (store / select / run) when that action exists in Keyword Specs. Example: store a group from the programmer (`Fixture 1 Thru 10` then `Store Group 1`).
+3. **Subtopics** — distinct behaviors get their **own heading** (not a buried clause) plus links to sibling concepts, Topic Specs, and Keyword Specs. Example: Group Masters are a separate heading on [`groups.md`](../../specs/concepts/groups.md), affecting playback of fixtures in the group, with a link to [`masters.md`](../../specs/concepts/masters.md) and the Group Masters manual topic.
+
+When the user flags a missing description or a buried subtopic, fix that page **and audit the rest of `specs/concepts/`** for the same gap.
+
+Recipe rows: a recipe line's **Selection** must be a **group**. Record that on both [`groups.md`](../../specs/concepts/groups.md) and [`recipes.md`](../../specs/concepts/recipes.md).
+
 Do **not** mass-move Topic Specs into `concepts/`.
 
 ## Cross-cutting topics

@@ -6,15 +6,14 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/patch.html"
 
 # Patch and Fixture Setup
 
-Fixtures, multipatch, MVR, live patch, DMX sheet/universes, 3D placement, stages, classes/layers, attribute definitions, parameter list, DMX curves.
+Fixtures must be added to the show file before they can be controlled. That happens in **Patch** (fixture types, attribute definitions, parameter list, DMX universes, stages, DMX curves, 3D placement, live patch, MVR, classes/layers).
 
 ## Syntax pointers
 
-Object/selection keywords commonly used after patching: [`Fixture`](../keywords/Fixture.md), [`Group`](../keywords/Group.md), patch-related tokens from the keyword index.
-
-Do not invent Patch menu option names — open the matching Keyword Spec.
+After fixtures exist, address them with [`Fixture`](../keywords/Fixture.md) (and store selections as [`Group`](../keywords/Group.md) — [`groups.md`](groups.md)). Patch-related tokens: [`../keywords/_index.md`](../keywords/_index.md). Do not invent Patch menu option names.
 
 ## Related
 
 - Operating fixtures / selection: [`operate-fixtures.md`](operate-fixtures.md)
 - Groups: [`groups.md`](groups.md)
+- DMX in/out: [`dmx.md`](dmx.md)

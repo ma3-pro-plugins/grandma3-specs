@@ -6,10 +6,34 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/datapool.html"
 
 # Data Pools
 
-DataPools hold worlds/filters, bitmaps, generators, shapes, preset pools, groups, sequences, plugins, macros, quickeys, MAtricks, executor configurations, pages, layouts, timecodes, timers, and related pool objects.
+Much of the data belonging to a show file is stored in **pools**. Many of those pools exist as children of a **Data Pool** parent object.
 
-Keyword: [`Datapool`](../keywords/Datapool.md).
+A new show file creates a **default Data Pool**. That object contains the other pools.
 
-## Related concept pages
+New Data Pool objects can be created, giving an entirely new set of pools. This is useful if several shows or acts share the same patch (for example, each song in a band catalog in its own data pool).
 
-[`worlds-filters.md`](worlds-filters.md) · [`presets.md`](presets.md) · [`groups.md`](groups.md) · [`cues-sequences.md`](cues-sequences.md) · [`plugins.md`](plugins.md) · [`macros.md`](macros.md) · [`quickeys.md`](quickeys.md) · [`matricks.md`](matricks.md) · [`layouts.md`](layouts.md) · [`timecode.md`](timecode.md) · [`bitmap.md`](bitmap.md) · [`generators.md`](generators.md) · [`shapes.md`](shapes.md)
+There is no Topic Spec for this hub — keep the description here.
+
+Keyword: [`Datapool`](../keywords/Datapool.md). Address an object in another pool:
+
+```
+Go+ DataPool 2 Sequence 2
+```
+
+## Pools inside a Data Pool
+
+| Destination | Concept |
+| --- | --- |
+| Worlds / Filters | [`worlds-filters.md`](worlds-filters.md) |
+| Bitmaps / Generators / Shapes | [`bitmap.md`](bitmap.md), [`generators.md`](generators.md), [`shapes.md`](shapes.md) |
+| Preset pools | [`presets.md`](presets.md) |
+| Groups | [`groups.md`](groups.md) |
+| Sequences | [`cues-sequences.md`](cues-sequences.md) |
+| Plugins / Macros / Quickeys | [`plugins.md`](plugins.md), [`macros.md`](macros.md), [`quickeys.md`](quickeys.md) |
+| MAtricks | [`matricks.md`](matricks.md) |
+| Executor configs / Pages | [`executors.md`](executors.md) |
+| Layouts / Timecodes | [`layouts.md`](layouts.md), [`timecode.md`](timecode.md) |
+
+Target 2.5: Shapes moved from destination 16 to destination 4. Macros that address data-pool destinations **by number** need updating; name-based addresses are unaffected.
+
+Pool windows can link to the selected data pool or a specific one (manual Common Window Settings).

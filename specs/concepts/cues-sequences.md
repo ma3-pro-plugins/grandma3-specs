@@ -33,7 +33,7 @@ Store options: [`../keywords/options/`](../keywords/options/).
 ## Related
 
 - Executors: [`executors.md`](executors.md)
-- Cue / phaser recipes: [`recipes.md`](recipes.md), [`../phaser-recipe.md`](../phaser-recipe.md)
+- Cue / phaser recipes: [`recipes.md`](recipes.md), [`../phaser-recipe.md`](../phaser-recipe.md) (recipe **Selection** is a group — [`groups.md`](groups.md))
 - Cue-command plugins run on the **master** — [`../multi-station.md`](../multi-station.md)
 
 ## Curated

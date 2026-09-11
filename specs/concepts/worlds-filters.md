@@ -6,8 +6,13 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/worldfilter.html"
 
 # Worlds and Filters
 
-Stub. Worlds and filters constrain what fixtures/attributes you can touch.
+Worlds and filters are programming / playback tools (both are pool windows). The selected world and the selected or called filter always dictate what the programmer can touch.
 
-Keywords to open from the index: [`World`](../keywords/World.md), [`Filter`](../keywords/Filter.md). Do not invent filter syntax.
+- **Worlds** limit access to fixtures and attributes (especially useful in multi-user so each user works in a designated world).
+- **Filters** block attributes from passing (typically store, update, recall, or sheet masking).
 
-Part of Data Pools map: [`datapools.md`](datapools.md).
+Worlds and filters can be assigned to objects (sequence, preset) and to sheets for masking.
+
+Keywords: [`World`](../keywords/World.md), [`Filter`](../keywords/Filter.md). Do not invent filter syntax.
+
+Part of Data Pools: [`datapools.md`](datapools.md). Multi-user session: [`users.md`](users.md), [`../multi-station.md`](../multi-station.md).
