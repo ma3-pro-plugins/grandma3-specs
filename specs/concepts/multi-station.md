@@ -1,12 +1,14 @@
 ---
-title: Multi-station
+title: Multi-station (alias)
 source: mixed
+manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/network_session.html"
 ---
 
 # Multi-station
 
-Sessions, master/follower, and **where commands run**. Depth: [`../multi-station.md`](../multi-station.md).
+This concept filename is kept as a **thin alias**.
 
-Network object API: [`../api-objects-network.md`](../api-objects-network.md). OSC transport (non-session): [`osc-remote.md`](osc-remote.md) → [`../osc.md`](../osc.md).
+- Networking / session summary: [`networking.md`](networking.md)
+- Canonical depth (master, where commands run): [`../multi-station.md`](../multi-station.md)
 
-Other concepts only **mention** multi-station in one line and link here — do not duplicate session rules.
+Do not duplicate session matrices here.
