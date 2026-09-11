@@ -24,7 +24,7 @@ Target: [`../versions.md`](../versions.md). Grammar: [`../command-line.md`](../c
 | Command Syntax and Keywords (`command_syntax_keywords.html`) | [`command-syntax.md`](command-syntax.md) | [`../command-line.md`](../command-line.md) |
 | Networking (`network.html`) | [`networking.md`](networking.md) | [`../multi-station.md`](../multi-station.md), [`../api-objects-network.md`](../api-objects-network.md) |
 | Single / Multi User (`user.html`) | [`users.md`](users.md) | [`../multi-station.md`](../multi-station.md) |
-| DMX | [`dmx.md`](dmx.md) | — |
+| DMX In and Out (`dmx.html`) | [`dmx.md`](dmx.md) | — |
 | Patch and Fixture Setup (`patch.html`) | [`patch.md`](patch.md) | — |
 | Operate Fixtures (`operate_fixtures.html`) | [`operate-fixtures.md`](operate-fixtures.md) | — |
 | The Programmer (`operate_programmer.html`) | [`programmer.md`](programmer.md) | — |
