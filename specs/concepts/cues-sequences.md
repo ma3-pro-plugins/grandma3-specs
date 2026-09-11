@@ -17,25 +17,37 @@ Looks for playback live in **cues** inside **sequences**. Tracking, cue timing, 
 
 ## Store / update / playback (syntax)
 
+Stores the active programmer values as **cue 1** of the selected sequence:
+
 ```
 Store Cue 1
 ```
+
+Stores the active programmer values as **cue 3.5** of sequence 2:
 
 ```
 Store Sequence 2 Cue 3.5
 ```
 
+Updates **cue 1** of the selected sequence with the current active programmer values:
+
 ```
 Update Cue 1
 ```
+
+Starts sequence 1 / goes to its **next cue** (`Go+`):
 
 ```
 Go+ Sequence 1
 ```
 
+Goes to the **previous cue** of the selected sequence (`Go-`):
+
 ```
 Go-
 ```
+
+Jumps the selected sequence to **cue 5**:
 
 ```
 Goto Cue 5

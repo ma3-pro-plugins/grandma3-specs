@@ -14,7 +14,9 @@ New Data Pool objects can be created, giving an entirely new set of pools. This 
 
 There is no Topic Spec for this hub — keep the description here.
 
-Keyword: [`Datapool`](../keywords/Datapool.md). Address an object in another pool:
+Keyword: [`Datapool`](../keywords/Datapool.md).
+
+Goes to the **next cue** of sequence 2 **inside data pool 2** (not the selected data pool):
 
 ```
 Go+ DataPool 2 Sequence 2

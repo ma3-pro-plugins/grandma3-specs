@@ -25,13 +25,19 @@ Target Lua: [`../versions.md`](../versions.md).
 
 ## Syntax
 
+Runs **plugin 1** (default function is Go+):
+
 ```
 Plugin 1
 ```
 
+Calls the plugin named MyPlugin and passes a JSON argument string:
+
 ```
 Call Plugin "MyPlugin" '{"ok":true}'
 ```
+
+Imports `FileName.xml` from the plugin library into the plugin pool, overwriting (`/o`) an empty slot:
 
 ```
 Import Plugin Library "FileName.xml" At Plugin "" /o

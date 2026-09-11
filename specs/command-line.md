@@ -17,7 +17,7 @@ Manual syntax overview (GUI-oriented): [General Syntax Rules](https://help.malig
 
 One **command** is a sequence of keywords, IDs/names, and options parsed by the station.
 
-Several commands may sit on one line, separated by [`;` (Semicolon)](keywords/Semicolon.md):
+Several commands may sit on one line, separated by [`;` (Semicolon)](keywords/Semicolon.md). This line turns **sequence 5 off**, then **deletes group 3**:
 
 ```text
 Off Sequence 5; Delete Group 3
@@ -67,9 +67,13 @@ From [`. (Dot)`](keywords/Dot.md):
 
 From [`Cue`](keywords/Cue.md): cue numbers may be decimals in `0.001`–`9999.999`. For **other** object types, a dot means parent.child, not a fractional ID.
 
+Stores the active programmer values as **cue 1.5** of the selected sequence (cue IDs may be decimals):
+
 ```text
 Store Cue 1.5
 ```
+
+Applies **preset 4.2** to fixture **31.2** (dot on Fixture is parent.child, not a fractional cue ID):
 
 ```text
 Fixture 31.2 At Preset 4.2
@@ -94,6 +98,8 @@ Selection is often built by resolving object lists (fixtures, groups, …).
 
 [`If`](keywords/If.md) filters or deselects relative to another object list (and has Clone-related helping uses). Close multi-part If forms with [`EndIf`](keywords/Endif.md) when the Spec’s pattern requires it.
 
+Filters the current selection with **group 5** (`If` is a CLI filter keyword, not a programming `if`):
+
 ```text
 If Group 5
 ```
@@ -109,15 +115,19 @@ From [`/ (Slash)`](keywords/Slash.md):
 - Introduce options with `/` **without spaces**: `/Merge` not `/ Merge`.
 - Same glyph is also a calculator separator — context-dependent.
 
-Common patterns:
+Merges the active programmer values into **cue 1** of the selected sequence:
 
 ```text
 Store Cue 1 /Merge
 ```
 
+Writes the system-monitor log with **no confirmation pop-up** (`/nc` = `/NoConfirmation`):
+
 ```text
 DumpLog /nc
 ```
+
+Imports `File.xml` from the plugin library into the plugin pool, **overwrite** (`/o`):
 
 ```text
 Import Plugin Library "File.xml" At Plugin "" /o

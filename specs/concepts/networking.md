@@ -8,7 +8,7 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/network.html"
 
 Networking expands a standalone station into a system: sessions, Ethernet DMX (Art-Net / sACN), MVR-xchange, World Server / internet, and station control.
 
-Open the Network menu:
+Opens the **Network** menu:
 
 ```
 Menu "Network"

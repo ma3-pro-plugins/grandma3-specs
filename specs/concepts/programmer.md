@@ -52,21 +52,31 @@ These commands select fixtures 1 through 5, set dimmer to 50 in the programmer, 
 Fixture 1 Thru 5; At 50; Store Cue 2
 ```
 
+Applies **preset 2.1** to fixture 1 in the programmer:
+
 ```
 Fixture 1 At Preset 2.1
 ```
+
+Toggles **Blind** (programmer values hidden from output while Blind is on):
 
 ```
 Blind
 ```
 
+**Off** with no object knocks out / stops the current target (programmer values or playback — confirm [`Off`](../keywords/Off.md) before automating a bare Off):
+
 ```
 Off
 ```
 
+**Clear** — first press deselects fixtures (three-press stack; see Clear levels above):
+
 ```
 Clear
 ```
+
+**ClearAll** releases the programmer in one step (selection and values):
 
 ```
 ClearAll

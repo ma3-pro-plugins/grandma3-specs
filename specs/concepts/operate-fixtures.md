@@ -10,9 +10,13 @@ Selection, align, clone, fixture sheet, selection grid/bar, gels, sMArt, and rel
 
 ## Syntax pointers
 
+Selects fixtures **1 through 10** in the programmer:
+
 ```
 Fixture 1 Thru 10
 ```
+
+Selects the fixtures stored in **group 3** (Group default function is SelFix):
 
 ```
 Group 3

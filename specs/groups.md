@@ -16,21 +16,19 @@ Groups store **fixture selection**, **order**, and **selection-grid** position �
 
 Empty selection stores an empty group (or merges/removes nothing useful — prefer an explicit selection).
 
+Creates **Group 1** containing fixtures 1–10 (order/grid from the selection). `/NoConfirmation` avoids the store-mode pop-up — required for unattended automation; see [`automation.md`](automation.md):
+
 ```
 Fixture 1 Thru 10; Store Group 1 /NoConfirmation
 ```
 
-Creates **Group 1** containing fixtures 1–10 (order/grid from the selection). `/NoConfirmation` avoids the store-mode pop-up — required for unattended automation; see [`automation.md`](automation.md).
-
 ## Build a selection with + and −
 
-Combine fixtures (or groups) into one selection, then store:
+Creates **Group 2** with fixtures 1–5 and 10–12:
 
 ```
 Fixture 1 Thru 5 + Fixture 10 Thru 12; Store Group 2 /NoConfirmation
 ```
-
-Creates **Group 2** with fixtures 1–5 and 10–12.
 
 ```
 Group 1 + Group 2; Store Group 3 /NoConfirmation

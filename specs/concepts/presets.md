@@ -12,13 +12,19 @@ Pools exist per feature group (filtered) plus All 1–5 (unfiltered). Preset mod
 
 ## Syntax
 
+Applies **preset 4.1** (feature-group 4, preset 1) to fixture 1 in the programmer:
+
 ```
 Fixture 1 At Preset 4.1
 ```
 
+Stores the active programmer values as **preset 4.2**:
+
 ```
 Store Preset 4.2
 ```
+
+Updates **preset 4.2** with the current active programmer values (references keep pointing here):
 
 ```
 Update Preset 4.2

@@ -16,7 +16,7 @@ Basic shape (manual):
 [Function] [Object]
 ```
 
-Example:
+Deletes **sequence 1** from the show:
 
 ```
 Delete Sequence 1
@@ -42,9 +42,13 @@ General rules (manual):
 
 ## Examples (bare commands)
 
+Stores the active programmer values as **cue 20** of sequence 8, overwriting whatever was in that cue:
+
 ```
 Store Sequence 8 Cue 20 /Overwrite
 ```
+
+Copies **cue 2** of the selected sequence onto cue 6:
 
 ```
 Copy Cue 2 At 6

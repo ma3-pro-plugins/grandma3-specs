@@ -8,11 +8,15 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/masters.html"
 
 Masters are **timing and level overrides**. Different families cover grand master, selected-sequence masters, Highlight / Lowlight / Solo, and speed / playback / timing masters.
 
-Address them with [`Master`](../keywords/Master.md). Assign a master to an executor:
+Address them with [`Master`](../keywords/Master.md).
+
+Assigns the **selected-sequence master** (Master 1.1) to executor 206:
 
 ```
 Assign Master 1.1 At Executor 206
 ```
+
+Assigns the **grand master** (Master 2.1) to executor 207:
 
 ```
 Assign Master 2.1 At Executor 207
