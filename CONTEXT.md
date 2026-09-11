@@ -100,7 +100,7 @@ The repo has **three agent-facing layers**. Do not collapse them into one folder
 
 | Layer | Path | Job |
 | --- | --- | --- |
-| **Map** | [`specs/concepts/`](specs/concepts/) | System overview + subsystem pages. Thin: what it is, boundaries, **pointers** to Topic Specs and keyword clusters. Not a second copy of deep notes. |
+| **Map** | [`specs/concepts/`](specs/concepts/) | Manual-TOC chapter pages (kebab names ↔ help.html hubs). Thin: what it is, boundaries, **pointers** to Topic Specs and keyword clusters. GUI how-tos → syntax-first recipes (Keyword Specs only); then curated bits from `_legacy/` / Topic Specs. Not a second copy of deep notes. |
 | **Topic Specs** | [`specs/*.md`](specs/) (flat) | Curated automation behavior: plugins, OSC, macros, long command patterns, lab conclusions. Stay flat — **do not mass-move** into `concepts/`. |
 | **Keyword Specs** | [`specs/keywords/`](specs/keywords/) | One CLI token each (Official from manual + Extra). |
 
@@ -119,7 +119,7 @@ Also: **grammar** — [`specs/command-line.md`](specs/command-line.md) (to be ad
 
 Optional: `manual_url` when a specific manual page backs the Spec.
 
-**Syntax-first enrichment (later track):** GUI how-tos in the manual can be rewritten as **command recipes** (using Keyword Specs) for plugins/OSC. Those recipes belong in Topic Spec Extra / Concept “Syntax” sections — **never invent commands**; only map steps that keywords and observed behavior support. Do not replace Keyword `## Official` with a guessed GUI→CLI translation.
+**Syntax-first enrichment:** Concept pages follow the Target **manual TOC**. GUI how-tos are rewritten as **command recipes** (Keyword Specs only) on the matching chapter page; then integrate curated notes from `_legacy/` / Topic Specs. Same recipes may also live in Topic Spec Extra. **Never invent commands.** Do not replace Keyword `## Official` with a guessed GUI→CLI translation.
 
 **Agent load order:**
 
