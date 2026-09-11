@@ -1,41 +1,74 @@
 ---
-title: Programmer & values
+title: The Programmer
 source: mixed
+manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/operate_programmer.html"
 ---
 
-# Programmer & values
+# The Programmer
 
-The **programmer** holds live attribute values for the current fixture selection until you Store, Update, or Clear them. Automation that “sets a look” almost always goes: select → `At` values → `Store`/`Update`.
+Manual: the programmer is a **temporary memory** where edited values sit until stored or released. **Every user profile has a programmer.**
 
-## Typical flow
+## Three levels
 
-```text
+1. **Selected fixture** — affected by encoder / command-line entries  
+2. **Active** programmer values — can affect output; **only active values are stored**  
+3. **Deactivated** programmer values — may still affect output, but Store will not keep them  
+
+Selected fixtures show with yellow name/ID in the Fixture Sheet (manual System Colors).
+
+## Blind
+
+[`Blind`](../keywords/Blind.md) hides programmer values from output. Toggle with the Blind keyword. Entering Blind with values removes them from output; leaving Blind with values adds them. Program Time is **not** respected when entering/exiting Blind.
+
+## Please / activate
+
+To activate all attributes for the selected fixture: **Please twice** loads current values into the programmer; Please again deactivates. (See Please / related keys in the manual; prefer Keyword Specs for automation.)
+
+## Off / KnockOut
+
+Remove a value: [`Off`](../keywords/Off.md) then target the value. Feature groups can be released via Off + encoder bank (GUI). See also [`Knockout`](../keywords/Knockout.md).
+
+## Clear levels
+
+[`Clear`](../keywords/Clear.md) has three presses (manual):
+
+1. **Deselect** fixtures — output unchanged; active values still storeable  
+2. Values remain but become **deactivated** — storing now yields an empty cue  
+3. **Clear all** — release values  
+
+Hold Clear >1s also clears completely. Associated keywords: [`Clear`](../keywords/Clear.md), [`ClearSelection`](../keywords/ClearSelection.md), [`ClearActive`](../keywords/ClearActive.md), [`ClearAll`](../keywords/ClearAll.md).
+
+## Freeze / Preview / Program Time
+
+- Default: running sequences can override programmer priority. [`Freeze`](../keywords/Freeze.md) keeps programmer above playback for adjusted values.  
+- [`Preview`](../keywords/Preview.md): separate programmer without stage output; **one shared preview programmer per session** (multi-user warning).  
+- Program Time can time programmer fades (manual).
+
+## Syntax-first examples
+
+```
 Fixture 1 Thru 5
 At 50
 Store Cue 2
 ```
 
-- Selection object keywords (`Fixture`, `Group`, …) often default to selecting fixtures (SelFix) when used without an explicit function — see each Keyword Spec.
-- [`At`](../keywords/At.md) applies values **live in the programmer** (and can mean “destination” after some functions). Relative values use `+` / `-` with `At` (see [`Plus`](../keywords/Plus.md)).
-- [`Store`](../keywords/Store.md) writes programmer (or other sources, via options) into show objects. Default object type when omitted: **Cue** on the selected sequence.
-- [`Update`](../keywords/Update.md) changes existing stored data (see Spec).
-- [`Clear`](../keywords/Clear.md) / selection clears — confirm options on the Keyword Spec before using in plugins.
+```
+Fixture 1 At Preset 2.1
+```
 
-## Selection helpers
+```
+Blind
+Off
+Clear
+ClearAll
+```
 
-| Keyword | Why it matters |
-| --- | --- |
-| [`Thru`](../keywords/Thru.md) | Ranges: `Fixture 3 Thru 6` |
-| [`+`](../keywords/Plus.md) / [`-`](../keywords/Minus.md) | Add/remove from lists; relative At |
-| [`If`](../keywords/If.md) | Filter / deselect relative to another object list |
-| [`Blind`](../keywords/Blind.md) | Programmer output path (see Spec) |
-| [`Park`](../keywords/Park.md) | Hold values (see Spec) |
+- [`At`](../keywords/At.md) applies values live in the programmer. Relative `At` with `+`/`-`: see [`Plus`](../keywords/Plus.md).  
+- [`Store`](../keywords/Store.md) / [`Update`](../keywords/Update.md) write show data (only **active** programmer values store).  
+- Store options (`/Merge`, `/Overwrite`, `/CueOnly`, `/Look`, `/Selective`, …): [`../keywords/options/`](../keywords/options/) — do not invent names.
 
-## Store options (common)
+## Curated
 
-Store takes many option keywords (`/Merge`, `/Overwrite`, `/CueOnly`, `/Look`, `/Selective`, …). Prefer the option Keyword Spec under [`../keywords/options/`](../keywords/options/) — do not invent option names.
-
-## Depth elsewhere
-
-- Full token list: [`../keywords/_index.md`](../keywords/_index.md)
-- Grammar (ranges, dots, quotes, options): [`../command-line.md`](../command-line.md)
+- Selection helpers: [`Thru`](../keywords/Thru.md), [`Plus`](../keywords/Plus.md), [`Minus`](../keywords/Minus.md), [`If`](../keywords/If.md), [`Park`](../keywords/Park.md).  
+- Grammar: [`../command-line.md`](../command-line.md).  
+- Cue-command vs CmdLine multi-station: [`../multi-station.md`](../multi-station.md).
