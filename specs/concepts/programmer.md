@@ -46,6 +46,8 @@ Hold Clear >1s also clears completely. Associated keywords: [`Clear`](../keyword
 
 ## Syntax-first examples
 
+These commands select fixtures 1 through 5, set dimmer to 50 in the programmer, and store that look as Cue 2 of the selected sequence:
+
 ```
 Fixture 1 Thru 5
 At 50

@@ -14,20 +14,20 @@ Cues and presets do **not** store a group reference; they store fixture values o
 
 ## Store a group from the programmer
 
-Select fixtures, then store:
+These commands create **Group 1** with fixtures 1 through 10 in it (order and grid from the current selection; no attribute values):
 
 ```
 Fixture 1 Thru 10
 Store Group 1
 ```
 
-Calling a group without a function **SelFix**es its fixtures (default function of [`Group`](../keywords/Group.md)):
+Calling a group without a function **SelFix**es its fixtures (default function of [`Group`](../keywords/Group.md)). This selects the fixtures stored in group 3:
 
 ```
 Group 3
 ```
 
-Other examples:
+Other examples (`Store Group 5` stores the **current** programmer selection into group 5):
 
 ```
 Store Group 5
