@@ -21,22 +21,19 @@ Groups are built from the **current programmer selection** (fixtures selected in
 These commands create **Group 1** with fixtures 1 through 10 in it:
 
 ```
-Fixture 1 Thru 10
-Store Group 1
+Fixture 1 Thru 10; Store Group 1
 ```
 
 Combine fixtures with `+`, then store. Creates **Group 2** with fixtures 1–5 and 10–12:
 
 ```
-Fixture 1 Thru 5 + Fixture 10 Thru 12
-Store Group 2
+Fixture 1 Thru 5 + Fixture 10 Thru 12; Store Group 2
 ```
 
 Subtract from a selection with `-`, then store. Creates **Group 6** from group 5 without fixture 2:
 
 ```
-Group 5 - Fixture 2
-Store Group 6
+Group 5 - Fixture 2; Store Group 6
 ```
 
 Calling a group without a function **SelFix**es its fixtures (default function of [`Group`](../keywords/Group.md)). This selects the fixtures stored in group 3:

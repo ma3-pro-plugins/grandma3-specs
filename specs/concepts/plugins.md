@@ -27,7 +27,13 @@ Target Lua: [`../versions.md`](../versions.md).
 
 ```
 Plugin 1
+```
+
+```
 Call Plugin "MyPlugin" '{"ok":true}'
+```
+
+```
 Import Plugin Library "FileName.xml" At Plugin "" /o
 ```
 

@@ -19,10 +19,25 @@ Looks for playback live in **cues** inside **sequences**. Tracking, cue timing, 
 
 ```
 Store Cue 1
+```
+
+```
 Store Sequence 2 Cue 3.5
+```
+
+```
 Update Cue 1
+```
+
+```
 Go+ Sequence 1
+```
+
+```
 Go-
+```
+
+```
 Goto Cue 5
 ```
 

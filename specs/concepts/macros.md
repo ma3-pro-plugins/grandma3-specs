@@ -10,6 +10,9 @@ Macros are **commands stored in a pool object**. A line can be simple or a long 
 
 ```
 Macro 1
+```
+
+```
 Store Macro 2
 ```
 

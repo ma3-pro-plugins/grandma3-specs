@@ -14,7 +14,13 @@ Pools exist per feature group (filtered) plus All 1–5 (unfiltered). Preset mod
 
 ```
 Fixture 1 At Preset 4.1
+```
+
+```
 Store Preset 4.2
+```
+
+```
 Update Preset 4.2
 ```
 

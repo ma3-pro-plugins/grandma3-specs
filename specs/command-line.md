@@ -23,7 +23,7 @@ Several commands may sit on one line, separated by [`;` (Semicolon)](keywords/Se
 Off Sequence 5; Delete Group 3
 ```
 
-Agents should prefer **one clear command per OSC/Cmd call** unless a macro truly needs a chain.
+The command line does **not** accept a multi-line paste. Spec **CLI** fences that are a unit (select then store, etc.) must be that one-line `;` form so GitHub copy is pasteable. Unrelated examples: one command per fence. OSC/`Cmd` may send that same one-line chain as a single payload; one command per call is still fine when the task is a single statement.
 
 ## 2. Core pattern
 
@@ -69,6 +69,9 @@ From [`Cue`](keywords/Cue.md): cue numbers may be decimals in `0.001`–`9999.99
 
 ```text
 Store Cue 1.5
+```
+
+```text
 Fixture 31.2 At Preset 4.2
 ```
 
@@ -110,7 +113,13 @@ Common patterns:
 
 ```text
 Store Cue 1 /Merge
+```
+
+```text
 DumpLog /nc
+```
+
+```text
 Import Plugin Library "File.xml" At Plugin "" /o
 ```
 

@@ -44,6 +44,9 @@ General rules (manual):
 
 ```
 Store Sequence 8 Cue 20 /Overwrite
+```
+
+```
 Copy Cue 2 At 6
 ```
 
