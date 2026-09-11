@@ -19,7 +19,7 @@ Open the smallest file that fits the task. Specs are facts for **Target**. Skill
 
 ## Specs — start here
 
-- System map (overview + subsystems): [`specs/concepts/_index.md`](specs/concepts/_index.md)
+- System map (manual TOC chapters): [`specs/concepts/_index.md`](specs/concepts/_index.md)
 - Current Target software / Lua engine: [`specs/versions.md`](specs/versions.md)
 - Command-line grammar (compose tokens): [`specs/command-line.md`](specs/command-line.md)
 - Command-line keywords (general + option; Official + Extra): [`specs/keywords/_index.md`](specs/keywords/_index.md)

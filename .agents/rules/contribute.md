@@ -13,6 +13,16 @@ For agents **editing** this repo (Specs, concepts, skills, indexes). Consumers u
 
 Do **not** mass-move Topic Specs into `concepts/`.
 
+## Concepts follow the manual TOC
+
+Concept pages under `specs/concepts/` use **kebab filenames that mirror grandMA3 help.html chapter hubs** (agent-relevant chapters), not ad-hoc subsystem nicknames. Live map: [`specs/concepts/_index.md`](../../specs/concepts/_index.md). Old filenames may remain under `specs/concepts/_legacy/` for reference only.
+
+1. **Structure first** — add/adjust the chapter page to match the Target manual hub (`manual_url` to that hub HTML). Frontmatter: `title`, `source: mixed` (or other provenance), `manual_url`.
+2. **GUI → syntax** — rewrite operator/GUI how-tos as command-line examples using **only** tokens that exist under `specs/keywords/`. No images. Bare commands (strip CLI chrome). Never invent keywords or options.
+3. **Then integrate curated** — fold useful bits from `_legacy/` and from Topic Specs into short **Curated** / Extra-style sections on the matching new page. Do not invent facts; link Topic Specs for depth (especially multi-station, OSC, plugins, PhaserRecipe).
+
+Do **not** mass-move Topic Specs into `concepts/`.
+
 ## Cross-cutting topics
 
 **Multi-station** (sessions, master/follower, where CmdLine/Macro/Cue Command run, OSC relay in a session) lives in **[`specs/multi-station.md`](../../specs/multi-station.md)** (concept pointer: `specs/concepts/multi-station.md`).
