@@ -44,6 +44,32 @@ Open the smallest file that fits the task. Specs are facts for **Target**. Skill
 - Lua message queues (`OpenMessageQueue` / `SendLuaMessage`): [`specs/message-queue.md`](specs/message-queue.md)
 - UserAttributePreferences EncoderResolution: [`specs/user-attribute-encoder-resolution.md`](specs/user-attribute-encoder-resolution.md)
 - PhaserRecipe (MA ≥ 2.4): [`specs/phaser-recipe.md`](specs/phaser-recipe.md)
+- Phasers (programmer steps, effects alias, store like a static look): [`specs/phasers.md`](specs/phasers.md)
+
+## Specs — concept hubs (one Topic Spec per manual hub)
+
+Thin concept pages stay under [`specs/concepts/`](specs/concepts/). Depth for hubs that have manual subtopics:
+
+- System: [`specs/system.md`](specs/system.md)
+- Show file handling: [`specs/show-file-handling.md`](specs/show-file-handling.md)
+- Users: [`specs/users.md`](specs/users.md)
+- DMX: [`specs/dmx.md`](specs/dmx.md)
+- Patch: [`specs/patch.md`](specs/patch.md)
+- Operate fixtures: [`specs/operate-fixtures.md`](specs/operate-fixtures.md)
+- Presets: [`specs/presets.md`](specs/presets.md)
+- Worlds / Filters: [`specs/worlds-filters.md`](specs/worlds-filters.md)
+- MAtricks: [`specs/matricks.md`](specs/matricks.md)
+- Cues and Sequences: [`specs/cues-sequences.md`](specs/cues-sequences.md)
+- Executors (behavior): [`specs/executors.md`](specs/executors.md)
+- Masters: [`specs/masters.md`](specs/masters.md)
+- Recipes (standard; PhaserRecipe stays separate): [`specs/recipes.md`](specs/recipes.md)
+- Phasers (programmer; PhaserRecipe stays separate): [`specs/phasers.md`](specs/phasers.md)
+- Macros: [`specs/macros.md`](specs/macros.md)
+- Agenda: [`specs/agenda.md`](specs/agenda.md)
+- Timecode: [`specs/timecode.md`](specs/timecode.md)
+- Quickeys: [`specs/quickeys.md`](specs/quickeys.md)
+
+Already listed above: [`specs/groups.md`](specs/groups.md), [`specs/layouts.md`](specs/layouts.md), [`specs/automation.md`](specs/automation.md).
 
 ## Sources
 
