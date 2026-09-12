@@ -8,6 +8,7 @@ Open the smallest file that fits the task. Specs are facts for **Target**. Skill
 
 - Use this repo as a reference (consume): [`.agents/skills/use-specs/SKILL.md`](.agents/skills/use-specs/SKILL.md)
 - Contribute Specs / concepts / rules: [`.agents/skills/contribute-specs/SKILL.md`](.agents/skills/contribute-specs/SKILL.md)
+- Ingest log / source queues (do not re-extract): [`.agents/ingest/`](.agents/ingest/)
 - Consume vs contribute rules: [`.agents/rules/consume.md`](.agents/rules/consume.md), [`.agents/rules/contribute.md`](.agents/rules/contribute.md)
 - Crawl general/option keywords from the HTML manual into Keyword Specs: [`.agents/skills/crawl-keywords/SKILL.md`](.agents/skills/crawl-keywords/SKILL.md)
 - Adopt a new grandMA3 software release (Target bump, release notes, keyword re-crawl, tag): [`.agents/skills/adopt-ma-release/SKILL.md`](.agents/skills/adopt-ma-release/SKILL.md)

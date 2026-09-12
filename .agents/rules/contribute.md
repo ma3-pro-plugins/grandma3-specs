@@ -67,6 +67,14 @@ Do **not** mass-move Topic Specs into `concepts/`.
 Same pattern for future cross-cuts: one canonical Topic Spec, thin mentions elsewhere. When the user states such a rule, record it here and in CONTEXT.
 
 
+## Ingest (elaborate, do not add topics)
+
+External sources (MA forum, `ma3-pro-plugins` `lib/ui/`, curated OSS plugins) **only elaborate existing Topic Specs**. Do not create new hubs or Specs from an ingest run.
+
+State and queues live in [`.agents/ingest/`](../ingest/README.md). Check [`log.md`](../ingest/log.md) before extracting. Forum: high-reliability users only ([`forum-users.md`](../ingest/forum-users.md); Andreas first). `lib/ui`: skip `*react*` folders; facts only, no vendoring. OSS plugins: working examples if they pass stars + last-commit (or a trusted forum author).
+
+One short PR per daily ingest run. Record the chunk in the log (source, Specs, extract logic).
+
 ## Version facts
 
 Do **not** add a `SupportedFeatures`-style file. Specs on `main` are Target only. Put version facts on the page that uses them:
