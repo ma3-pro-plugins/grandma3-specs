@@ -8,7 +8,7 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/matricks.html"
 
 MAtricks divides a fixture **selection** into sub-selections (and can shuffle that selection). Typical use: step through a selection one fixture or subgroup at a time, or spread values across a grid.
 
-MAtricks objects live in the Data Pool. Use Keyword Specs / Object API when automating — do not invent property names.
+MAtricks objects live in the Data Pool. Official selection property names and typings Transform/Invert/ShuffleMode lists: Topic Spec [`../matricks.md`](../matricks.md); Keyword: [`MAtricks`](../keywords/Matricks.md).
 
 **Depth:** [`../matricks.md`](../matricks.md).
 

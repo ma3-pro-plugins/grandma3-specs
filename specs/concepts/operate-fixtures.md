@@ -26,7 +26,7 @@ Group 3
 
 Selection helpers (confirm each Spec): [`Thru`](../keywords/Thru.md), [`Plus`](../keywords/Plus.md), [`Minus`](../keywords/Minus.md), [`If`](../keywords/If.md).
 
-Align / Clone: open [`Align`](../keywords/Align.md) / [`Clone`](../keywords/Clone.md) — examples and Official options in the Topic Spec ([`../operate-fixtures.md`](../operate-fixtures.md)). Do not invent options.
+Align / Clone / Gel Official options and examples: Topic Spec [`../operate-fixtures.md`](../operate-fixtures.md); keywords [`Align`](../keywords/Align.md), [`Clone`](../keywords/Clone.md), [`Gel`](../keywords/Gel.md).
 
 ## Related
 

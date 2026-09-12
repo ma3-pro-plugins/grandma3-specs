@@ -10,7 +10,7 @@ Macros are **commands stored in a pool object**. A line can be a single command 
 
 Default function of [`Macro`](../keywords/Macro.md) is **Go+**: calling a macro with no function **runs** it.
 
-**Depth:** [`../macros.md`](../macros.md).
+**Depth (MacroLine props Official + typings):** [`../macros.md`](../macros.md).
 
 This command **runs macro 1** (starts it / Go+):
 

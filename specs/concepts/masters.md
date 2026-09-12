@@ -24,7 +24,7 @@ Assigns the **grand master** (Master 2.1) to executor 207:
 Assign Master 2.1 At Executor 207
 ```
 
-Confirm names and indexes on the Keyword Spec — do not invent master category names.
+Category indexes/names and **LearnMode** / **SpeedScale** enums: Topic Spec [`../masters.md`](../masters.md) and [`Master`](../keywords/Master.md) Official.
 
 ## Group Masters
 
