@@ -44,7 +44,7 @@ _Avoid_: using a migration Spec as the only source for current Target truth
 
 ### Specs = latest only
 
-Topic Specs under `specs/*.md` and Keyword Specs under `specs/keywords/` always describe **Target**. When MA changes behavior, rewrite in place on `main`. Do not keep parallel Spec trees per version.
+Topic Specs under `specs/*.md` and Keyword Specs under `specs/keywords/` always describe **Target**. When MA changes behavior, rewrite in place on `main`. Do not keep parallel Spec trees per version. Do **not** add a `SupportedFeatures` matrix — version facts live on the keyword (`introduced` / `deprecated`), a one-line Topic Spec gate, a Migration Spec, or the release-notes dump. See [`.agents/rules/contribute.md`](.agents/rules/contribute.md).
 
 ### Keywords: one tree
 

@@ -66,6 +66,18 @@ Do **not** mass-move Topic Specs into `concepts/`.
 
 Same pattern for future cross-cuts: one canonical Topic Spec, thin mentions elsewhere. When the user states such a rule, record it here and in CONTEXT.
 
+
+## Version facts
+
+Do **not** add a `SupportedFeatures`-style file. Specs on `main` are Target only. Put version facts on the page that uses them:
+
+- **Keywords** already have `introduced` / `deprecated` — that is the token changelog. Omit `introduced` if unknown; never guess.
+- **Topic Specs** get one “since MA x.y” line only when an agent would otherwise take the old path (`GetObject` 2.1.1.2, PhaserRecipe 2.4).
+- **Migration Specs** (like Lua 5.4 → 5.5) for behavior that *broke*.
+- **Release-notes dumps** stay the raw changelog.
+
+Ingest a `SupportedFeatures` flag as a fact on that Spec (same as issue #5 / `lib/ma_obj`: facts only, no vendoring). Do not vendor the whole table.
+
 ## Provenance
 
 Topic Spec / concept frontmatter `source`: `manual` | `observed` | `lab` | `mixed` (see CONTEXT). Optional `manual_url`.
