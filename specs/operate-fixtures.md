@@ -153,12 +153,33 @@ Exports gel swatch **8**.
 
 Gel Pool / custom gels / sMArt / Feature Graphic / Fixture Graphic / Fixture Sheet / Selection Bar / Special Dialog / Encoder Resolution Multiplier are largely **GUI**.
 
-Selection **grid** positions matter for groups, layouts, and align — store grid with the selection via Group store ([`groups.md`](groups.md)) or layout assign ([`layouts.md`](layouts.md)).
+## Selection grid (XYZ)
+
+Official: [Selection Grid](https://help.malighting.com/grandMA3/2.5/HTML/operate_selection.html). Fixtures have a position in a **3D selection grid**. Each fixture is a box. The grid is spatial relationships for **MAtricks**, phasers, selection order, and effects — not necessarily 3D Viewer positions ([`concepts/xyz.md`](concepts/xyz.md)).
+
+Origin **0/0/0**. Cursor syntax ([`keywords/Grid.md`](keywords/Grid.md)):
+
+```
+Grid 1/2/1
+```
+
+Moves the cursor to X=1, Y=2, Z=1 (Z may be omitted when it is 1). Span:
+
+```
+Grid 2/2 Thru 4/4
+```
+
+**Move Grid Cursor** (title bar / user profile; **typings** `GridCursorMovement`): `None` | `Append X` | `New Line`. **Preserve GridPositions** keeps gaps/offsets from origin. Align Range **Rx / Ry / Rz** (recipe `alignRangeX`/`Y`/`Z`) chooses align across the whole selection vs per row/column. Official: MAtricks X, Y, and Z directions are relative to the entire range of selected fixtures.
+
+MAtricks property families are the same on all three axes and operate on these grid axes — [`matricks.md`](matricks.md). A recipe embeds those families and can also assign a pool MAtricks as defaults — [`recipes.md`](recipes.md). Store the grid with a group — [`groups.md`](groups.md).
+
+Selection **grid** positions also matter for layouts and align — store via Group store or layout assign ([`layouts.md`](layouts.md)).
 
 ## Related
 
 - Programmer (separate): [`concepts/programmer.md`](concepts/programmer.md)
 - Groups / recipe Selection: [`groups.md`](groups.md), [`concepts/recipes.md`](concepts/recipes.md)
+- MAtricks (grid axes): [`matricks.md`](matricks.md)
 - Patch: [`concepts/patch.md`](concepts/patch.md)
 - Layouts (clone into layout): [`layouts.md`](layouts.md)
 - Encoder resolution lab note: [`user-attribute-encoder-resolution.md`](user-attribute-encoder-resolution.md)

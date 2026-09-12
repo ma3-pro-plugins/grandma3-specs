@@ -9,6 +9,8 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/matricks.html"
 
 MAtricks divides a fixture **selection** into sub-selections (and can shuffle that selection). Typical use: step through a selection one fixture or subgroup at a time, or spread values across a grid.
 
+X / Y / Z property families are the same on all three axes and act on the **selection grid** axes (not 3D Viewer XYZ) — [`operate-fixtures.md`](operate-fixtures.md). A recipe can embed those properties or assign a pool MAtricks as defaults — [`recipes.md`](recipes.md).
+
 MAtricks objects live in the Data Pool. Official selection property names and typings Transform/Invert/ShuffleMode lists: Topic Spec [`../matricks.md`](../matricks.md); Keyword: [`MAtricks`](../keywords/Matricks.md).
 
 **Topic Spec (depth):** [`../matricks.md`](../matricks.md).

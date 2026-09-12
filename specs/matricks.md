@@ -11,7 +11,7 @@ Manual hub + subtopics (one Spec): [Blocks](https://help.malighting.com/grandMA3
 
 MAtricks divides a fixture **selection** into sub-selections (and can shuffle that selection). Typical use: step through a selection one fixture or subgroup at a time (`Next` / `Prev`), or spread values across the selection grid. Each user profile has **two selections** (Selection 1 and Selection 2).
 
-MAtricks **pool objects** live in the Data Pool. Active MAtricks can also be stored into presets via [`/MAtricks`](keywords/options/Matricks.md) — [`presets.md`](presets.md). Recipes can attach MAtricks; recipe **Selection** must be a **group** — [`phaser-recipe.md`](phaser-recipe.md), [`groups.md`](groups.md).
+MAtricks **pool objects** live in the Data Pool. Active MAtricks can also be stored into presets via [`/MAtricks`](keywords/options/Matricks.md) — [`presets.md`](presets.md). Recipes can attach MAtricks **or** hold the same X/Y/Z properties on the row (assigning a pool object spreads those values as **defaults**) — [`recipes.md`](recipes.md). Recipe **Selection** must be a **group** — [`phaser-recipe.md`](phaser-recipe.md), [`groups.md`](groups.md). Those X/Y/Z families act on the **selection grid** — [`concepts/operate-fixtures.md`](concepts/operate-fixtures.md).
 
 ## Pool object vs active selection MAtricks
 
@@ -147,7 +147,7 @@ To shuffle then store the order into a group, use normal group store after shuff
 
 ## Related
 
-- Selection grid / operate fixtures: [`concepts/operate-fixtures.md`](concepts/operate-fixtures.md), [`groups.md`](groups.md)
+- Selection grid / operate fixtures: [`operate-fixtures.md`](operate-fixtures.md), [`concepts/operate-fixtures.md`](concepts/operate-fixtures.md), [`groups.md`](groups.md)
 - Presets + `/MAtricks`: [`presets.md`](presets.md)
 - Phaser / recipes: [`phaser-recipe.md`](phaser-recipe.md), [`concepts/recipes.md`](concepts/recipes.md)
 - Automation: [`automation.md`](automation.md)

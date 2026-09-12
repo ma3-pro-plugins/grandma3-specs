@@ -56,6 +56,8 @@ Do **not** mass-move Topic Specs into `concepts/`.
 
 **Plugin access** (Lua read of show objects: `GetObject`, `ObjectList`, `:Get`, `:Parent`, `:Count`, `:Ptr`, `:Children`) lives in **[`specs/plugin-access.md`](../../specs/plugin-access.md)** (concept: [`specs/concepts/plugin-access.md`](../../specs/concepts/plugin-access.md)). Topic Specs for show-tree objects keep a short **Plugin access** section with **that** object’s path only, and link the generic Spec. Do not invent child class names. GUI editor modes stay **one line**. The write-plugin skill points at `plugin-access.md` — do not duplicate the API there.
 
+**Lua examples — `GetObject` first.** Use `GetObject(address)` when the address names **one** object and has **no** wildcard. Do **not** write `ObjectList("…")[1]` for a concrete address. `ObjectList` only when you actually need a table (several matches). `GetObject` exists since MA **2.1.1.2** (**observed** `ma3-pro-plugins` `lib/SupportedFeatures.ts` `objectFreeApi.GetObject`). Target is newer — examples default to `GetObject`.
+
 **Multi-station** (sessions, master/follower, where CmdLine/Macro/Cue Command run, OSC relay in a session) lives in **[`specs/multi-station.md`](../../specs/multi-station.md)** (concept pointer: `specs/concepts/multi-station.md`).
 
 - Other concepts/Topic Specs may **mention** multi-station in one short line and **link** there.

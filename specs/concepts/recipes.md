@@ -13,6 +13,8 @@ Recipes store reusable programming as **recipe lines** on cue parts or presets. 
 
 A recipe line's **Selection** is a **group**. Groups are a basic building block of recipes — see [`groups.md`](groups.md).
 
+A line can hold **MAtricks** values itself (X/Y/Z families). Assigning a MAtricks pool object to `matricks` **spreads** those values onto the row as **defaults**. Depth + full property list: Topic Spec.
+
 Recipes can live in cue parts and in presets. Cue-part recipes must be cooked; preset recipes cook automatically. Values stored directly in a cue part outrank that part's recipe; values stored in a preset outrank that preset's recipe.
 
 **Topic Spec (depth — Store/Assign recipe lines, Cook, Plugin access):** [`../recipes.md`](../recipes.md).
@@ -30,3 +32,4 @@ Phaser editor orientation: [`phasers.md`](phasers.md).
 - Presets: [`presets.md`](presets.md)
 - Cues / sequences: [`cues-sequences.md`](cues-sequences.md)
 - MAtricks: [`matricks.md`](matricks.md)
+- Selection grid XYZ: [`operate-fixtures.md`](operate-fixtures.md)

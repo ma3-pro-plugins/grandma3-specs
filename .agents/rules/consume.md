@@ -9,7 +9,7 @@ For agents **using** this repo to write OSC, macros, or Lua — not for editing 
 5. Do not invent keywords, options, or GUI→CLI translations.
 6. Multi-station / master / where-commands-run → [`specs/multi-station.md`](../../specs/multi-station.md). Do not invent session behavior from memory.
 7. Unattended macros / plugin `Cmd` / OSC → [`specs/automation.md`](../../specs/automation.md): append `/NoConfirmation` on commands that can pop up; pass explicit store modes.
-8. Read show objects from Lua (`GetObject` / `ObjectList` / `:Get` / parent-children) → [`specs/plugin-access.md`](../../specs/plugin-access.md). Per-object trees stay on that object’s Topic Spec.
+8. Read show objects from Lua → [`specs/plugin-access.md`](../../specs/plugin-access.md). Use `GetObject` for one concrete address; `ObjectList` only when you need a table. Per-object trees stay on that object’s Topic Spec.
 9. Do not write plugin/macro files until the user gives absolute `gma3_library`. Do not guess station IPs (default OSC `127.0.0.1`).
 10. Full agent checklist: [`AGENTS.md`](../../AGENTS.md). Vocabulary: [`CONTEXT.md`](../../CONTEXT.md).
 

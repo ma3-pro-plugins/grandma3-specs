@@ -19,6 +19,6 @@ Follow [`.agents/rules/consume.md`](../../rules/consume.md) and [`AGENTS.md`](..
 5. Multi-station questions → `specs/multi-station.md`  
 6. Unattended macro / plugin `Cmd` / OSC → `specs/automation.md` (`/NoConfirmation`)  
 7. Compose strings → `specs/command-line.md`  
-8. Read show objects from Lua → `specs/plugin-access.md`  
+8. Read show objects from Lua → `specs/plugin-access.md` (`GetObject` for one address)  
 
 Do not invent keywords or session behavior. To **change** Specs, switch to [contribute-specs](../contribute-specs/SKILL.md).

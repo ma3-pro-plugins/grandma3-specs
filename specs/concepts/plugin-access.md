@@ -20,7 +20,7 @@ if g ~= nil then
 end
 ```
 
-`ObjectList("…")` returns a table of handles (use `[1]` when you want one). Traverse: `obj:Parent()`, `obj:Count()`, `obj:Ptr(i)` (1-based), `obj:Children()`.
+Use `GetObject` for one concrete address. `ObjectList` only when you need a table of matches. Traverse: `obj:Parent()`, `obj:Count()`, `obj:Ptr(i)` (1-based), `obj:Children()`.
 
 ## Related
 

@@ -22,7 +22,7 @@ Part
         PhaserRecipeValueSource -- one or more per step (attributes / filters / preset)
 ```
 
-`PhaserRecipe` also shares `RecipeBaseProps` with StandardRecipe (`selection`, `values`, `preset`, SpeedX/FadeX/…, MAtricks). Phaser-only extras include `measure`, `playbackNShot`, `playbackDirection`, `shape`.
+`PhaserRecipe` also shares `RecipeBaseProps` with StandardRecipe. Full list (including embedded MAtricks X/Y/Z): [`recipes.md`](recipes.md). Phaser-only extras include `measure`, `playbackNShot`, `playbackDirection`, `shape`.
 
 `PhaserRecipeValueSource` props (typings): `attributes`, `shape`, `preset`, `curve`, `transX/Y/Z`, `widthX/Y/Z`, `accelX/Y/Z`, `decelX/Y/Z`, `rawValueAbs`, `rawValueRel`, `valueAbsolute`, `valueRelative`.
 

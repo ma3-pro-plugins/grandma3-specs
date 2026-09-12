@@ -25,6 +25,86 @@ Recipes live in **cue parts** and **presets**. Cue-part recipes must be cooked; 
 
 A recipe line's **Selection** must be a **group** (group number/name in the Selection column) — not a raw fixture list. Empty groups show red and will not cook. Build groups first — [`groups.md`](groups.md).
 
+
+## MAtricks on a recipe
+
+A recipe line can have a **MAtricks** pool object assigned (`matricks`). That assignment **spreads** the pool object's MAtricks properties onto the recipe row as **defaults**. The recipe also **owns** those same properties itself, so any MAtricks value can sit on the line with or without a pool object.
+
+**typings:** `StandardRecipe` = `RecipeBaseProps` = `ObjProps` + `MAtrickOnlyProps` + the recipe fields below (`grandma3-ts-types` `typings/grandMA3.DataPool/functions.d.ts` + `MAtricks.d.ts`). PhaserRecipe shares `RecipeBaseProps` and adds extras — [`phaser-recipe.md`](phaser-recipe.md). Class split StandardRecipe / PhaserRecipe is MA **2.4+** (**typings** + **observed** `SupportedFeatures.ts` `cue.phaserRecipe`).
+
+Assigns **MAtricks 1** onto recipe 1 (spreads that object's values as defaults on the row):
+
+```
+Assign MAtricks 1 At Sequence 1 Cue 2 Part 0.1
+```
+
+MAtricks properties exist **once per axis** (X, Y, Z). Those axes are the **selection grid** axes, not 3D Viewer / patch XYZ — [`concepts/operate-fixtures.md`](concepts/operate-fixtures.md) (Selection grid), [`matricks.md`](matricks.md).
+
+### Recipe properties (typings `RecipeBaseProps`)
+
+Lua `:Get` names below are **typings** (camelCase). CLI MAtricks tokens on the active selection are Official (`X`, `XBlock`, …) — [`matricks.md`](matricks.md). Confirm case on Target.
+
+`ObjProps`: `name`, `nameAndApp`, `index`.
+
+Handles / cook:
+
+| Property | Type (typings) |
+| --- | --- |
+| `selection` | Group |
+| `values` | Preset |
+| `preset` | Preset |
+| `matricks` | MAtrick (pool object; assignment spreads defaults) |
+| `filter` | World or Filter |
+| `enabled` | boolean |
+| `selectionFromValue` | boolean |
+| `selectionMode` | string |
+| `recipeTemplate` | boolean |
+| `emptyLastCooking` | boolean |
+| `failedCookedPart` | `None` \| `Group` \| `Matricks` \| `Preset` \| `Filter` \| `GroupPartlyCooked` \| `IntegratedPresetMiss` |
+| `hasAnyMatricksData` | boolean |
+| `active` | boolean |
+| `shuffleMode` | `Auto` \| `Linked` \| `Unlinked` |
+| `moveGridCursor` | `None` \| `Append X` \| `New Line` |
+| `preserveGridPositions` | boolean |
+| `presetMode` | `Default` \| `Selective` \| `Global` \| `Universal` |
+| `relative` / `relativeFade` / `relativeDelay` / `relativePhase` / `relativeSpeed` | boolean |
+| `alignRangeX` / `alignRangeY` / `alignRangeZ` | boolean (Official Selection Grid: Rx / Ry / Rz — align across the whole selection vs per row/column) |
+
+Embedded MAtricks (`MAtrickOnlyProps` — **same families on X, Y, and Z**):
+
+| Family | X | Y | Z |
+| --- | --- | --- | --- |
+| index / count | `x` | `y` | `z` |
+| Block | `xBlock` | `yBlock` | `zBlock` |
+| Group | `xGroup` | `yGroup` | `zGroup` |
+| Wings | `xWings` | `yWings` | `zWings` |
+| Width | `xWidth` | `yWidth` | `zWidth` |
+| Shuffle | `xShuffle` | `yShuffle` | `zShuffle` |
+| Shift | `xShift` | `yShift` | `zShift` |
+| fade From / To | `fadeFromX` `fadeToX` | `fadeFromY` `fadeToY` | `fadeFromZ` `fadeToZ` |
+| delay From / To | `delayFromX` `delayToX` | `delayFromY` `delayToY` | `delayFromZ` `delayToZ` |
+| speed From / To | `speedFromX` `speedToX` | `speedFromY` `speedToY` | `speedFromZ` `speedToZ` |
+| phase From / To | `phaseFromX` `phaseToX` | `phaseFromY` `phaseToY` | `phaseFromZ` `phaseToZ` |
+| invert | `invertX` | `invertY` | `invertZ` |
+
+Not per-axis on the pool object: `invertStyle` (`Pan` \| `Tilt` \| `P+T` \| `All`), `phaserTransform` (`None` \| `Mirror`).
+
+Also on the recipe (not in `MAtrickOnlyProps`): `fadeX`/`fadeY`/`fadeZ`, `delayX`/`delayY`/`delayZ`, `speedX`/`speedY`/`speedZ`, `phaseX`/`phaseY`/`phaseZ`; invert flags `xInv` `xInvB` `xInvG` `xInvW` (and `y*` / `z*`).
+
+`xBlock` also allows `None` / `No Block`; `xGroup` `None` / `No Group`; `xWings` `None` / `No Wings`; `xShuffle` `None` (typings). Y/Z Block/Group/Wings are typed as number only in the same file — confirm on Target.
+
+Other `RecipeBaseProps` (typings; several are `any`): `tags`, `previewCopy`, `initialName`, `initialMatricks`, `doShuffle`, `memoryType`, `selectionData`, `type`, `user`, `featureGroup`, `trigger`, `storedData`, `presetData`, `ownDataPresent`, `directProgrammerCooking`, `ownNonCookedDataPresent`, `mode`, `dependencies`, `references`, `maxDepth`, `action`, `generator`.
+
+Reads the assigned MAtricks handle and the row's own `x` (defaults from that object if assigned):
+
+```lua
+local rec = GetObject("Sequence 1 Cue 2 Part 0.1")
+if rec ~= nil then
+  Printf("%s x=%s", tostring(rec:Get("matricks")), tostring(rec:Get("x")))
+end
+```
+
+
 ## Store a recipe line and set its values
 
 Address a standard recipe as **`{cuePart}.{recipeIndex}`** or **`{preset}.{recipeIndex}`**. Same shape as PhaserRecipe named paths ([`phaser-recipe.md`](phaser-recipe.md)). **Observed** (production plugins / `ma_obj` `HRecipe`): creating the line is `Store` of that address; selection / values / MAtricks are **Assign … At** that address.
@@ -47,7 +127,7 @@ Assigns **dimmer preset 1.1** as that line's Values:
 Assign Preset 1.1 At Sequence 1 Cue 2 Part 0.1
 ```
 
-Assigns **MAtricks 1** onto that line (optional):
+Assigns **MAtricks 1** onto that line (spreads its values as defaults — see **MAtricks on a recipe**):
 
 ```
 Assign MAtricks 1 At Sequence 1 Cue 2 Part 0.1
@@ -178,7 +258,7 @@ ShowData().DataPools
 Resolves the handle for recipe 1 on sequence 1 cue 2 part 0:
 
 ```lua
-local rec = ObjectList("Sequence 1 Cue 2 Part 0.1")[1]
+local rec = GetObject("Sequence 1 Cue 2 Part 0.1")
 if rec ~= nil then
   Printf("%s", rec:GetClass())
 end
@@ -187,7 +267,7 @@ end
 Walks every child of that cue part (print class + index):
 
 ```lua
-local part = ObjectList("Sequence 1 Cue 2 Part 0")[1]
+local part = GetObject("Sequence 1 Cue 2 Part 0")
 if part ~= nil then
   for i = 1, part:Count() do
     local child = part[i]
@@ -203,7 +283,7 @@ local seqs = DataPool().Sequences
 Printf("seq count %d", seqs:Count())
 ```
 
-Recipe line fields plugins read (**observed** / **typings** `RecipeBaseProps`): `selection` (group handle), `values` / `preset`, `matricks`, `enabled`. Do not invent more property names — dump `GetClass()` / Help Dump / grandma3-ts-types.
+Full property list (including embedded MAtricks): **MAtricks on a recipe** above. Plugin reads use `:Get` — [`plugin-access.md`](plugin-access.md).
 
 ## GUI surfaces (facts only)
 
@@ -222,6 +302,7 @@ Pot colors (manual): green = standard cook ok (object only recipe data); violet 
 - Groups (Selection): [`groups.md`](groups.md), [`concepts/groups.md`](concepts/groups.md)
 - PhaserRecipe depth: [`phaser-recipe.md`](phaser-recipe.md)
 - Presets / cues: [`concepts/presets.md`](concepts/presets.md), [`concepts/cues-sequences.md`](concepts/cues-sequences.md)
-- MAtricks / shapes: [`concepts/matricks.md`](concepts/matricks.md), [`concepts/shapes.md`](concepts/shapes.md)
+- MAtricks / selection grid XYZ: [`matricks.md`](matricks.md), [`concepts/matricks.md`](concepts/matricks.md), [`concepts/operate-fixtures.md`](concepts/operate-fixtures.md)
+- Shapes: [`concepts/shapes.md`](concepts/shapes.md)
 - Programmer: [`concepts/programmer.md`](concepts/programmer.md)
 - Automation: [`automation.md`](automation.md)

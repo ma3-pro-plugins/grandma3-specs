@@ -52,6 +52,7 @@ Target: [`../versions.md`](../versions.md). Grammar: [`../command-line.md`](../c
 
 - [`multi-station.md`](multi-station.md) — thin pointer → [`networking.md`](networking.md) + Topic Spec [`../multi-station.md`](../multi-station.md)
 - [`plugin-access.md`](plugin-access.md) — read objects from Lua → Topic Spec [`../plugin-access.md`](../plugin-access.md)
+- Selection grid (XYZ) — heading on [`operate-fixtures.md`](operate-fixtures.md); MAtricks/recipe embed [`../matricks.md`](../matricks.md), [`../recipes.md`](../recipes.md)
 
 ## Legacy
 

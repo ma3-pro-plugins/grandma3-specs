@@ -24,6 +24,8 @@ Signatures below are from the **2.5.0.3 Help Dump** (`HelpLua`). Colon form `obj
 
 Always nil-check. `GetObject` / `FromAddr` fail closed (no handle). `ObjectList` can be empty.
 
+**`GetObject` first.** Use it when the address names one object and has no wildcard. Do not write `ObjectList("…")[1]` for a concrete address. `ObjectList` only when you need every matching handle. `GetObject` exists since MA **2.1.1.2** (**observed** `SupportedFeatures.ts`). Target examples use `GetObject`.
+
 Resolves **Group 1** (one handle):
 
 ```lua
@@ -34,11 +36,10 @@ if g == nil then
 end
 ```
 
-Resolves every object matching the address (table; may be more than one):
+Resolves **one** recipe by concrete address (`GetObject`, not `ObjectList`):
 
 ```lua
-local list = ObjectList("Sequence 1 Cue 2 Part 0.1")
-local rec = list[1]
+local rec = GetObject("Sequence 1 Cue 2 Part 0.1")
 ```
 
 Selected data pool vs numbered pool:

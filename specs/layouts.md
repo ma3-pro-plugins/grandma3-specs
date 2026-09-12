@@ -127,7 +127,7 @@ ShowData().DataPools
 Resolves layout 5 in the selected data pool:
 
 ```lua
-local layout = ObjectList("Layout 5")[1]
+local layout = GetObject("Layout 5")
 if layout ~= nil then
   Printf("%s count %d", layout:GetClass(), layout:Count())
 end

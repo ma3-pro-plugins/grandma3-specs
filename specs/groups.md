@@ -115,8 +115,10 @@ ShowData().DataPools
       Group n                    -- CLI: Group n
 ```
 
+Resolves **Group 1**:
+
 ```lua
-local g = ObjectList("Group 1")[1]
+local g = GetObject("Group 1")
 if g ~= nil then
   Printf("%s", g:GetClass())
 end
