@@ -8,6 +8,8 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/executor.html"
 
 Executors are **handles** (physical keys, knobs, faders, or on-screen virtual executors) that control other objects. A sequence is often assigned to an executor; several executors can control the same object. The executor sends commands to the object in the pool.
 
+**Depth (assign, pages, functions, special):** [`../executors.md`](../executors.md).
+
 Assign / On / Off / Go family — confirm each Keyword Spec before use. Bare sequence `Go+` also works (see [`cues-sequences.md`](cues-sequences.md)).
 
 ```
@@ -18,7 +20,7 @@ Assigns sequence 1 to executor **201** (2nd physical row: fader + key — see la
 
 ## Physical console layout
 
-Lab note for **hardware** executor numbers (grandMA3 console surface). Virtual Playback Window executors follow the same numbering model. Canonical Topic Spec (edit there if this disagrees): **[`../hardware-layout.md`](../hardware-layout.md)** (`source: lab`).
+Lab note for **hardware** executor numbers (grandMA3 console surface). Virtual Playback Window executors follow the same numbering model. Canonical Topic Spec (edit there if this disagrees): **[`../hardware-layout.md`](../hardware-layout.md)** (`source: lab`). Do not fork the row table into [`../executors.md`](../executors.md) beyond a short pointer.
 
 Executors are laid out in **4 rows** on the physical console (bottom to top):
 
@@ -39,3 +41,4 @@ So: pick **201–290** when you need a fader handle; **301–390** / **401–490
 - Sequences / cues: [`cues-sequences.md`](cues-sequences.md)
 - Pages / executor configs live in the Data Pool: [`datapools.md`](datapools.md)
 - Lab layout Spec: [`../hardware-layout.md`](../hardware-layout.md)
+- Topic Spec: [`../executors.md`](../executors.md)

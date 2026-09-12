@@ -8,6 +8,8 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/operate_fixtures.html
 
 Selection, align, clone, fixture sheet, selection grid/bar, gels, sMArt, and related operate-fixture topics. The Programmer hub is split to [`programmer.md`](programmer.md).
 
+**Depth (selection, parent/child, align, clone):** [`../operate-fixtures.md`](../operate-fixtures.md).
+
 ## Syntax pointers
 
 Selects fixtures **1 through 10** in the programmer:
@@ -24,10 +26,11 @@ Group 3
 
 Selection helpers (confirm each Spec): [`Thru`](../keywords/Thru.md), [`Plus`](../keywords/Plus.md), [`Minus`](../keywords/Minus.md), [`If`](../keywords/If.md).
 
-Align / Clone: open [`Align`](../keywords/Align.md) / [`Clone`](../keywords/Clone.md) Keyword Specs when those files exist in the index — do not invent options.
+Align / Clone: open [`Align`](../keywords/Align.md) / [`Clone`](../keywords/Clone.md) — examples and Official options in the Topic Spec ([`../operate-fixtures.md`](../operate-fixtures.md)). Do not invent options.
 
 ## Related
 
 - Programmer values: [`programmer.md`](programmer.md)
 - Patch: [`patch.md`](patch.md)
-- Store selection as a group: [`groups.md`](groups.md)
+- Store selection as a group: [`groups.md`](groups.md) / [`../groups.md`](../groups.md)
+- Topic Spec: [`../operate-fixtures.md`](../operate-fixtures.md)

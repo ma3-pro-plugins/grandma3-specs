@@ -8,6 +8,8 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/cue_sequence.html"
 
 Looks for playback live in **cues** inside **sequences**. Tracking, cue timing, MIB, recipes, store/update/copy/delete — manual subtopics.
 
+**Depth (store modes, copy/delete, playback, timing, cook, MIB notes):** [`../cues-sequences.md`](../cues-sequences.md).
+
 ## Objects
 
 | Object | Notes |
@@ -55,13 +57,14 @@ Goto Cue 5
 
 Playback keywords (Official on each Spec): `Go+` → [`Goplus`](../keywords/Goplus.md), `Go-` → [`Gominus`](../keywords/Gominus.md), [`Goto`](../keywords/Goto.md), plus Load/Pause/Off/On/Call as listed in the keyword index.
 
-Store options: [`../keywords/options/`](../keywords/options/).
+Store options: [`../keywords/options/`](../keywords/options/). Unattended store/delete/copy: [`../automation.md`](../automation.md) (`/NoConfirmation` when Official lists it).
 
 ## Related
 
 - Executors: [`executors.md`](executors.md)
-- Cue / phaser recipes: [`recipes.md`](recipes.md), [`../phaser-recipe.md`](../phaser-recipe.md) (recipe **Selection** is a group — [`groups.md`](groups.md))
+- Cue / phaser recipes: [`recipes.md`](recipes.md), [`../phaser-recipe.md`](../phaser-recipe.md) (recipe **Selection** is a group — [`groups.md`](groups.md) / [`../groups.md`](../groups.md))
 - Cue-command plugins run on the **master** — [`../multi-station.md`](../multi-station.md)
+- Topic Spec: [`../cues-sequences.md`](../cues-sequences.md)
 
 ## Curated
 

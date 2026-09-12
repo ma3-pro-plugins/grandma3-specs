@@ -10,6 +10,8 @@ Masters are **timing and level overrides**. Different families cover grand maste
 
 Address them with [`Master`](../keywords/Master.md).
 
+**Depth (categories, assign, speed, H/L/S):** [`../masters.md`](../masters.md).
+
 Assigns the **selected-sequence master** (Master 1.1) to executor 206:
 
 ```
@@ -26,9 +28,10 @@ Confirm names and indexes on the Keyword Spec — do not invent master category 
 
 ## Group Masters
 
-**Group Masters** are a separate family: a group that limits or adds to **playback of the fixtures in that group**. Details and the four kinds live on [`groups.md`](groups.md) (manual: [Group Masters](https://help.malighting.com/grandMA3/2.5/HTML/group_master.html)).
+**Group Masters** are a separate family: a group that limits or adds to **playback of the fixtures in that group**. Details and the four kinds live on [`groups.md`](groups.md) / [`../groups.md`](../groups.md) (manual: [Group Masters](https://help.malighting.com/grandMA3/2.5/HTML/group_master.html)).
 
 ## Related
 
 - Executors: [`executors.md`](executors.md)
 - Sequences: [`cues-sequences.md`](cues-sequences.md)
+- Topic Spec: [`../masters.md`](../masters.md)

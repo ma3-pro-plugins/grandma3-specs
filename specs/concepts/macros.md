@@ -10,6 +10,8 @@ Macros are **commands stored in a pool object**. A line can be a single command 
 
 Default function of [`Macro`](../keywords/Macro.md) is **Go+**: calling a macro with no function **runs** it.
 
+**Depth:** [`../macros.md`](../macros.md).
+
 This command **runs macro 1** (starts it / Go+):
 
 ```
@@ -20,6 +22,18 @@ This command **stores a new empty macro 2**:
 
 ```
 Store Macro 2
+```
+
+Imports a library macro file into **macro 42**:
+
+```
+Import Macro Library "color.xml" At Macro 42
+```
+
+Sets user variable **Green** to 5 (for use inside macro lines):
+
+```
+SetUserVariable "Green" 5
 ```
 
 Macro lines are ordinary CLI strings (bare commands). Where a macro **runs** in a session (which station): [`../multi-station.md`](../multi-station.md). Unattended lines: [`../automation.md`](../automation.md) (`/NoConfirmation`).
