@@ -8,7 +8,7 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/operate_programmer.ht
 
 Manual: the programmer is a **temporary memory** where edited values sit until stored or released. **Every user profile has a programmer.**
 
-**Depth (layers):** [`../programmer.md`](../programmer.md).
+**Topic Spec (depth — layers):** [`../programmer.md`](../programmer.md).
 
 ## Layers
 
@@ -106,3 +106,9 @@ ClearAll
 - Selection helpers: [`Thru`](../keywords/Thru.md), [`Plus`](../keywords/Plus.md), [`Minus`](../keywords/Minus.md), [`If`](../keywords/If.md), [`Park`](../keywords/Park.md).  
 - Grammar: [`../command-line.md`](../command-line.md).  
 - Cue-command vs CmdLine multi-station: [`../multi-station.md`](../multi-station.md).
+
+## Related
+
+- **Topic Spec:** [`../programmer.md`](../programmer.md)
+- Operate fixtures: [`operate-fixtures.md`](operate-fixtures.md)
+- Phasers: [`phasers.md`](phasers.md)

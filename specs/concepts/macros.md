@@ -10,7 +10,7 @@ Macros are **commands stored in a pool object**. A line can be a single command 
 
 Default function of [`Macro`](../keywords/Macro.md) is **Go+**: calling a macro with no function **runs** it.
 
-**Depth (MacroLine props Official + typings):** [`../macros.md`](../macros.md).
+**Topic Spec (depth — MacroLine props Official + typings):** [`../macros.md`](../macros.md).
 
 This command **runs macro 1** (starts it / Go+):
 
@@ -40,6 +40,7 @@ Macro lines are ordinary CLI strings (bare commands). Where a macro **runs** in 
 
 ## Related
 
+- **Topic Spec:** [`../macros.md`](../macros.md)
 - Command syntax: [`command-syntax.md`](command-syntax.md), [`../command-line.md`](../command-line.md)
 - Agenda / timed runs: [`agenda.md`](agenda.md)
 - Startup notes: [`../startup-dmxremote-agenda.md`](../startup-dmxremote-agenda.md)

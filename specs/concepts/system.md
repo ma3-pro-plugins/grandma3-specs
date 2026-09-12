@@ -8,7 +8,7 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/system.html"
 
 Manual hub for how a station (console or onPC) stands alone or expands: standalone device, locally networked devices, World Server, and parameters.
 
-**Depth** (Standalone / IdleMaster / GlobalMaster / Connected, World Server, parameters vs DMX): [`../system.md`](../system.md).
+**Topic Spec (depth — Standalone / IdleMaster / GlobalMaster / Connected, World Server, parameters vs DMX):** [`../system.md`](../system.md).
 
 ## Agent mental model
 
@@ -40,7 +40,8 @@ LeaveSession
 
 ## Curated
 
+- **Topic Spec:** [`../system.md`](../system.md)
 - Bare commands only — never include console CLI chrome (`User name[Fixture]>`).
 - Hardware executor layout (lab note): [`../hardware-layout.md`](../hardware-layout.md) (`source: lab`).
 - Repo load order: [`../versions.md`](../versions.md) → this map → Topic Spec → Keyword Spec → Help Dump.
-- Topic Spec: [`../system.md`](../system.md)
+

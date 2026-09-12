@@ -10,7 +10,7 @@ The agenda **schedules objects** (sequences, macros, plugins) or commands to run
 
 Keyword: [`Agenda`](../keywords/Agenda.md).
 
-**Depth** (view modes, entry properties, Official Assign/Label/Set examples): [`../agenda.md`](../agenda.md).
+**Topic Spec (depth — view modes, entry properties, Official Assign/Label/Set examples):** [`../agenda.md`](../agenda.md).
 
 Assigns sequence 1 to agenda event 1:
 
@@ -24,7 +24,7 @@ Startup / DMXRemote / agenda automation notes: **[`../startup-dmxremote-agenda.m
 
 ## Related
 
+- **Topic Spec:** [`../agenda.md`](../agenda.md)
 - Macros: [`macros.md`](macros.md)
 - Plugins: [`plugins.md`](plugins.md)
 - Sequences: [`cues-sequences.md`](cues-sequences.md)
-- Topic Spec: [`../agenda.md`](../agenda.md)

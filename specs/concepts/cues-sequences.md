@@ -8,7 +8,7 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/cue_sequence.html"
 
 Looks for playback live in **cues** inside **sequences**. Tracking, cue timing, MIB, recipes, store/update/copy/delete — manual subtopics.
 
-**Depth (store modes, Update/Cook Official options, MIB + Sequence props typings, no Renumber keyword):** [`../cues-sequences.md`](../cues-sequences.md).
+**Topic Spec (depth — store modes, Update/Cook Official options, MIB + Sequence props typings, no Renumber keyword):** [`../cues-sequences.md`](../cues-sequences.md).
 
 ## Objects
 
@@ -61,10 +61,10 @@ Store / Update / Cook option lists: Topic Spec [`../cues-sequences.md`](../cues-
 
 ## Related
 
+- **Topic Spec:** [`../cues-sequences.md`](../cues-sequences.md)
 - Executors: [`executors.md`](executors.md)
 - Cue / phaser recipes: [`recipes.md`](recipes.md), [`../phaser-recipe.md`](../phaser-recipe.md) (recipe **Selection** is a group — [`groups.md`](groups.md) / [`../groups.md`](../groups.md))
 - Cue-command plugins run on the **master** — [`../multi-station.md`](../multi-station.md)
-- Topic Spec: [`../cues-sequences.md`](../cues-sequences.md)
 
 ## Curated
 

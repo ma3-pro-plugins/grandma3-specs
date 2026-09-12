@@ -36,13 +36,15 @@ Every **agent-relevant** concept page (not an explicit out-of-scope stub) must i
 
 When the user flags a missing description or a buried subtopic, fix that page **and audit the rest of `specs/concepts/`** for the same gap.
 
+On concept pages, the Topic Spec link must be obvious: **Topic Spec (depth)** right under the description, and **first** in Related — never the last Related bullet.
+
 Recipe rows: a recipe line's **Selection** must be a **group**. Record that on both [`groups.md`](../../specs/concepts/groups.md) and [`recipes.md`](../../specs/concepts/recipes.md).
 
 **Groups depth** (programmer selection → store, `+` / `-` selection builds, `/Merge` `/Remove` `/Overwrite` into an existing group) lives in Topic Spec [`specs/groups.md`](../../specs/groups.md). Keep [`specs/concepts/groups.md`](../../specs/concepts/groups.md) thin with a few primary examples and a pointer.
 
 **Layouts depth** (assign/clone CLI, multipatch, Setup vs operate, element editor, encoder bar, view settings) lives in one Topic Spec [`specs/layouts.md`](../../specs/layouts.md). Do **not** split the seven manual subtopic pages into seven Specs — they are one object. Keep [`specs/concepts/layouts.md`](../../specs/concepts/layouts.md) thin with a pointer.
 
-**Hub depth (general)** — When a concept hub’s Target manual page has **child subtopics** with real CLI (or facts agents need), write **one** Topic Spec at `specs/<hub>.md`. Do **not** split those subtopic pages into separate Specs. Keep the concept page thin with a **Depth** pointer. Live map: [`specs/concepts/_index.md`](../../specs/concepts/_index.md).
+**Hub depth (general)** — When a concept hub’s Target manual page has **child subtopics** with real CLI (or facts agents need), write **one** Topic Spec at `specs/<hub>.md`. Do **not** split those subtopic pages into separate Specs. Keep the concept page thin with a **Topic Spec (depth)** pointer **immediately after the hub description**. If the page has a Related list, that Topic Spec link is the **first** item (never last). Live map: [`specs/concepts/_index.md`](../../specs/concepts/_index.md).
 
 Hubs with a Topic Spec today: `system`, `show-file-handling`, `users`, `dmx`, `patch`, `operate-fixtures`, `programmer`, `groups`, `presets`, `worlds-filters`, `matricks`, `cues-sequences`, `executors` (behavior; hardware numbers stay in [`hardware-layout.md`](../../specs/hardware-layout.md)), `masters`, `recipes` (standard recipes; PhaserRecipe stays in [`phaser-recipe.md`](../../specs/phaser-recipe.md)), `phasers` (programmer / effects; PhaserRecipe stays separate), `macros`, `agenda`, `timecode`, `layouts`, `quickeys`. Still pointer-only or out-of-scope: plugins (existing plugin Topic Specs), networking / remote-in-out, datapools, first-steps, workspace, shapes, generators, bitmap, xyz, local-settings.
 

@@ -8,7 +8,7 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/executor.html"
 
 Executors are **handles** (physical keys, knobs, faders, or on-screen virtual executors) that control other objects. A sequence is often assigned to an executor; several executors can control the same object. The executor sends commands to the object in the pool.
 
-**Depth (assign, pages, AssignmentButtonFunctionsSequence / AssignmentFaderFunctions / SpecialExecutor typings):** [`../executors.md`](../executors.md).
+**Topic Spec (depth — assign, pages, AssignmentButtonFunctionsSequence / AssignmentFaderFunctions / SpecialExecutor typings):** [`../executors.md`](../executors.md).
 
 Assign / On / Off / Go family — Keyword Specs + finite key/fader/special lists on the Topic Spec. Bare sequence `Go+` also works (see [`cues-sequences.md`](cues-sequences.md)).
 
@@ -37,8 +37,8 @@ So: pick **201–290** when you need a fader handle; **301–390** / **401–490
 
 ## Related
 
+- **Topic Spec:** [`../executors.md`](../executors.md)
 - Masters (including group masters): [`masters.md`](masters.md), [`groups.md`](groups.md)
 - Sequences / cues: [`cues-sequences.md`](cues-sequences.md)
 - Pages / executor configs live in the Data Pool: [`datapools.md`](datapools.md)
 - Lab layout Spec: [`../hardware-layout.md`](../hardware-layout.md)
-- Topic Spec: [`../executors.md`](../executors.md)

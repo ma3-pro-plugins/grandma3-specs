@@ -12,7 +12,7 @@ Using a group is a fast way to select those fixtures. Groups live in the **Group
 
 Cues and presets do **not** store a group reference; they store fixture values only.
 
-**Depth (store modes, merge/remove/overwrite, automation):** [`../groups.md`](../groups.md).
+**Topic Spec (depth — store modes, merge/remove/overwrite, automation):** [`../groups.md`](../groups.md).
 
 ## Store a group from the programmer
 
@@ -62,6 +62,6 @@ Groups can be assigned to executors as handles for that master level (see [`exec
 
 ## Related
 
+- **Topic Spec:** [`../groups.md`](../groups.md)
 - Programmer / selection: [`programmer.md`](programmer.md), [`operate-fixtures.md`](operate-fixtures.md)
 - Data pools: [`datapools.md`](datapools.md)
-- Topic Spec: [`../groups.md`](../groups.md)

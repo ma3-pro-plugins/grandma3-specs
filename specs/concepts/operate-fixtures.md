@@ -8,7 +8,7 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/operate_fixtures.html
 
 Selection, align, clone, fixture sheet, selection grid/bar, gels, sMArt, and related operate-fixture topics. The Programmer hub is split to [`programmer.md`](programmer.md).
 
-**Depth (selection, parent/child, align, clone):** [`../operate-fixtures.md`](../operate-fixtures.md).
+**Topic Spec (depth — selection, parent/child, align, clone):** [`../operate-fixtures.md`](../operate-fixtures.md).
 
 ## Syntax pointers
 
@@ -30,7 +30,7 @@ Align / Clone / Gel Official options and examples: Topic Spec [`../operate-fixtu
 
 ## Related
 
+- **Topic Spec:** [`../operate-fixtures.md`](../operate-fixtures.md)
 - Programmer values: [`programmer.md`](programmer.md)
 - Patch: [`patch.md`](patch.md)
 - Store selection as a group: [`groups.md`](groups.md) / [`../groups.md`](../groups.md)
-- Topic Spec: [`../operate-fixtures.md`](../operate-fixtures.md)

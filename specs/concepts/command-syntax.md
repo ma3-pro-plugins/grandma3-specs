@@ -8,7 +8,7 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/command_syntax_keywor
 
 The command line is how operators (and agents via OSC/macros/Lua `Cmd`) talk to the console: keywords, special characters, and identifiers.
 
-**Depth:** grammar Spec [`../command-line.md`](../command-line.md). **Token dictionary:** [`../keywords/_index.md`](../keywords/_index.md).
+**Topic Spec (depth):** grammar Spec [`../command-line.md`](../command-line.md). **Token dictionary:** [`../keywords/_index.md`](../keywords/_index.md).
 
 Basic shape (manual):
 
@@ -61,3 +61,8 @@ Abbreviations use each keyword’s shortcuts (subject to change — prefer full 
 - Do not invent options or keywords — only tokens present under [`../keywords/`](../keywords/).
 - OSC / prove loop: [`remote-in-out.md`](remote-in-out.md) → [`../osc.md`](../osc.md).
 - Programmer-oriented recipes: [`programmer.md`](programmer.md).
+
+## Related
+
+- **Topic Spec:** [`../command-line.md`](../command-line.md)
+- Keywords: [`../keywords/_index.md`](../keywords/_index.md)

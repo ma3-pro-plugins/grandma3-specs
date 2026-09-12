@@ -8,7 +8,7 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/patch.html"
 
 Fixtures must be added to the show file before they can be controlled. That happens in **Patch** (fixture types, attribute definitions, parameter list, DMX universes, stages, DMX curves, 3D placement, live patch, MVR, classes/layers).
 
-**Depth** (patch address CLI, multipatch, universe/tester, live vs full patch, stages/layers, short 3D/camera facts): [`../patch.md`](../patch.md).
+**Topic Spec (depth — patch address CLI, multipatch, universe/tester, live vs full patch, stages/layers, short 3D/camera facts):** [`../patch.md`](../patch.md).
 
 ## Syntax pointers
 
@@ -28,7 +28,7 @@ Fixture 4 Multipatch 2
 
 ## Related
 
-- Topic Spec: [`../patch.md`](../patch.md)
+- **Topic Spec:** [`../patch.md`](../patch.md)
 - Operating fixtures / selection: [`operate-fixtures.md`](operate-fixtures.md)
 - Groups: [`groups.md`](groups.md)
 - DMX in/out: [`dmx.md`](dmx.md)

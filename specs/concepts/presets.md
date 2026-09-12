@@ -10,7 +10,7 @@ A preset holds attribute/timing values for a selection and may be **referenced**
 
 Pools exist per feature group (filtered) plus All 1–5 (unfiltered). Preset modes: **Selective**, **Global**, **Universal** (manual letters S/G/U).
 
-**Depth:** [`../presets.md`](../presets.md).
+**Topic Spec (depth):** [`../presets.md`](../presets.md).
 
 ## Syntax
 
@@ -42,6 +42,7 @@ See [`Preset`](../keywords/Preset.md), [`At`](../keywords/At.md), [`Store`](../k
 
 ## Related
 
+- **Topic Spec:** [`../presets.md`](../presets.md)
 - Data pools: [`datapools.md`](datapools.md)
 - Recipes: [`recipes.md`](recipes.md) (recipe Selection must be a group)
 - Worlds / filters as input filters: [`worlds-filters.md`](worlds-filters.md)

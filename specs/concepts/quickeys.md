@@ -10,7 +10,7 @@ Quickeys are **soft versions of hardkeys and functions**. They live in the Quick
 
 Keyword: [`Quickey`](../keywords/Quickey.md).
 
-**Depth** (Edit Quickey, pool LEDs, editor Code list, pool settings): [`../quickeys.md`](../quickeys.md).
+**Topic Spec (depth — Edit Quickey, pool LEDs, editor Code list, pool settings):** [`../quickeys.md`](../quickeys.md).
 
 Opens the editor for Quickey 1:
 
@@ -22,5 +22,5 @@ Part of Data Pools: [`datapools.md`](datapools.md).
 
 ## Related
 
-- Topic Spec: [`../quickeys.md`](../quickeys.md)
+- **Topic Spec:** [`../quickeys.md`](../quickeys.md)
 - Layouts / executors: [`layouts.md`](layouts.md), [`executors.md`](executors.md)

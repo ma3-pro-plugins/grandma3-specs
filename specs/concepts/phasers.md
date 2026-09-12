@@ -15,7 +15,7 @@ They store into **cues and presets the same way static looks do**. Two ways to b
 1. **Programmer** (classic) — steps in the programmer, then `Store Cue` / `Store Preset`. Manual: [Phasers](https://help.malighting.com/grandMA3/2.5/HTML/phaser.html) (programmer steps / Step key) and [Create a Sinus Dimmer Phaser](https://help.malighting.com/grandMA3/2.5/HTML/phaser_create_dimmer.html) (ends with store into a preset or cue).
 2. **PhaserRecipe** (MA ≥ 2.4) — violet recipe lines on a cue part or preset. Depth: [`../phaser-recipe.md`](../phaser-recipe.md).
 
-**Depth:** [`../phasers.md`](../phasers.md).
+**Topic Spec (depth):** [`../phasers.md`](../phasers.md).
 
 ## Syntax
 
@@ -33,9 +33,9 @@ Fixture 1 Thru 10; At 0; Next Step; At 100; Store Cue 2 /NoConfirmation
 
 ## Related
 
+- **Topic Spec:** [`../phasers.md`](../phasers.md)
 - Programmer: [`programmer.md`](programmer.md)
 - Cues / sequences: [`cues-sequences.md`](cues-sequences.md)
 - Presets: [`presets.md`](presets.md)
 - Recipes: [`recipes.md`](recipes.md)
-- Topic Spec: [`../phasers.md`](../phasers.md)
 - PhaserRecipe: [`../phaser-recipe.md`](../phaser-recipe.md)

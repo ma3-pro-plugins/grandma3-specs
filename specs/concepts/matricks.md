@@ -10,7 +10,7 @@ MAtricks divides a fixture **selection** into sub-selections (and can shuffle th
 
 MAtricks objects live in the Data Pool. Official selection property names and typings Transform/Invert/ShuffleMode lists: Topic Spec [`../matricks.md`](../matricks.md); Keyword: [`MAtricks`](../keywords/Matricks.md).
 
-**Depth:** [`../matricks.md`](../matricks.md).
+**Topic Spec (depth):** [`../matricks.md`](../matricks.md).
 
 Sets MAtricks **X** to 2 on the active selection:
 
@@ -31,3 +31,10 @@ Call MAtricks 1
 ```
 
 See [`datapools.md`](datapools.md). Recipes can attach MAtricks: [`recipes.md`](recipes.md). Selection / groups: [`groups.md`](groups.md), [`operate-fixtures.md`](operate-fixtures.md). Keywords: [`MAtricks`](../keywords/Matricks.md), [`Shuffle`](../keywords/Shuffle.md), [`Selection`](../keywords/Selection.md).
+
+## Related
+
+- **Topic Spec:** [`../matricks.md`](../matricks.md)
+- Data pools: [`datapools.md`](datapools.md)
+- Recipes: [`recipes.md`](recipes.md)
+- Groups / selection: [`groups.md`](groups.md), [`operate-fixtures.md`](operate-fixtures.md)

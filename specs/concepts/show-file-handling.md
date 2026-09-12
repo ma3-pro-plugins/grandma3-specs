@@ -10,7 +10,7 @@ The show file holds patch, fixture types, cues, timings, 3D data, users/profiles
 
 Show files are limited to **10 GB**. Management is via the Backup menu.
 
-**Depth** (LoadShow / SaveShow / NewShow, drives, `/Type "Demo"`, backup/demo/template folders): [`../show-file-handling.md`](../show-file-handling.md).
+**Topic Spec (depth — LoadShow / SaveShow / NewShow, drives, `/Type "Demo"`, backup/demo/template folders):** [`../show-file-handling.md`](../show-file-handling.md).
 
 ## Syntax (from manual)
 
@@ -48,6 +48,6 @@ Load / Save / New / Backup & Template / Organize / Demo Shows.
 
 ## Related
 
-- Topic Spec: [`../show-file-handling.md`](../show-file-handling.md)
+- **Topic Spec:** [`../show-file-handling.md`](../show-file-handling.md)
 - Local settings: [`local-settings.md`](local-settings.md)
 - System: [`system.md`](system.md)

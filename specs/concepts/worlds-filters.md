@@ -13,7 +13,7 @@ Worlds and filters are programming / playback tools (both are pool windows). The
 
 Worlds and filters can be assigned to objects (sequence, preset) and to sheets for masking.
 
-**Depth:** [`../worlds-filters.md`](../worlds-filters.md).
+**Topic Spec (depth):** [`../worlds-filters.md`](../worlds-filters.md).
 
 Stores **world 5** from the current programmer selection / active attributes:
 
@@ -36,3 +36,9 @@ Filter 4
 Keywords: [`World`](../keywords/World.md), [`Filter`](../keywords/Filter.md). Official Filter: `Filter 4`, option `/Overwrite` only — finite lists (FilterAction, rule enums) on [`../worlds-filters.md`](../worlds-filters.md).
 
 Part of Data Pools: [`datapools.md`](datapools.md). Multi-user session: [`users.md`](users.md), [`../multi-station.md`](../multi-station.md).
+
+## Related
+
+- **Topic Spec:** [`../worlds-filters.md`](../worlds-filters.md)
+- Data pools: [`datapools.md`](datapools.md)
+- Users / session: [`users.md`](users.md), [`../multi-station.md`](../multi-station.md)

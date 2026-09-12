@@ -10,7 +10,7 @@ Masters are **timing and level overrides**. Different families cover grand maste
 
 Address them with [`Master`](../keywords/Master.md).
 
-**Depth (categories, assign, speed, H/L/S):** [`../masters.md`](../masters.md).
+**Topic Spec (depth — categories, assign, speed, H/L/S):** [`../masters.md`](../masters.md).
 
 Assigns the **selected-sequence master** (Master 1.1) to executor 206:
 
@@ -32,6 +32,6 @@ Category indexes/names and **LearnMode** / **SpeedScale** enums: Topic Spec [`..
 
 ## Related
 
+- **Topic Spec:** [`../masters.md`](../masters.md)
 - Executors: [`executors.md`](executors.md)
 - Sequences: [`cues-sequences.md`](cues-sequences.md)
-- Topic Spec: [`../masters.md`](../masters.md)
