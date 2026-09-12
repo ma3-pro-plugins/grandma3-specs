@@ -21,15 +21,15 @@ Pool/window settings (Name, Input Filter, Cue Part, Display Mode, DataPool, colo
 
 ## Preset modes (store / call)
 
-Modes: **Selective (S)**, **Global (G)**, **Universal (U)**. Each pool has a default mode (letter on the pool title). A preset can hold combinations of mode data; pool object letters show what is stored vs the active mode.
+PresetMode values (Official / typings): **Default**, **Selective (S)**, **Global (G)**, **Universal (U)**; store/update also **ForceGlobal**, **ForceUniversal**. Each pool has a default mode (letter on the pool title). A preset can hold combinations of mode data; pool object letters show what is stored vs the active mode.
 
 | Mode | Meaning (manual) |
 | --- | --- |
 | Selective | Data valid for each fixture with active stored data |
 | Global | Per fixture type; lowest-ID fixture holds shared type data; divergent fixtures add Selective |
 | Universal | Valid for all fixtures that have the stored attributes |
-
-Store/update may also use **Default** (respect pool/preset), **Force Global**, **Force Universal** (strip lower-level data on update — confirm [`/ForceGlobal`](keywords/options/Forceglobal.md), [`/ForceUniversal`](keywords/options/Forceuniversal.md)).
+| Default | Respect pool/preset default on store/update |
+| ForceGlobal / ForceUniversal | Strip lower-level data on update — [`/ForceGlobal`](keywords/options/Forceglobal.md), [`/ForceUniversal`](keywords/options/Forceuniversal.md) |
 
 Call-time temporary mode overrides (even when the preset’s stored mode would not match the selection): [`/Selective`](keywords/options/Selective.md), [`/Global`](keywords/options/Global.md), [`/Universal`](keywords/options/Universal.md).
 
@@ -45,7 +45,7 @@ Creates **preset 4.2** from the active programmer (store-mode / confirm pop-ups 
 Store Preset 4.2 /NoConfirmation
 ```
 
-Store options that affect presets (confirm each option Spec before use): [`/Embed`](keywords/options/Embed.md), [`/MAtricks`](keywords/options/Matricks.md) (store active MAtricks into the preset), [`/KeepActivation`](keywords/options/Keepactivation.md), [`/InputFilter`](keywords/options/Inputfilter.md), mode options above. Prefer explicit `/Merge` `/Overwrite` `/Remove` when storing onto an existing preset — [`keywords/Store.md`](keywords/Store.md), [`keywords/options/_index.md`](keywords/options/_index.md).
+Preset Official option keywords (complete): `/Active` `/ActiveForSelected` `/AddNewContent` `/All` `/AllForSelected` `/Ask` `/Auto` `/DMX` `/Embed` `/ForceGlobal` `/Global` `/GridMergeMode` `/InputFilter` `/KeepActivation` `/Look` `/MAtricks` `/Output` `/Overwrite` `/PhaserData` `/Programmer` `/Selective` `/Universal` — see [`keywords/Preset.md`](keywords/Preset.md). Prefer explicit Store `/Merge` `/Overwrite` `/Remove` when storing onto an existing preset — [`keywords/Store.md`](keywords/Store.md).
 
 Assign a filter (or world) as **input filter** on a preset:
 
@@ -129,7 +129,7 @@ Sets the **Name** of preset 2.3 (Official Set form; [`Label`](keywords/Label.md)
 Set Preset 2.3 Name "Stage Left"
 ```
 
-Object settings via Assign/Set (Appearance, InputFilter, Scribble, Name, MoveGridCursor, CuePart, MAgic, …): confirm tables on [`keywords/Preset.md`](keywords/Preset.md). Do not invent property names.
+Official Assign settings: Appearance, InputFilter, Scribble. Official Set: Name (text), MoveGridCursor (`Yes`|`No`), CuePart (`Default` or part number), MAgic (`Yes`|`No`). PresetMode and StoredData are read-only. Tables: [`keywords/Preset.md`](keywords/Preset.md).
 
 ## Related
 

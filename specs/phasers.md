@@ -62,7 +62,7 @@ Deletes **step 3** from the programmer:
 Delete Step 3
 ```
 
-Hold **Step** and tap presets to stamp steps (same-attribute preset = next step; different attributes add to the current step) — that path is GUI; the CLI equivalent is `Next Step` / `At Preset …`. Confirm tokens on [`keywords/_index.md`](keywords/_index.md) (`Step`, `Next`, `Previous`, `Phase`, `Speed`, `Width`, `Transition`, Accel/Decel). Do not invent layer names.
+Hold **Step** and tap presets to stamp steps (same-attribute preset = next step; different attributes add to the current step) — that path is GUI; the CLI equivalent is `Next Step` / `At Preset …`. Layer keywords: **Step**, **Next**, **Previous**, **Phase**, **Speed**, **Width**, **Transition**, **Accel**, **Decel** ([`keywords/_index.md`](keywords/_index.md)).
 
 ## Stomp and Sync
 

@@ -21,7 +21,7 @@ Edit Quickey 1
 
 General form (Official): `[Function] Quickey ["Quickey_Name" or Quickey_Number]`.
 
-Do not invent Store/Assign/Label forms for Quickey unless Keyword Specs show them. Confirm [`Assign`](keywords/Assign.md) before `Assign Quickey … At …`.
+Official CLI example is **`Edit Quickey 1` only** ([`Quickey`](keywords/Quickey.md)). AssignmentButtonFunctionsQuickey (typings): `Empty` \| `Go+`. Prefer [`Assign`](keywords/Assign.md) Official forms when assigning a Quickey to Xkeys / layouts / executors.
 
 ## Pool object behavior (manual facts)
 
@@ -35,7 +35,7 @@ Tap a pool object to activate/deactivate. **MA1** / **MA2** Quickeys can be latc
 
 ## Editor settings (GUI)
 
-Name, Scribble, Appearance, Tags, Note, Lock, **Code**. **Code** opens the hardkey/function list (filterable). Selecting a code first takes precedence over the function name for the pool label. Individual codes are documented under **Keys** in the manual — do not invent code names in Specs.
+Pool object fields: Name, Scribble, Appearance, Tags, Note, Lock, **Code**. **Code** opens the hardkey/function list (filterable). Selecting a code first takes precedence over the function name for the pool label. Individual codes are documented under **Keys** in the manual (list codes from that chapter when needed).
 
 Creating a Quickey is primarily **GUI** (Swipey → Edit on an empty pool object → Code → pick function). Example workflow uses `Fixture 9 Thru 13` then taps FULL / BLIND Quickeys — fixture selection is ordinary CLI:
 

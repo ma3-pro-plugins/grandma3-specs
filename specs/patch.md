@@ -11,7 +11,7 @@ Manual hub + subtopics (one object, not eighteen Specs): [What are Fixtures](htt
 
 Fixtures must exist in **Patch** before they can be controlled. The Patch menu also exposes Fixture Types, Attribute Definitions, Parameter List, DMX Universes, Stages, and DMX Curves. Condensed vs Full columns; Split View filters by Fixture Types / DMX Universes / Filters / Hierarchy / ID Types / Layers / Classes. Optional **Show 3D Positions** pane (does not show live DMX output).
 
-Adding fixtures, editing fixture types, MVR export options, Live Patch column edits, 3D placement tools, render quality, and most stage/class/layer setup are **GUI**. Do not invent `Set … Property` names for those. Prefer evidenced CLI below.
+Adding fixtures, editing fixture types, MVR export options, Live Patch column edits, 3D placement tools, render quality, and most stage/class/layer setup are **GUI**. Prefer evidenced CLI below (Keyword Official / tables in this Spec).
 
 ## Patch address (CLI)
 
@@ -109,7 +109,19 @@ Selects all fixtures linked to layer **Backtruss**:
 SelectFixtures FixtureLayer "Backtruss"
 ```
 
-[`FixtureClass`](keywords/FixtureClass.md) is the class-side object keyword — confirm Official before inventing `SelectFixtures FixtureClass …` forms beyond what that Spec shows.
+[`FixtureClass`](keywords/FixtureClass.md) Official examples (options [`/All`](keywords/options/All.md), [`/OddEven`](keywords/options/Oddeven.md), [`/Single`](keywords/options/Single.md)):
+
+```
+AutoCreate FixtureClass "Spots" At Group 301
+```
+
+Creates **group 301** containing all fixtures of class Spots.
+
+```
+SelectFixture FixtureClass "Spots"
+```
+
+Selects all fixtures of class Spots (Official spelling `SelectFixture`).
 
 ## Stages
 
@@ -144,12 +156,18 @@ Window showing actual DMX output (sequences, programmer, merged in, masters). Ab
 - Position via Live Patch XYZ/rotation columns, 3D Viewer Setup tools (Line / Grid / Circle arrange), or position calibration — **GUI**. Axes: +X stage left, +Y upstage, +Z up; meters and degrees only.
 - **3D Viewer**: Setup vs operate; stage box/floor; cameras from Camera Pool; title-bar Stage / Render Quality / Camera. While shaders compile, yellow status text.
 - **Render Quality**: pool object selected by 3D Viewer (Beam modes No Beam → High Fancy, Shadow, Gobo, etc.) — **GUI** pool/editor.
-- **Camera Pool**: default cameras; locked **Auto** camera frames selection (or whole stage). Edit Camera pop-up is **GUI** (FOV, Roll, Mode 3D/2D, …). Do not invent `Set Camera …` properties.
+- **Camera Pool**: default cameras; locked **Auto** camera frames selection (or whole stage). Edit Camera pop-up is **GUI**. Camera Official has **no Set-property table**. Official CLI: `Camera 1`, `Camera "Front"`. CameraType (typings — grandma3-ts-types, MA 2.4.2.2 dump): Auto, Front, Front/Left, Left, Back/Left, Back, Back/Right, Right, Front/Right, Top. CameraMode (typings): 3D, 2D_Front, 2D_Left, 2D_Top, 2D_Right, 2D_Back.
 
-Selects camera **3** (manual also shows `Select Camera 3`):
+Selects camera **3**:
 
 ```
 Camera 3
+```
+
+Selects the **Front** camera:
+
+```
+Camera "Front"
 ```
 
 ## Related
