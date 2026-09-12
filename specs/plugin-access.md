@@ -110,6 +110,7 @@ Echo(parent:GetClass())
 
 ## Related
 
+- Lua Enums catalog: [`enums.md`](enums.md)
 - Object API / which Help Dump to open: [`object-api.md`](object-api.md)
 - Hooks (`HookObjectChange` needs a handle): [`hooks.md`](hooks.md)
 - Per-object trees: [`recipes.md`](recipes.md), [`layouts.md`](layouts.md), [`groups.md`](groups.md), [`phaser-recipe.md`](phaser-recipe.md)

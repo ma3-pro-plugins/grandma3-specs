@@ -12,6 +12,8 @@ Narrative Specs here follow **Target** in [`versions.md`](versions.md) (latest a
 
 **Which file to open** — Read Target from [`versions.md`](versions.md). Use the `grandMA3_lua_functions X.X.X.X.txt` whose version suffix equals Target (or the closest available dump if a brand-new patch is not exported yet).
 
+**Lua Enums** (`Enums.Name.Member`, all members): [`enums.md`](enums.md).
+
 **Read objects** (`GetObject` / `ObjectList` / `:Get` / parent-children): [`plugin-access.md`](plugin-access.md).
 
 **PhaserRecipe (MA ≥ 2.4)** — Cue-part/preset phaser recipes, named addressing, value sources, presets as step values, `<From Preset>` attributes: [`phaser-recipe.md`](phaser-recipe.md).

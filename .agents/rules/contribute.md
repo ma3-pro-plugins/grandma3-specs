@@ -82,6 +82,8 @@ Ingest a `SupportedFeatures` flag as a fact on that Spec (same as issue #5 / `li
 
 Topic Spec / concept frontmatter `source`: `manual` | `observed` | `lab` | `mixed` (see CONTEXT). Optional `manual_url`.
 
+**Lua Enums** — Usage Spec [`specs/enums.md`](../../specs/enums.md). The member catalog is a **typings** dump under `specs/enums/` (filename has the MA version). Regenerate from `grandma3-ts-types` `Enums.d.ts`; do not hand-edit members.
+
 ## Keywords
 
 - Replace `## Official` only when crawling; never overwrite `## Extra` or blank `introduced`.

@@ -30,6 +30,7 @@ Open the smallest file that fits the task. Specs are facts for **Target**. Skill
 - Official Help Dumps and how to pick one: [`specs/object-api.md`](specs/object-api.md)
 - Plugin lifecycle (Lua VM, ReloadUI, signalTable, show load): [`specs/plugins.md`](specs/plugins.md)
 - Plugin access (read objects: GetObject / ObjectList / Get / parent-children): [`specs/plugin-access.md`](specs/plugin-access.md)
+- Lua Enums (`Enums.Name.Member` catalog): [`specs/enums.md`](specs/enums.md)
 - RemoteCommand behavior and quoting: [`specs/remote-command.md`](specs/remote-command.md)
 
 ## Specs — by topic

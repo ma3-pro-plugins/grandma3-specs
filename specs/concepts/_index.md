@@ -39,7 +39,7 @@ Target: [`../versions.md`](../versions.md). Grammar: [`../command-line.md`](../c
 | Phasers (`phaser.html`) | [`phasers.md`](phasers.md) | [`../phasers.md`](../phasers.md), [`../phaser-recipe.md`](../phaser-recipe.md) |
 | Macros (`macros.html`) | [`macros.md`](macros.md) | [`../macros.md`](../macros.md) |
 | Agenda (`agenda.html`) | [`agenda.md`](agenda.md) | [`../agenda.md`](../agenda.md), [`../startup-dmxremote-agenda.md`](../startup-dmxremote-agenda.md) |
-| Plugins (`plugins.html`) | [`plugins.md`](plugins.md) | [`../plugins.md`](../plugins.md), [`../object-api.md`](../object-api.md), [`../hooks.md`](../hooks.md), [`../message-queue.md`](../message-queue.md), [`../addonvars.md`](../addonvars.md), [`../plugin-access.md`](../plugin-access.md) |
+| Plugins (`plugins.html`) | [`plugins.md`](plugins.md) | [`../plugins.md`](../plugins.md), [`../object-api.md`](../object-api.md), [`../hooks.md`](../hooks.md), [`../message-queue.md`](../message-queue.md), [`../addonvars.md`](../addonvars.md), [`../plugin-access.md`](../plugin-access.md), [`../enums.md`](../enums.md) |
 | Data Pools (`datapool.html`) | [`datapools.md`](datapools.md) | — |
 | Remote In and Out (`remote_inputs.html`) | [`remote-in-out.md`](remote-in-out.md) | [`../osc.md`](../osc.md), [`../remote-command.md`](../remote-command.md), [`../multi-station.md`](../multi-station.md) |
 | Timecode (`timecode.html`) | [`timecode.md`](timecode.md) | [`../timecode.md`](../timecode.md) |

@@ -15,6 +15,7 @@ Agents must treat topic Specs and live Keyword Specs as truth for **Target** onl
 | Keyword Specs (general + option) | [`keywords/`](keywords/) — only live dictionary; Official + Extra in each file |
 | Archived keywords | [`keywords/archive/`](keywords/archive/) — gone from Target, or deprecated ≥ 24 months |
 | Help Dump (current layout) | [`lua-functions/grandMA3_lua_functions 2.5.0.3.txt`](lua-functions/grandMA3_lua_functions%202.5.0.3.txt) |
+| Lua Enums catalog (typings, MA 2.5.0.2) | [`enums/grandMA3_lua_enums 2.5.0.2.md`](enums/grandMA3_lua_enums%202.5.0.2.md) — how to use: [`enums.md`](enums.md) |
 | Help Dump (intended layout) | `raw/2.5.0.3/lua-functions.txt` (not migrated yet) |
 | Release notes (MD) | [`release-notes/Release_Notes_v2.5.0.3.md`](release-notes/Release_Notes_v2.5.0.3.md) |
 
