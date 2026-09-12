@@ -84,7 +84,7 @@ ClearAll
 
 - [`At`](../keywords/At.md) applies values live in the programmer. Relative `At` with `+`/`-`: see [`Plus`](../keywords/Plus.md).  
 - [`Store`](../keywords/Store.md) / [`Update`](../keywords/Update.md) write show data (only **active** programmer values store).  
-- Store options (`/Merge`, `/Overwrite`, `/CueOnly`, `/Look`, `/Selective`, …): [`../keywords/options/`](../keywords/options/) — do not invent names.
+- Store options: full Official list on [`Store`](../keywords/Store.md) Option Keywords (e.g. `/Merge`, `/Overwrite`, `/CueOnly`, `/Look`, `/Selective`, `/NoConfirmation`, …) — also [`../keywords/options/`](../keywords/options/).
 
 ## Curated
 

@@ -40,7 +40,7 @@ SaveShow
 NewShow "La Bohème"
 ```
 
-Confirm keywords on Keyword Specs before use — [`../keywords/_index.md`](../keywords/_index.md).
+Keywords: [`LoadShow`](../keywords/Loadshow.md), [`SaveShow`](../keywords/Saveshow.md), [`NewShow`](../keywords/Newshow.md). There is no `DeleteShow` keyword (Backup menu Delete GUI). BackupBrowserFilter / options: [`../show-file-handling.md`](../show-file-handling.md).
 
 ## Subtopics (manual)
 

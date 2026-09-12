@@ -33,6 +33,6 @@ Calls **filter 4**:
 Filter 4
 ```
 
-Keywords: [`World`](../keywords/World.md), [`Filter`](../keywords/Filter.md). Do not invent filter syntax.
+Keywords: [`World`](../keywords/World.md), [`Filter`](../keywords/Filter.md). Official Filter: `Filter 4`, option `/Overwrite` only — finite lists (FilterAction, rule enums) on [`../worlds-filters.md`](../worlds-filters.md).
 
 Part of Data Pools: [`datapools.md`](datapools.md). Multi-user session: [`users.md`](users.md), [`../multi-station.md`](../multi-station.md).

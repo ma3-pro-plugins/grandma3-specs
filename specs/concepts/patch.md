@@ -12,7 +12,7 @@ Fixtures must be added to the show file before they can be controlled. That happ
 
 ## Syntax pointers
 
-After fixtures exist, address them with [`Fixture`](../keywords/Fixture.md) (and store selections as [`Group`](../keywords/Group.md) — [`groups.md`](groups.md)). Patch-related tokens: [`../keywords/_index.md`](../keywords/_index.md). Do not invent Patch menu option names.
+After fixtures exist, address them with [`Fixture`](../keywords/Fixture.md) (and store selections as [`Group`](../keywords/Group.md) — [`groups.md`](groups.md)). Patch CLI, FixtureClass/Camera Official examples, and typings CameraType/CameraMode: Topic Spec [`../patch.md`](../patch.md); keywords [`../keywords/_index.md`](../keywords/_index.md).
 
 Patches **fixture 2** to universe **3**, address **123**:
 
