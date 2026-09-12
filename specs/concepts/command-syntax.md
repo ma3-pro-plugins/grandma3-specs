@@ -1,5 +1,6 @@
 ---
 title: Command Syntax and Keywords
+topic_spec: ../command-line.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/command_syntax_keywords.html"
 ---

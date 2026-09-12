@@ -1,5 +1,6 @@
 ---
 title: Layouts
+topic_spec: ../layouts.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/layouts.html"
 ---

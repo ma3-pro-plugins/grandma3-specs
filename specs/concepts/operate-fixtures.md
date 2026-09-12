@@ -1,5 +1,6 @@
 ---
 title: Operate Fixtures
+topic_spec: ../operate-fixtures.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/operate_fixtures.html"
 ---

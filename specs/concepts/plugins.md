@@ -1,5 +1,11 @@
 ---
 title: Plugins
+topic_spec:
+  - ../plugins.md
+  - ../object-api.md
+  - ../hooks.md
+  - ../message-queue.md
+  - ../addonvars.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/plugins.html"
 ---

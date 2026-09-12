@@ -1,5 +1,6 @@
 ---
 title: Agenda
+topic_spec: ../agenda.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/agenda.html"
 ---

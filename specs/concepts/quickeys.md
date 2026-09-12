@@ -1,5 +1,6 @@
 ---
 title: Quickeys
+topic_spec: ../quickeys.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/quickeys.html"
 ---

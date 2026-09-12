@@ -1,5 +1,8 @@
 ---
 title: Executors
+topic_spec:
+  - ../executors.md
+  - ../hardware-layout.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/executor.html"
 ---

@@ -1,5 +1,6 @@
 ---
 title: Show File Handling
+topic_spec: ../show-file-handling.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/show_file_management.html"
 ---

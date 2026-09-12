@@ -1,5 +1,9 @@
 ---
 title: Remote In and Out
+topic_spec:
+  - ../osc.md
+  - ../remote-command.md
+  - ../multi-station.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/remote_inputs.html"
 ---

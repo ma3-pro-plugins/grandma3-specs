@@ -1,5 +1,6 @@
 ---
 title: Cues and Sequences
+topic_spec: ../cues-sequences.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/cue_sequence.html"
 ---

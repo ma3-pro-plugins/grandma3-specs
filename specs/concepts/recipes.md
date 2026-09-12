@@ -1,5 +1,8 @@
 ---
 title: Recipes
+topic_spec:
+  - ../recipes.md
+  - ../phaser-recipe.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/recipes.html"
 ---

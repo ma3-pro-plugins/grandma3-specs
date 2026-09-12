@@ -1,5 +1,6 @@
 ---
 title: Patch and Fixture Setup
+topic_spec: ../patch.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/patch.html"
 ---

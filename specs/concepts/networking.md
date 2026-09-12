@@ -1,5 +1,8 @@
 ---
 title: Networking
+topic_spec:
+  - ../multi-station.md
+  - ../api-objects-network.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/network.html"
 ---

@@ -1,5 +1,8 @@
 ---
 title: Single User and Multi User Systems
+topic_spec:
+  - ../users.md
+  - ../multi-station.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/user.html"
 ---

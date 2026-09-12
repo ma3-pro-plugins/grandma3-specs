@@ -1,5 +1,8 @@
 ---
 title: Phasers
+topic_spec:
+  - ../phasers.md
+  - ../phaser-recipe.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/phaser.html"
 ---

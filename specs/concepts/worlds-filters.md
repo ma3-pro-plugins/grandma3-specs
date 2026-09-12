@@ -1,5 +1,6 @@
 ---
 title: Worlds and Filters
+topic_spec: ../worlds-filters.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/worldfilter.html"
 ---

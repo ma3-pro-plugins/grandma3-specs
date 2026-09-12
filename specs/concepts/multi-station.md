@@ -1,5 +1,6 @@
 ---
 title: Multi-station (alias)
+topic_spec: ../multi-station.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/network_session.html"
 ---

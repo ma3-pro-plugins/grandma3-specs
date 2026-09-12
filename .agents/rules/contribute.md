@@ -17,7 +17,7 @@ Do **not** mass-move Topic Specs into `concepts/`.
 
 Concept pages under `specs/concepts/` use **kebab filenames that mirror grandMA3 help.html chapter hubs** (agent-relevant chapters), not ad-hoc subsystem nicknames. Live map: [`specs/concepts/_index.md`](../../specs/concepts/_index.md). Old filenames may remain under `specs/concepts/_legacy/` for reference only.
 
-1. **Structure first** — add/adjust the chapter page to match the Target manual hub (`manual_url` to that hub HTML). Frontmatter: `title`, `source: mixed` (or other provenance), `manual_url`.
+1. **Structure first** — add/adjust the chapter page to match the Target manual hub (`manual_url` to that hub HTML). Frontmatter: `title`, `topic_spec` (relative path or YAML list to the Topic Spec(s); omit if the hub has none), `source: mixed` (or other provenance), `manual_url`. Put `topic_spec` immediately after `title`.
 2. **GUI → syntax** — rewrite operator/GUI how-tos as command-line examples using **only** tokens that exist under `specs/keywords/`. No images. Bare commands (strip CLI chrome). Never invent keywords or options.
 3. **Then integrate curated** — fold useful bits from `_legacy/` and from Topic Specs into short **Curated** / Extra-style sections on the matching new page. Do not invent facts; link Topic Specs for depth (especially multi-station, OSC, plugins, PhaserRecipe).
 
@@ -36,7 +36,7 @@ Every **agent-relevant** concept page (not an explicit out-of-scope stub) must i
 
 When the user flags a missing description or a buried subtopic, fix that page **and audit the rest of `specs/concepts/`** for the same gap.
 
-On concept pages, the Topic Spec link must be obvious: **Topic Spec (depth)** right under the description, and **first** in Related — never the last Related bullet.
+On concept pages, the Topic Spec link must be obvious: `topic_spec` in the YAML (right after `title`), a **Topic Spec (depth)** line under the description, and **first** in Related — never the last Related bullet.
 
 Recipe rows: a recipe line's **Selection** must be a **group**. Record that on both [`groups.md`](../../specs/concepts/groups.md) and [`recipes.md`](../../specs/concepts/recipes.md).
 
@@ -44,7 +44,7 @@ Recipe rows: a recipe line's **Selection** must be a **group**. Record that on b
 
 **Layouts depth** (assign/clone CLI, multipatch, Setup vs operate, element editor, encoder bar, view settings) lives in one Topic Spec [`specs/layouts.md`](../../specs/layouts.md). Do **not** split the seven manual subtopic pages into seven Specs — they are one object. Keep [`specs/concepts/layouts.md`](../../specs/concepts/layouts.md) thin with a pointer.
 
-**Hub depth (general)** — When a concept hub’s Target manual page has **child subtopics** with real CLI (or facts agents need), write **one** Topic Spec at `specs/<hub>.md`. Do **not** split those subtopic pages into separate Specs. Keep the concept page thin with a **Topic Spec (depth)** pointer **immediately after the hub description**. If the page has a Related list, that Topic Spec link is the **first** item (never last). Live map: [`specs/concepts/_index.md`](../../specs/concepts/_index.md).
+**Hub depth (general)** — When a concept hub’s Target manual page has **child subtopics** with real CLI (or facts agents need), write **one** Topic Spec at `specs/<hub>.md`. Do **not** split those subtopic pages into separate Specs. Keep the concept page thin with `topic_spec` in the YAML plus a **Topic Spec (depth)** pointer **immediately after the hub description**. If the page has a Related list, that Topic Spec link is the **first** item (never last). Live map: [`specs/concepts/_index.md`](../../specs/concepts/_index.md).
 
 Hubs with a Topic Spec today: `system`, `show-file-handling`, `users`, `dmx`, `patch`, `operate-fixtures`, `programmer`, `groups`, `presets`, `worlds-filters`, `matricks`, `cues-sequences`, `executors` (behavior; hardware numbers stay in [`hardware-layout.md`](../../specs/hardware-layout.md)), `masters`, `recipes` (standard recipes; PhaserRecipe stays in [`phaser-recipe.md`](../../specs/phaser-recipe.md)), `phasers` (programmer / effects; PhaserRecipe stays separate), `macros`, `agenda`, `timecode`, `layouts`, `quickeys`. Still pointer-only or out-of-scope: plugins (existing plugin Topic Specs), networking / remote-in-out, datapools, first-steps, workspace, shapes, generators, bitmap, xyz, local-settings.
 

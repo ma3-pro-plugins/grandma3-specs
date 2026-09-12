@@ -1,5 +1,6 @@
 ---
 title: DMX In and Out
+topic_spec: ../dmx.md
 source: mixed
 manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/dmx.html"
 ---
