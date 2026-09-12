@@ -10,6 +10,8 @@ The show file holds patch, fixture types, cues, timings, 3D data, users/profiles
 
 Show files are limited to **10 GB**. Management is via the Backup menu.
 
+**Depth** (LoadShow / SaveShow / NewShow, drives, `/Type "Demo"`, backup/demo/template folders): [`../show-file-handling.md`](../show-file-handling.md).
+
 ## Syntax (from manual)
 
 Open Backup menu:
@@ -24,8 +26,28 @@ Select a drive (internal = Drive 1; first USB = Drive 2):
 Select Drive 2
 ```
 
-Confirm `Menu` / `Select` / `Drive` on Keyword Specs before use — [`../keywords/_index.md`](../keywords/_index.md).
+Load / save / new (see Topic Spec for options):
+
+```
+LoadShow "MacBeth"
+```
+
+```
+SaveShow
+```
+
+```
+NewShow "La Bohème"
+```
+
+Confirm keywords on Keyword Specs before use — [`../keywords/_index.md`](../keywords/_index.md).
 
 ## Subtopics (manual)
 
 Load / Save / New / Backup & Template / Organize / Demo Shows.
+
+## Related
+
+- Topic Spec: [`../show-file-handling.md`](../show-file-handling.md)
+- Local settings: [`local-settings.md`](local-settings.md)
+- System: [`system.md`](system.md)

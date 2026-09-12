@@ -12,6 +12,8 @@ A recipe line's **Selection** is a **group**. Groups are a basic building block 
 
 Recipes can live in cue parts and in presets. Cue-part recipes must be cooked; preset recipes cook automatically. Values stored directly in a cue part outrank that part's recipe; values stored in a preset outrank that preset's recipe.
 
+**Depth** (Cook / EditRecipe / Store / CleanUp `/Type "Recipe"`, pot icons, Recipe Template): [`../recipes.md`](../recipes.md).
+
 ## PhaserRecipe depth
 
 Automation/API for PhaserRecipe (MA ≥ 2.4, distinct from StandardRecipe / `HRecipe`): **[`../phaser-recipe.md`](../phaser-recipe.md)**.
@@ -24,3 +26,4 @@ Phaser editor orientation: [`phasers.md`](phasers.md).
 - Presets: [`presets.md`](presets.md)
 - Cues / sequences: [`cues-sequences.md`](cues-sequences.md)
 - MAtricks: [`matricks.md`](matricks.md)
+- Topic Spec: [`../recipes.md`](../recipes.md)

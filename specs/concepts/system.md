@@ -8,6 +8,8 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/system.html"
 
 Manual hub for how a station (console or onPC) stands alone or expands: standalone device, locally networked devices, World Server, and parameters.
 
+**Depth** (Standalone / IdleMaster / GlobalMaster / Connected, World Server, parameters vs DMX): [`../system.md`](../system.md).
+
 ## Agent mental model
 
 A **station** holds a show file. Automation usually enters via:
@@ -23,6 +25,12 @@ A **station** holds a show file. Automation usually enters via:
 | **Playback** | Sequences on executors — [`cues-sequences.md`](cues-sequences.md), [`executors.md`](executors.md) |
 | **Session** | Optional multi-station link — [`networking.md`](networking.md) → [`../multi-station.md`](../multi-station.md) |
 
+Leave the current session:
+
+```
+LeaveSession
+```
+
 ## Subtopics (manual)
 
 - Standalone Device
@@ -35,3 +43,4 @@ A **station** holds a show file. Automation usually enters via:
 - Bare commands only — never include console CLI chrome (`User name[Fixture]>`).
 - Hardware executor layout (lab note): [`../hardware-layout.md`](../hardware-layout.md) (`source: lab`).
 - Repo load order: [`../versions.md`](../versions.md) → this map → Topic Spec → Keyword Spec → Help Dump.
+- Topic Spec: [`../system.md`](../system.md)

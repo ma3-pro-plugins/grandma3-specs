@@ -16,7 +16,21 @@ Sessions may run single-user or multi-user.
 
 Rights span admin down to view-only. Preview programmer caveat in session: see [`programmer.md`](programmer.md).
 
+**Depth** (login/rights CLI, screen configs, ownership): [`../users.md`](../users.md).
+
 Session routing / where commands run: [`../multi-station.md`](../multi-station.md).
+
+Logs in as **Admin**:
+
+```
+User Admin
+```
+
+Lists ownership locks in the session:
+
+```
+ListOwnership
+```
 
 ## Subtopics (manual)
 
