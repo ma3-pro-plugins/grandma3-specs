@@ -7,9 +7,9 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/recipes.html"
 
 Concept map (thin): [`concepts/recipes.md`](concepts/recipes.md).
 
-Manual hub + subtopics (one Spec for the hub — **standard** / cue+preset recipes): [Recipes](https://help.malighting.com/grandMA3/2.5/HTML/recipes.html), [Cue Recipe](https://help.malighting.com/grandMA3/2.5/HTML/cue_recipe.html), [Preset Recipe](https://help.malighting.com/grandMA3/2.5/HTML/presets_recipes.html), [Recipe Editor Window](https://help.malighting.com/grandMA3/2.5/HTML/recipe-editor-window.html), [Edit Recipe Mode](https://help.malighting.com/grandMA3/2.5/HTML/edit-recipe-mode.html), [Recipe Editor (sheet)](https://help.malighting.com/grandMA3/2.5/HTML/recipe-sheet.html).
+Manual hub + subtopics (one Spec for the hub — **standard** / cue+preset recipes): [Recipes](https://help.malighting.com/grandMA3/2.5/HTML/recipes.html), [Cue Recipe](https://help.malighting.com/grandMA3/2.5/HTML/cue_recipe.html), [Preset Recipe](https://help.malighting.com/grandMA3/2.5/HTML/presets_recipes.html). GUI-only pages (Recipe Editor Window, Edit Recipe Mode, Recipe sheet) are not elaborated here.
 
-**PhaserRecipe** (violet lines, MA ≥ 2.4, Object API / named addressing) stays in **[`phaser-recipe.md`](phaser-recipe.md)** — link it; do **not** copy its property tables here. `Store Recipe` / Cmd store creates a **StandardRecipe** (`HRecipe`), not a PhaserRecipe.
+**PhaserRecipe** (violet lines, MA ≥ 2.4, Object API / named addressing) stays in **[`phaser-recipe.md`](phaser-recipe.md)** — link it; do **not** copy its property tables here. `Store` of `{cuePart}.{n}` / Cmd store creates a **StandardRecipe** (`HRecipe`), not a PhaserRecipe.
 
 ## What a recipe is
 
@@ -25,9 +25,67 @@ Recipes live in **cue parts** and **presets**. Cue-part recipes must be cooked; 
 
 A recipe line's **Selection** must be a **group** (group number/name in the Selection column) — not a raw fixture list. Empty groups show red and will not cook. Build groups first — [`groups.md`](groups.md).
 
+## Store a recipe line and set its values
+
+Address a standard recipe as **`{cuePart}.{recipeIndex}`** or **`{preset}.{recipeIndex}`**. Same shape as PhaserRecipe named paths ([`phaser-recipe.md`](phaser-recipe.md)). **Observed** (production plugins / `ma_obj` `HRecipe`): creating the line is `Store` of that address; selection / values / MAtricks are **Assign … At** that address.
+
+Creates **standard recipe 1** on cue 2 part 0 of sequence 1 (empty line):
+
+```
+Store Sequence 1 Cue 2 Part 0.1 /NoConfirmation
+```
+
+Assigns **group 1** as that line's Selection:
+
+```
+Assign Group 1 At Sequence 1 Cue 2 Part 0.1
+```
+
+Assigns **dimmer preset 1.1** as that line's Values:
+
+```
+Assign Preset 1.1 At Sequence 1 Cue 2 Part 0.1
+```
+
+Assigns **MAtricks 1** onto that line (optional):
+
+```
+Assign MAtricks 1 At Sequence 1 Cue 2 Part 0.1
+```
+
+Second line on the **same cue part**, same group, **color** preset 4.1:
+
+```
+Store Sequence 1 Cue 2 Part 0.2 /NoConfirmation; Assign Group 1 At Sequence 1 Cue 2 Part 0.2; Assign Preset 4.1 At Sequence 1 Cue 2 Part 0.2
+```
+
+On the **selected** sequence, cue 2 part 0 recipe 1 is the same object (shorter form):
+
+```
+Store Cue 2 Part 0.1 /NoConfirmation
+```
+
+Into a **preset** (recipe 1 of preset 4.2):
+
+```
+Store Preset 4.2.1 /NoConfirmation
+```
+
+```
+Assign Group 1 At Preset 4.2.1
+```
+
+```
+Assign Preset 4.1 At Preset 4.2.1
+```
+
+`Set … Property "enabled"` / `"selection"` / `"values"` is used in plugins (**observed**). Prefer **Assign** for group / preset / MAtricks handles; confirm any `Set Property` token on the desk before automating.
+
+Unattended store/cook: [`automation.md`](automation.md) — name the store/cook mode and append [`/NoConfirmation`](keywords/options/Noconfirmation.md) when Official lists it.
+
 ## Cook (standard recipes)
 
-[`Cook`](keywords/Cook.md) cooks recipes on an object without opening the editor. **Cook Official options:** [`/Merge`](keywords/options/Merge.md), [`/MergeLowPriority`](keywords/options/Mergelowpriority.md), [`/Overwrite`](keywords/options/Overwrite.md), [`/Remove`](keywords/options/Remove.md), `/Restart` (Cook Official). Plus [`/NoConfirmation`](keywords/options/Noconfirmation.md) (option Spec lists Cook).
+[`Cook`](keywords/Cook.md) cooks recipes on an object without opening the editor. **Cook Official options:** [`/Merge`](keywords/options/Merge.md), [`/MergeLowPriority`](keywords/options/Mergelowpriority.md), [`/Overwrite`](keywords/options/Overwrite.md), [`/Remove`](keywords/options/Remove.md), `/Restart` (Cook Official). Plus [`/NoConfirmation`](keywords/options/Noconfirmation.md) (option Spec lists Cook). Cue-part cook without an option **opens a pop-up** (manual).
 
 Cooks dimmer preset 1.1:
 
@@ -35,51 +93,29 @@ Cooks dimmer preset 1.1:
 Cook Preset 1.1
 ```
 
-Cook can target a whole sequence (manual: an entire sequence can be cooked in one command):
+Cooks **sequence 1** (manual: an entire sequence can be cooked in one command):
 
 ```
-Cook Sequence 1
+Cook Sequence 1 /Merge /NoConfirmation
 ```
 
-Confirm object addressing on Keyword Specs before use. Phaser-line cook with `/Restart` / `/MergeLowPriority` is covered under [`phaser-recipe.md`](phaser-recipe.md) / Recipe Editor Window notes (e.g. `Cook PhaserRecipe1 /Restart /MergeLowPriority`).
-
-Cue-part cook modes (manual flowchart): **Merge** keeps existing cue-part values; **Overwrite** replaces with recipe (attributes not in the recipe are removed from the overwritten cue).
-
-## Edit recipe mode
-
-[`EditRecipe`](keywords/Editrecipe.md) enables recipe edit mode (optional object).
+Cooks **cue 2** of sequence 1 after the two-line store above:
 
 ```
-EditRecipe
+Cook Sequence 1 Cue 2 /Merge /NoConfirmation
 ```
 
-```
-EditRecipe Cue 1
-```
+Cue-part cook modes (manual flowchart): **Merge** keeps existing cue-part values; **Overwrite** replaces with recipe (attributes not in the recipe are removed from the overwritten cue). Default if you omit the option is **MergeLowPriority** (replace cooked data, leave non-cooked). Phaser-line cook with `/Restart` / `/MergeLowPriority`: [`phaser-recipe.md`](phaser-recipe.md).
 
-```
-EditRecipe Preset 2.2
-```
+## Store recipes that are already in the programmer
 
-```
-EditRecipe Sequence 1
-```
+If recipe lines are already in the programmer (operator used the Recipe Editor), store destinations (manual):
 
-```
-EditRecipe Page 1.204
-```
-
-## Store recipes from the programmer
-
-With recipes in the programmer (Recipe Editor Window / Edit Recipe Mode), store destinations (manual):
-
-- **Cue part** destination → selected programmer part only — e.g. `Store Cue Part 1`
-- **Cue** destination → all parts as cue parts — e.g. `Store Cue 1`
-- **Preset** destination → selected part into the preset — e.g. `Store Preset 1.3`
+- **Cue part** → selected programmer part only — e.g. `Store Cue Part 1 /NoConfirmation`
+- **Cue** → all parts as cue parts — e.g. `Store Cue 1 /NoConfirmation`
+- **Preset** → selected part into the preset — e.g. `Store Preset 1.3 /NoConfirmation`
 
 After store, recipes clear from the Recipe Editor.
-
-Unattended store: [`automation.md`](automation.md) — use Store options Official lists (`/Merge`, `/Overwrite`, …) **and** [`/NoConfirmation`](keywords/options/Noconfirmation.md) when Store lists it.
 
 [`/Recipe`](keywords/options/Recipe.md) with Store: Official two-step example stores programmer recipes **without** selection (then tap a preset in the GUI):
 
@@ -87,7 +123,7 @@ Unattended store: [`automation.md`](automation.md) — use Store options Officia
 Store /Recipe "NoSelection"
 ```
 
-`/Recipe "Normal"` keeps selection when storing recipes into a preset. **RecipeStoreMode** (**typings**): `Normal`, `NoSelection`. Store destinations for recipes from the programmer are the cue part / cue / preset forms listed above.
+`/Recipe "Normal"` keeps selection when storing recipes into a preset. **RecipeStoreMode** (**typings**): `Normal`, `NoSelection`.
 
 ## Clean up unused recipe lines
 
@@ -107,13 +143,73 @@ CleanUp Preset 2.2 /Type "Recipe" /Recipe "NotCooked"
 
 `/Recipe` values (Official): `NoOutput`, `NotCooked`, `CookedButOverwritten`, plus Store-only `Normal` / `NoSelection`.
 
+## Edit Recipe (GUI only)
+
+[`EditRecipe`](keywords/Editrecipe.md) opens the **recipe editor window** (Official: "enables the recipe editor"). It is for an operator on the desk, not for unattended store/set. Do not use it in macros/plugins/OSC to create or fill lines — use `Store` + `Assign` above.
+
+```
+EditRecipe
+```
+
+## Plugin access
+
+For Lua plugins that **read** (or walk) show data. Write path stays the CLI above (`Cmd` / `Store` / `Assign`).
+
+Object tree (**observed** + **typings**; confirm `GetClass()` on Target):
+
+```text
+ShowData().DataPools
+  DataPool n                          -- DataPool() is the selected pool
+    Sequences
+      Sequence n
+        Cue n
+          Part n                      -- Part 0 is the default part
+            StandardRecipe r          -- CLI: Sequence n Cue n Part p.r
+    PresetPools
+      Dimmer | Position | Color | …   -- pool name
+        Preset n
+          StandardRecipe r            -- CLI: Preset pool.n.r
+```
+
+`Store {addr}` on that recipe slot creates **StandardRecipe**, not PhaserRecipe. PhaserRecipe children live under the same Part/Preset — [`phaser-recipe.md`](phaser-recipe.md).
+
+Resolves the handle for recipe 1 on sequence 1 cue 2 part 0:
+
+```lua
+local rec = ObjectList("Sequence 1 Cue 2 Part 0.1")[1]
+if rec ~= nil then
+  Printf("%s", rec:GetClass())
+end
+```
+
+Walks every child of that cue part (print class + index):
+
+```lua
+local part = ObjectList("Sequence 1 Cue 2 Part 0")[1]
+if part ~= nil then
+  for i = 1, part:Count() do
+    local child = part[i]
+    Printf("%d %s", i, child:GetClass())
+  end
+end
+```
+
+Selected data pool → sequences pool (**observed** `DataPool().Sequences`; `ShowData().DataPools` for a numbered pool):
+
+```lua
+local seqs = DataPool().Sequences
+Printf("seq count %d", seqs:Count())
+```
+
+Recipe line fields plugins read (**observed** / **typings** `RecipeBaseProps`): `selection` (group handle), `values` / `preset`, `matricks`, `enabled`. Do not invent more property names — dump `GetClass()` / Help Dump / grandma3-ts-types.
+
 ## GUI surfaces (facts only)
 
 | Surface | Role |
 | --- | --- |
 | Cue / Preset editors | Add Standard Recipe / Add Phaser Recipe, Cook, Take Selection, Turn Into Recipe, Recipe Template |
-| Recipe Editor Window | Tools → Recipe Editor; parts + lines; Edit Recipe title-bar toggle |
-| Recipe sheet columns | Selection (groups), Values, Filter/World, MAtricks, Enabled, … — edit via GUI/context area |
+| Recipe Editor Window | Tools → Recipe Editor; Edit Recipe title-bar toggle — [`EditRecipe`](keywords/Editrecipe.md) |
+| Recipe sheet columns | Selection (groups), Values, Filter/World, MAtricks, Enabled, … |
 
 **Recipe Template** (preset setting): open green pot; loads recipe lines into the programmer part when called. Presets **without** selection cook onto the current programmer selection (template-style). Presets **with** selection cook into the preset and can be referenced/played like other presets.
 

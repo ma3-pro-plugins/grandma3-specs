@@ -101,6 +101,30 @@ Delete Group 5 /NoConfirmation
 - Recipe **Selection** must be a group — [`concepts/recipes.md`](concepts/recipes.md), [`phaser-recipe.md`](phaser-recipe.md).
 - Group Masters affect **playback** of fixtures in the group — [`concepts/groups.md`](concepts/groups.md), [`concepts/masters.md`](concepts/masters.md).
 
+
+## Plugin access
+
+Lua plugins that **read** groups. Write path stays `Store Group` / `Assign` CLI.
+
+```text
+ShowData().DataPools
+  DataPool n
+    Groups
+      Group n                    -- CLI: Group n
+```
+
+```lua
+local g = ObjectList("Group 1")[1]
+if g ~= nil then
+  Printf("%s", g:GetClass())
+end
+```
+
+```lua
+local groups = DataPool().Groups
+Printf("group count %d", groups:Count())
+```
+
 ## Related
 
 - Programmer: [`concepts/programmer.md`](concepts/programmer.md)

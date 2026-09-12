@@ -109,6 +109,37 @@ Display: which Layout is linked, Setup, Layer readout (**DMX** / **Value** / **O
 
 A title-bar control can **push the current layout fixture arrangement into the Selection Grid**.
 
+
+## Plugin access
+
+Lua plugins that **read** layout objects. Write path stays the Assign/Store CLI above.
+
+```text
+ShowData().DataPools
+  DataPool n
+    Layouts
+      Layout n                 -- CLI: Layout n
+        (elements) n           -- CLI: Layout n.1 Thru …  (observed)
+```
+
+Resolves layout 5 in the selected data pool:
+
+```lua
+local layout = ObjectList("Layout 5")[1]
+if layout ~= nil then
+  Printf("%s count %d", layout:GetClass(), layout:Count())
+end
+```
+
+Same pool via **observed** `DataPool().Layouts` (`ShowData().DataPools` for a numbered pool):
+
+```lua
+local layouts = DataPool().Layouts
+Printf("layout count %d", layouts:Count())
+```
+
+Confirm element class with `GetClass()` on `layout[i]` / `layout:Ptr(i)` before treating a child as a fixture vs a pool-object button.
+
 ## Related
 
 - Data pools: [`concepts/datapools.md`](concepts/datapools.md)

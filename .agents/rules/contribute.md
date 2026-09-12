@@ -13,6 +13,9 @@ For agents **editing** this repo (Specs, concepts, skills, indexes). Consumers u
 
 Do **not** mass-move Topic Specs into `concepts/`.
 
+**Plugin access** — Topic Specs for objects in the show tree (recipes, layouts, groups, presets, macros, sequences, …) get a **Plugin access** section: the path from `ShowData()` / `DataPool()` to that object, plus Lua that **reads** handles/properties. Do not invent child class names (`GetClass()` / Help Dump / typings, labeled). GUI editor modes (e.g. Edit Recipe) stay **one line**. CLI store/set stays in the command sections.
+
+
 ## Concepts follow the manual TOC
 
 Concept pages under `specs/concepts/` use **kebab filenames that mirror grandMA3 help.html chapter hubs** (agent-relevant chapters), not ad-hoc subsystem nicknames. Live map: [`specs/concepts/_index.md`](../../specs/concepts/_index.md). Old filenames may remain under `specs/concepts/_legacy/` for reference only.
