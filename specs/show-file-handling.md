@@ -83,8 +83,9 @@ Useful options (confirm on option Specs): LoadShow — `/All`, `/DMXProtocols`, 
 
 - Up to **10** backup files per show; cannot save/create new shows **into** Backup / Demo / Template folders.
 - Demo Shows = MA-supplied; Template Shows = user-predefined templates.
-- Free disk space warnings in Backup menu: orange < 15 GB, red < 5 GB.
-- Delete show files: Backup menu Delete (GUI). Do not invent a DeleteShow keyword.
+- Free disk space warnings in Backup menu: orange &lt; 15 GB, red &lt; 5 GB.
+- Delete show files: Backup menu Delete (GUI). There is no `DeleteShow` keyword.
+- Official BackupBrowserFilter values: **Shows**, **Backups**, **Demoshows**, **Templates**.
 
 ## Related
 

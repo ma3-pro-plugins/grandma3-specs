@@ -11,7 +11,13 @@ Manual hub + subtopics (one object): [Viewer](https://help.malighting.com/grandM
 
 A timecode show fires events (and can move faders) against a running time counter: **internal** timing or an **external** source via a Timecode Slot. Hierarchy: **Timecode show** → **Track Groups** → **Tracks** → **Time Ranges** → **Events** (subtracks hold fader motion). Shows live in the Timecode pool; **16** fixed Timecode Slots in the TimecodeSlots pool.
 
-**Internal timecode / session master:** one-line link — [`multi-station.md`](multi-station.md). Track/event editing beyond store/playback is largely Viewer Setup **GUI** (or Object API); do not invent `Set` property names for track rows.
+**Internal timecode / session master:** one-line link — [`multi-station.md`](multi-station.md). Track/event editing beyond store/playback is largely Viewer Setup **GUI** (or Object API).
+
+Finite value sets (typings; Official TCSlot names kept below):
+
+- **LoopMode** (typings): `Loop` \| `Pause` \| `Off`
+- **TimecodeSlot** (typings alias): `TCSlot 1`–`8`, `<Selected>` — Official uses `Internal` / `Link Selected` / Slot n
+- **TimecodePoolAction** (typings): `Select` \| `Toggle` \| `Go+` \| `Pause` \| `Off` \| `Top` \| `None`
 
 ## Store / set / play (CLI)
 

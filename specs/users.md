@@ -45,7 +45,21 @@ Assigns appearance **1** to user **2**:
 Assign Appearance 1 At User 2
 ```
 
-Other `Set User` settings from Official: Name, Password, Profile, ScreenConfig, Language, Keyboard — plus Scribble/Appearance via Assign. Creating a user by editing an empty pool object is **GUI**; do not invent `Store User` forms unless a Keyword Spec shows them.
+Official `Set User` / Assign settings ([`User`](keywords/User.md)):
+
+| Setting | Object/Option/Value |
+| --- | --- |
+| Name | Text |
+| Scribble | Scribble pool object (via Assign) |
+| Appearance | Appearance pool object (via Assign) |
+| Password | Text |
+| Profile | UserProfile object |
+| ScreenConfig | Screen configuration object |
+| Rights | `Admin` \| `Setup` \| `Program` \| `Preset` \| `Playback` \| `View` \| `None` |
+| Language | `de` \| `en` \| `ru` \| `dk` |
+| Keyboard | `German` \| `English` \| `Russian` \| `Danish` |
+
+Creating a user by editing an empty pool object is **GUI**. There is no `Store User` form on the User Keyword Spec.
 
 Opens the User Configuration menu:
 

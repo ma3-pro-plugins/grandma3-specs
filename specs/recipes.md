@@ -23,13 +23,11 @@ Recipes live in **cue parts** and **presets**. Cue-part recipes must be cooked; 
 
 ### Selection must be a group
 
-A recipe line's **Selection** is a **group** (group number/name in the Selection column). Empty groups show red and will not cook. Build groups first — [`groups.md`](groups.md).
-
-Do not invent fixture-list Selection CLI; use groups.
+A recipe line's **Selection** must be a **group** (group number/name in the Selection column) — not a raw fixture list. Empty groups show red and will not cook. Build groups first — [`groups.md`](groups.md).
 
 ## Cook (standard recipes)
 
-[`Cook`](keywords/Cook.md) cooks recipes on an object without opening the editor. Options Official lists: [`/Merge`](keywords/options/Merge.md), [`/MergeLowPriority`](keywords/options/Mergelowpriority.md), [`/Overwrite`](keywords/options/Overwrite.md), [`/Remove`](keywords/options/Remove.md), and `/Restart` (Cook Official links the Restart page). **Cook does not list `/NoConfirmation`** — do not append it.
+[`Cook`](keywords/Cook.md) cooks recipes on an object without opening the editor. **Cook Official options:** [`/Merge`](keywords/options/Merge.md), [`/MergeLowPriority`](keywords/options/Mergelowpriority.md), [`/Overwrite`](keywords/options/Overwrite.md), [`/Remove`](keywords/options/Remove.md), `/Restart` (Cook Official). Plus [`/NoConfirmation`](keywords/options/Noconfirmation.md) (option Spec lists Cook).
 
 Cooks dimmer preset 1.1:
 
@@ -89,7 +87,7 @@ Unattended store: [`automation.md`](automation.md) — use Store options Officia
 Store /Recipe "NoSelection"
 ```
 
-`/Recipe "Normal"` keeps selection when storing recipes into a preset. Prefer documented Store + option forms; do not invent destinations.
+`/Recipe "Normal"` keeps selection when storing recipes into a preset. **RecipeStoreMode** (**typings**): `Normal`, `NoSelection`. Store destinations for recipes from the programmer are the cue part / cue / preset forms listed above.
 
 ## Clean up unused recipe lines
 
