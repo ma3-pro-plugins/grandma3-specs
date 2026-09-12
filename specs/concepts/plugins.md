@@ -2,6 +2,7 @@
 title: Plugins
 topic_spec:
   - ../plugins.md
+  - ../plugin-dialogs.md
   - ../object-api.md
   - ../hooks.md
   - ../message-queue.md
@@ -23,6 +24,7 @@ Plugins are show objects in the **Plugins** pool (inside a DataPool). Each stati
 | Spec | Covers |
 | --- | --- |
 | [`../plugins.md`](../plugins.md) | Lifecycle, where `Plugin N` runs, ~16K Cmd string limit, quoting JSON args |
+| [`../plugin-dialogs.md`](../plugin-dialogs.md) | Custom UI (`MessageBox` vs `DialogFrame` / layout grids / buttons / inputs) |
 | [`../object-api.md`](../object-api.md) | Help Dumps / API surface |
 | [`../hooks.md`](../hooks.md) | Hooks |
 | [`../message-queue.md`](../message-queue.md) | `OpenMessageQueue` / `SendLuaMessage` |
