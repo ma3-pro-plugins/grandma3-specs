@@ -42,6 +42,10 @@ Recipe rows: a recipe line's **Selection** must be a **group**. Record that on b
 
 **Layouts depth** (assign/clone CLI, multipatch, Setup vs operate, element editor, encoder bar, view settings) lives in one Topic Spec [`specs/layouts.md`](../../specs/layouts.md). Do **not** split the seven manual subtopic pages into seven Specs — they are one object. Keep [`specs/concepts/layouts.md`](../../specs/concepts/layouts.md) thin with a pointer.
 
+**Hub depth (general)** — When a concept hub’s Target manual page has **child subtopics** with real CLI (or facts agents need), write **one** Topic Spec at `specs/<hub>.md`. Do **not** split those subtopic pages into separate Specs. Keep the concept page thin with a **Depth** pointer. Live map: [`specs/concepts/_index.md`](../../specs/concepts/_index.md).
+
+Hubs with a Topic Spec today: `system`, `show-file-handling`, `users`, `dmx`, `patch`, `operate-fixtures`, `groups`, `presets`, `worlds-filters`, `matricks`, `cues-sequences`, `executors` (behavior; hardware numbers stay in [`hardware-layout.md`](../../specs/hardware-layout.md)), `masters`, `recipes` (standard recipes; PhaserRecipe stays in [`phaser-recipe.md`](../../specs/phaser-recipe.md)), `phasers` (programmer / effects; PhaserRecipe stays separate), `macros`, `agenda`, `timecode`, `layouts`, `quickeys`. Still pointer-only or out-of-scope: plugins (existing plugin Topic Specs), networking / remote-in-out, phasers, datapools, first-steps, workspace, shapes, generators, bitmap, xyz, local-settings.
+
 **Automation** (macros, plugin `Cmd`, OSC — any unattended CLI): Topic Spec [`specs/automation.md`](../../specs/automation.md). Commands that can prompt must use [`/NoConfirmation`](../../specs/keywords/options/Noconfirmation.md); prefer explicit store modes plus `/NoConfirmation`. Do not bury this only on the option Keyword Spec.
 
 Do **not** mass-move Topic Specs into `concepts/`.
