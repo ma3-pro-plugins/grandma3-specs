@@ -101,7 +101,7 @@ The repo has **three agent-facing layers**. Do not collapse them into one folder
 | Layer | Path | Job |
 | --- | --- | --- |
 | **Map** | [`specs/concepts/`](specs/concepts/) | Manual-TOC chapter pages (kebab names ↔ help.html hubs). Thin: **what it is** (manual prose, required when there is no Topic Spec), boundaries, primary syntax example, **pointers** to Topic Specs and keyword clusters. Distinct sub-behaviors get their own heading + links. GUI how-tos → syntax-first recipes (Keyword Specs only); then curated bits from `_legacy/` / Topic Specs. Not a second copy of deep notes. |
-| **Topic Specs** | [`specs/*.md`](specs/) (flat) | Curated automation behavior: plugins, OSC, macros, groups depth, [`automation.md`](specs/automation.md) (`/NoConfirmation`), long command patterns, lab conclusions. Stay flat — **do not mass-move** into `concepts/`. |
+| **Topic Specs** | [`specs/*.md`](specs/) (flat) | Curated automation behavior: plugins, OSC, macros, [`automation.md`](specs/automation.md) (`/NoConfirmation`), and **one hub-depth file per concept chapter** that has manual subtopics (`groups.md`, `layouts.md`, `cues-sequences.md`, … — see [`specs/concepts/_index.md`](specs/concepts/_index.md)). Stay flat — **do not mass-move** into `concepts/`. |
 | **Keyword Specs** | [`specs/keywords/`](specs/keywords/) | One CLI token each (Official from manual + Extra). |
 
 Also: **grammar** — [`specs/command-line.md`](specs/command-line.md) (to be added): pools, handles, quotes, thru/at, how options attach. Not a keyword list and not a subsystem essay.
