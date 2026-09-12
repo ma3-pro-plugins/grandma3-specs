@@ -27,7 +27,7 @@ Target: [`../versions.md`](../versions.md). Grammar: [`../command-line.md`](../c
 | DMX In and Out (`dmx.html`) | [`dmx.md`](dmx.md) | [`../dmx.md`](../dmx.md) |
 | Patch and Fixture Setup (`patch.html`) | [`patch.md`](patch.md) | [`../patch.md`](../patch.md) |
 | Operate Fixtures (`operate_fixtures.html`) | [`operate-fixtures.md`](operate-fixtures.md) | [`../operate-fixtures.md`](../operate-fixtures.md) |
-| The Programmer (`operate_programmer.html`) | [`programmer.md`](programmer.md) | — |
+| The Programmer (`operate_programmer.html`) | [`programmer.md`](programmer.md) | [`../programmer.md`](../programmer.md) |
 | Groups (`group.html`) | [`groups.md`](groups.md) | [`../groups.md`](../groups.md) |
 | Presets (`presets.html`) | [`presets.md`](presets.md) | [`../presets.md`](../presets.md) |
 | Worlds / Filters (`worldfilter.html`) | [`worlds-filters.md`](worlds-filters.md) | [`../worlds-filters.md`](../worlds-filters.md) |

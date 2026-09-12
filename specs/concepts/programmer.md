@@ -8,6 +8,20 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/operate_programmer.ht
 
 Manual: the programmer is a **temporary memory** where edited values sit until stored or released. **Every user profile has a programmer.**
 
+**Depth (layers):** [`../programmer.md`](../programmer.md).
+
+## Layers
+
+Each **attribute** can hold **different values on different layers at the same time** — in the programmer and after those values are stored into cues or presets. Selecting a layer chooses which slot you edit; the other slots stay.
+
+Sets **ColorRGB_R** to 10 on the **Absolute** layer (other layers on that attribute are unchanged):
+
+```
+Attribute "ColorRGB_R" At Absolute 10
+```
+
+Full catalog (value / timing / step / phaser / sheet-view): [`../programmer.md`](../programmer.md). Phaser layers: [`../phasers.md`](../phasers.md).
+
 ## Three levels
 
 1. **Selected fixture** — affected by encoder / command-line entries  
@@ -88,6 +102,7 @@ ClearAll
 
 ## Curated
 
+- Layers (full list): [`../programmer.md`](../programmer.md).
 - Selection helpers: [`Thru`](../keywords/Thru.md), [`Plus`](../keywords/Plus.md), [`Minus`](../keywords/Minus.md), [`If`](../keywords/If.md), [`Park`](../keywords/Park.md).  
 - Grammar: [`../command-line.md`](../command-line.md).  
 - Cue-command vs CmdLine multi-station: [`../multi-station.md`](../multi-station.md).

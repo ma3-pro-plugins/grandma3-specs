@@ -46,6 +46,7 @@ Open the smallest file that fits the task. Specs are facts for **Target**. Skill
 - PhaserRecipe (MA ≥ 2.4): [`specs/phaser-recipe.md`](specs/phaser-recipe.md)
 - Phasers (programmer steps, effects alias, store like a static look): [`specs/phasers.md`](specs/phasers.md)
 
+
 ## Specs — concept hubs (one Topic Spec per manual hub)
 
 Thin concept pages stay under [`specs/concepts/`](specs/concepts/). Depth for hubs that have manual subtopics:
@@ -56,6 +57,7 @@ Thin concept pages stay under [`specs/concepts/`](specs/concepts/). Depth for hu
 - DMX: [`specs/dmx.md`](specs/dmx.md)
 - Patch: [`specs/patch.md`](specs/patch.md)
 - Operate fixtures: [`specs/operate-fixtures.md`](specs/operate-fixtures.md)
+- Programmer (layers): [`specs/programmer.md`](specs/programmer.md)
 - Presets: [`specs/presets.md`](specs/presets.md)
 - Worlds / Filters: [`specs/worlds-filters.md`](specs/worlds-filters.md)
 - MAtricks: [`specs/matricks.md`](specs/matricks.md)
