@@ -76,7 +76,7 @@ Fixture 1 Thru 4; Store Group 1 /Overwrite /NoConfirmation
 
 **Group 1** now contains only fixtures 1–4.
 
-[`/GridMergeMode`](keywords/options/Gridmergemode.md) controls how merged fixtures land on the selection grid (manual Create Groups: Append X vs Off). Confirm the option Spec before use.
+[`/GridMergeMode`](keywords/options/Gridmergemode.md) controls how merged fixtures land on the selection grid. Official values: `AppendX`, `Off`.
 
 ## Call / list / delete
 

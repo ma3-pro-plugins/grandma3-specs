@@ -39,7 +39,7 @@ Assigns an **output station** (onPC/console host) named HostName onto layout 3 (
 Assign "HostName" At Layout 3
 ```
 
-Keywords: [`Assign`](keywords/Assign.md), [`Layout`](keywords/Layout.md), [`Group`](keywords/Group.md), [`Macro`](keywords/Macro.md). Confirm Official before inventing other `Assign … At Layout` object types.
+Keywords: [`Assign`](keywords/Assign.md), [`Layout`](keywords/Layout.md), [`Group`](keywords/Group.md), [`Macro`](keywords/Macro.md). Official Layout Assign examples: `Assign Layout 5`, `Assign Group 5 At Layout 4`. Assign Official option: [`/Tab`](keywords/options/Tab.md). [`/NoConfirmation`](keywords/options/Noconfirmation.md) is listed on the option Spec as a general keyword for Assign.
 
 Unattended store/assign: [`automation.md`](automation.md) (`/NoConfirmation` when that function lists it).
 
@@ -51,7 +51,7 @@ Requires patched multipatch fixtures. Selects/assigns **fixture 1** plus its mul
 Assign Fixture 1 Multipatch 1 Thru 5
 ```
 
-Placement into a specific layout via tap is **GUI**. Prefer a later `Assign … At Layout N` form when Official documents it; do not invent an `At Layout` suffix here.
+Placement into a specific layout via tap is **GUI**. Official Layout examples use `Assign Layout N` (selection onto layout) or `Assign Group N At Layout M` — no multipatch `At Layout` suffix on Official.
 
 ## Clone into a layout
 
@@ -73,7 +73,7 @@ Toggles (manual): **Markers** (layer markers on elements), **Value Colors** (dim
 
 **Layout Element Defaults** (user **profile**, not the show object): templates applied when assigning a new object (groups, worlds, sequences, …). Also via Menu → Preferences and Timings → Layout Elements. Render styles: **Default** (follow layout), **Pool**, **Executor**.
 
-Do not invent `Set Layout … Property` names until a Keyword Spec or Help Dump shows them.
+Layout Official has **no Set-property table**. Layout *element* props (typings — grandma3-ts-types, MA 2.4.2.2 dump, Layouts.d.ts): `assignType`, `action` (AssignmentButtonFunctionsSequence), `appearance`, `borderSize`, `borderColor`, `customTextColor`, `customTextAlignmentH` (`Center`|`Left`|`Right`), `customTextAlignmentV` (`Center`|`Top`|`Bottom`|`Above`), `customTextSize` (`Default`|10|12|14|16|18|20|24|28|32), `customTextText`, `fullResolution`, `height`, `id`, visibilityElement/Bar/ObjectName/ID/CID/Border/Value/IndicatorBar/SelectionRelevance, `padding*`, `posX`/`posY`, `width`.
 
 ## Layout Viewer and Setup mode
 

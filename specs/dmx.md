@@ -9,7 +9,7 @@ Concept map (thin): [`concepts/dmx.md`](concepts/dmx.md). Related keywords: [`DM
 
 Manual hub + subtopics (one object): [DMX Port Configuration](https://help.malighting.com/grandMA3/2.5/HTML/dmx_port_config.html), [Ethernet DMX](https://help.malighting.com/grandMA3/2.5/HTML/dmx_ethernet.html), [DMX Priorities](https://help.malighting.com/grandMA3/2.5/HTML/dmx_priorities.html).
 
-Physical XLR ports and Ethernet protocols (Art-Net / sACN) get DMX in or out of the system. Port/protocol tables are mostly **GUI** in Output Configuration / DMX Protocols — do not invent `Set` property names for port rows.
+Physical XLR ports and Ethernet protocols (Art-Net / sACN) get DMX in or out of the system. Port/protocol tables are mostly **GUI** in Output Configuration / DMX Protocols. Known GUI enums for incoming DMX: Merge Mode `Prio` \| `HTP` \| `LowTP` \| `Off`; Input Priority `Super` \| `Prog` \| `Highest` \| `High` \| `LTP` \| `Low` \| `Lowest` (see priorities below). No evidenced CLI `Set` property names for port rows beyond the menus below.
 
 **Session Master outputs network DMX** (Art-Net / sACN): one-line depth in [`multi-station.md`](multi-station.md) / [`concepts/networking.md`](concepts/networking.md). Visual send/receive feedback can differ per station — judge real I/O on the master.
 
@@ -53,7 +53,7 @@ Port list: devices matched by IP; prefer **device name** over the changing No in
 
 ## Ethernet DMX
 
-Supported protocols: **sACN** and **Art-Net**. Configure in DMX Protocols (menus above). Protocol-specific transmit/receive rows and multicast/unicast choices are **GUI** — confirm any CLI against Keyword Specs before inventing.
+Supported Ethernet protocols: **sACN** and **Art-Net** only. Configure in DMX Protocols (menus above). Protocol-specific transmit/receive rows and multicast/unicast choices are **GUI**.
 
 ## DMX priorities (resolve competing sources)
 

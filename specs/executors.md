@@ -86,15 +86,15 @@ Unattended Assign: [`/NoConfirmation`](keywords/options/Noconfirmation.md) when 
 Assign Sequence 1 At Executor 201 /NoConfirmation
 ```
 
-Handle functions from the Assign menu (confirm each Keyword Spec before use): Go+, Go-, Goto, Pause, Off, On, Toggle, Select, Top, Temp, Flash, Call, HalfSpeed, DoubleSpeed, Master / Rate / Speed fader keywords, custom commands, etc.
+Key functions for a **sequence** handle (**typings** `AssignmentButtonFunctionsSequence`): Empty, Go+, Go-, >>>, <<<, On, Off, Learn, LearnSpeed, Rate1, Speed1, Toggle, Top, Goto, Load, Pause, Select, HalfSpeed, DoubleSpeed, Kill, ReSync, FastSync, SelectFixtures. Fader functions (**typings** `AssignmentFaderFunctions`): Empty, Master, X, XA, XB, Temp, Rate, Speed, Time. Other object families have their own `AssignmentButtonFunctions*` enums — Sequence is the default playback assign.
 
 ## Configurations / running playbacks / special
 
-Executor Configurations are pool objects edited from the Assign menu (GUI) — save/load configs there; do not invent config CLI.
+Executor Configurations are pool objects edited from the Assign menu (GUI) — save/load configs there (no dedicated config CLI on Keyword Specs).
 
 Running Playbacks / Off Menu are GUI for seeing and killing playbacks (`Off` family — [`Off`](keywords/Off.md)).
 
-Special Executors / Custom Master Section: grand master on special executor 5, default playback buttons, page area — see [`Specialexecutor`](keywords/Specialexecutor.md) and the manual Special Executors topic. Prefer `Assign Master 2.1 At …` patterns from [`masters.md`](masters.md) over inventing special-executor-only syntax.
+Special Executors / Custom Master Section: grand master on special executor 5, default playback buttons, page area — see [`Specialexecutor`](keywords/Specialexecutor.md) and the manual Special Executors topic. **SpecialExecutor** (**typings**): None, XFade1, XFade2, XFade1Btn, XFade2Btn, GrandKnob, RateBtn1, SpeedBtn1, RateBtn2, SpeedBtn2, ExecEncoder, ExecBtn1–3, ProgEncoder, ProgBtn1–3. Prefer `Assign Master 2.1 At …` patterns from [`masters.md`](masters.md) for masters on handles.
 
 ## Playback via executor
 
