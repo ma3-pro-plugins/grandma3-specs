@@ -131,7 +131,27 @@ Clone Fixture 1 Attribute "Pan" At Fixture 2 Attribute "Tilt" /Overwrite
 
 ## Gels / sMArt / sheets / graphics
 
-[`Gel`](keywords/Gel.md) addresses gel pool objects — confirm Official before inventing `At Gel` recipes. Gel Pool / custom gels / sMArt / Feature Graphic / Fixture Graphic / Fixture Sheet / Selection Bar / Special Dialog / Encoder Resolution Multiplier are largely **GUI**; do not invent CLI from screenshots.
+[`Gel`](keywords/Gel.md) Official examples:
+
+```
+At Gel "Lee"."Mauve"
+```
+
+Applies Lee Mauve gel to the selection.
+
+```
+At Gel 8.44
+```
+
+Applies gel by swatch.number (8.44).
+
+```
+Export Gel 8
+```
+
+Exports gel swatch **8**.
+
+Gel Pool / custom gels / sMArt / Feature Graphic / Fixture Graphic / Fixture Sheet / Selection Bar / Special Dialog / Encoder Resolution Multiplier are largely **GUI**.
 
 Selection **grid** positions matter for groups, layouts, and align — store grid with the selection via Group store ([`groups.md`](groups.md)) or layout assign ([`layouts.md`](layouts.md)).
 

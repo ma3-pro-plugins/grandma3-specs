@@ -29,7 +29,7 @@ Where a macro **runs** in a session: [`multi-station.md`](multi-station.md). Una
 
 ## Macro line fields
 
-Each row: **Command**, **Wait** (time, or special **Follow** = 0 / **Go** = pause until Go+), **Enabled** (Yes/No), **AddToCmdline** (Yes/No), **Execute** (Yes = auto-Please; No = leave text on the command line).
+Each row (Official examples + **typings** `MacroLineProps`): **command** / Command, **wait** / Wait (time, or special **Follow** = 0 / **Go** = pause until Go+), **note**, **enabled** / Enabled (boolean), **addToCmdLine** / AddToCmdline (boolean), **execute** / Execute (boolean; Yes = auto-Please; No = leave text on the command line). Macro-level (**typings**): `scribble`, `note`, `appearance`.
 
 Sets wait of macro 3 line 4 to the special **Go** value (Official):
 
@@ -75,7 +75,7 @@ Stores empty macro **10** at the current destination (equivalent intent to `Stor
 ChangeDestination 10; Insert; Set 1 Property "Command" "Fixture 1 At 100"; Set 1 Property "Wait" "Follow"; ChangeDestination Root
 ```
 
-Inserts a line, sets its **Command** and **Wait**, then returns to root. Confirm Property names on [`keywords/Set.md`](keywords/Set.md) / [`keywords/Property.md`](keywords/Property.md) before inventing others (`"Enabled"`, `"Execute"`, `"AddToCmdline"` appear as GUI fields — confirm Keyword Spec before scripting them).
+Inserts a line, sets its **Command** and **Wait**, then returns to root. MacroLine property tokens for `Set … Property`: `"Command"`, `"Wait"`, `"Note"`, `"Enabled"`, `"Execute"`, `"AddToCmdline"` (see Macro line fields above; [`keywords/Set.md`](keywords/Set.md) / [`keywords/Property.md`](keywords/Property.md)).
 
 ## Import
 
@@ -103,7 +103,7 @@ Opens the CLI property editor for macro 5 (manual):
 Edit Macro 5 Property "CLI"
 ```
 
-(Confirm Property token on Keyword Specs; do not invent alternate spellings.)
+(Property token is `"CLI"` as shown — MacroLine / macro-level props listed under Macro line fields.)
 
 ## Edit / delete lines
 

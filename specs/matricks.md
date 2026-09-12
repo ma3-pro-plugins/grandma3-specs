@@ -125,7 +125,7 @@ Sets **XWidth** to 5 on the active selection.
 
 ## Shuffle
 
-[`Shuffle`](keywords/Shuffle.md) randomizes selection order on the selection grid. MAtricks tool Shuffle bumps **XShuffle/YShuffle/ZShuffle**; ShuffleMode is a GUI control (confirm Keyword Spec before scripting mode names).
+[`Shuffle`](keywords/Shuffle.md) randomizes selection order on the selection grid. MAtricks tool Shuffle bumps **XShuffle/YShuffle/ZShuffle**. ShuffleMode values (typings — grandma3-ts-types, MA 2.4.2.2 dump): `Auto`|`Linked`|`Unlinked`.
 
 ```
 MAtricks "XShuffle" 4
@@ -141,11 +141,9 @@ Increments **YShuffle** (Official).
 
 To shuffle then store the order into a group, use normal group store after shuffle — [`groups.md`](groups.md).
 
-## Transform (mostly GUI)
+## Transform / Invert
 
-**Transform** lives under Invert Options in the MAtricks window. **Mirror** mirrors values according to Blocks/Groups/Wings; **None** clears related inverts. Manual notes: Mirror turns InvertStyle toward Pan; mirrored fixtures show green; Mirror can force hard values in the programmer (symmetry), which affects cue/preset referencing.
-
-No Transform / InvertStyle / InvertX|Y|Z tokens appear in the Official MAtricks **Properties** table — treat Transform as **GUI** until a Keyword Spec or Help Dump lists the property names. Do **not** invent `Set Selection MAtricks "Transform" "Mirror"`.
+**Transform** lives under Invert Options in the MAtricks window. **Mirror** mirrors values according to Blocks/Groups/Wings; **None** clears related inverts. Official MAtricks **Properties** table has no Transform / InvertStyle / InvertX|Y|Z tokens (GUI / Object API). Values (typings — grandma3-ts-types, MA 2.4.2.2 dump): `phaserTransform` / Transform `None`|`Mirror`; `invertStyle` `Pan`|`Tilt`|`P+T`|`All`; `invertX`/`invertY`/`invertZ` boolean. Manual notes: Mirror turns InvertStyle toward Pan; mirrored fixtures show green; Mirror can force hard values in the programmer (symmetry), which affects cue/preset referencing.
 
 ## Related
 

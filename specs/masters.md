@@ -23,7 +23,7 @@ Masters are **level / rate / speed / timing overrides**. Address with `Master Ca
 | **4.x Playback** | Playback masters | `Master 4.3` |
 | **Timing** | Named timing masters | `Master "Timing"."Timing1"` |
 
-Confirm indexes/names on [`Master`](keywords/Master.md) before inventing categories.
+Indexes/names: use the category table above and [`Master`](keywords/Master.md) Official — categories are **1.x Selected**, **2.x Grand**, **3.x Speed**, **4.x Playback**, and **Timing** (named).
 
 ## Assign masters to executors
 
@@ -81,7 +81,7 @@ Labels speed master 3.2:
 Label Master 3.2 "Great Speed"
 ```
 
-SpeedScale / LearnMode are speed-master properties (GUI / Assign menu) — confirm before inventing `Set Master … Property` CLI. Related: [`Speed`](keywords/Speed.md), [`Doublespeed`](keywords/Doublespeed.md), [`Halfspeed`](keywords/Halfspeed.md), [`Learnspeed`](keywords/Learnspeed.md), [`Faderspeed`](keywords/Faderspeed.md).
+Speed-master properties (**typings**): **LearnMode** = `Default` | `Learn Respects Speed Scale` | `Auto Increase Speed Scale`; **SpeedScale** = `Div256` | `Div128` | `Div64` | `Div32` | `Div16` | `Div8` | `Div4` | `Div2` | `One` | `Mul2` | `Mul4` | `Mul8` | `Mul16` | `Mul32` | `Mul64` | `Mul128` | `Mul256` (GUI / Assign menu — not proven `Set Master … Property` CLI unless a Keyword Spec shows it). Related: [`Speed`](keywords/Speed.md), [`Doublespeed`](keywords/Doublespeed.md), [`Halfspeed`](keywords/Halfspeed.md), [`Learnspeed`](keywords/Learnspeed.md), [`Faderspeed`](keywords/Faderspeed.md).
 
 ## Highlight / Lowlight / Solo
 
