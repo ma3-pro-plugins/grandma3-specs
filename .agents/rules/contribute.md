@@ -40,6 +40,8 @@ Recipe rows: a recipe line's **Selection** must be a **group**. Record that on b
 
 **Groups depth** (programmer selection → store, `+` / `-` selection builds, `/Merge` `/Remove` `/Overwrite` into an existing group) lives in Topic Spec [`specs/groups.md`](../../specs/groups.md). Keep [`specs/concepts/groups.md`](../../specs/concepts/groups.md) thin with a few primary examples and a pointer.
 
+**Layouts depth** (assign/clone CLI, multipatch, Setup vs operate, element editor, encoder bar, view settings) lives in one Topic Spec [`specs/layouts.md`](../../specs/layouts.md). Do **not** split the seven manual subtopic pages into seven Specs — they are one object. Keep [`specs/concepts/layouts.md`](../../specs/concepts/layouts.md) thin with a pointer.
+
 **Automation** (macros, plugin `Cmd`, OSC — any unattended CLI): Topic Spec [`specs/automation.md`](../../specs/automation.md). Commands that can prompt must use [`/NoConfirmation`](../../specs/keywords/options/Noconfirmation.md); prefer explicit store modes plus `/NoConfirmation`. Do not bury this only on the option Keyword Spec.
 
 Do **not** mass-move Topic Specs into `concepts/`.

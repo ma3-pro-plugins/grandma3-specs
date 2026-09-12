@@ -43,7 +43,7 @@ Target: [`../versions.md`](../versions.md). Grammar: [`../command-line.md`](../c
 | Data Pools (`datapool.html`) | [`datapools.md`](datapools.md) | — |
 | Remote In and Out (`remote_inputs.html`) | [`remote-in-out.md`](remote-in-out.md) | [`../osc.md`](../osc.md), [`../remote-command.md`](../remote-command.md), [`../multi-station.md`](../multi-station.md) |
 | Timecode (`timecode.html`) | [`timecode.md`](timecode.md) | — |
-| Layouts (`layouts.html`) | [`layouts.md`](layouts.md) | — |
+| Layouts (`layouts.html`) | [`layouts.md`](layouts.md) | [`../layouts.md`](../layouts.md) |
 | Quickeys (`quickeys.html`) | [`quickeys.md`](quickeys.md) | — |
 | Workspace (`workspace.html`) | [`workspace.md`](workspace.md) | out-of-scope for most agents |
 | Shapes / Generators / Bitmap / XYZ / Local settings | [`shapes.md`](shapes.md), [`generators.md`](generators.md), [`bitmap.md`](bitmap.md), [`xyz.md`](xyz.md), [`local-settings.md`](local-settings.md) | out-of-scope for most agents |

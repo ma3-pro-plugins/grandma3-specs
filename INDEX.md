@@ -24,6 +24,7 @@ Open the smallest file that fits the task. Specs are facts for **Target**. Skill
 - Command-line grammar (compose tokens): [`specs/command-line.md`](specs/command-line.md)
 - Automation (macros / plugins / OSC, `/NoConfirmation`): [`specs/automation.md`](specs/automation.md)
 - Groups (selection store, merge/remove/overwrite): [`specs/groups.md`](specs/groups.md)
+- Layouts (assign/clone, elements, viewer): [`specs/layouts.md`](specs/layouts.md)
 - Command-line keywords (general + option; Official + Extra): [`specs/keywords/_index.md`](specs/keywords/_index.md)
 - OSC input (`/gma3/cmd`), DumpLog, import, Echo proof, session master from logs: [`specs/osc.md`](specs/osc.md)
 - Official Help Dumps and how to pick one: [`specs/object-api.md`](specs/object-api.md)
