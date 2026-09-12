@@ -38,7 +38,7 @@ Delete Sequence 8 /NoConfirmation
 
 Deletes sequence 8 without a confirm dialog.
 
-Official token list (which functions accept it): open the option Spec. Do not invent other "silent" flags.
+Official `/NoConfirmation` general keywords ([`Noconfirmation`](keywords/options/Noconfirmation.md)): **Assign**, **AutoCreate**, **AutoStore**, **ChangeMulticastBase**, **CleanUp**, **Clone**, **Cook**, **Copy**, **CopyCrashLog**, **Delete**, **DumpLog**, **Exchange**, **Insert**, **Import**, **NewShow**, **Oops**, **Paste**, **Reboot**, **Restart**, **ShutDown**, **Store**. That is the silent-flag list — no others.
 
 ## Also pass explicit options
 

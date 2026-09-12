@@ -15,7 +15,7 @@ This Spec is **calendar agenda entries** and the **Agenda** CLI keyword. Startup
 
 The agenda runs **sequences, macros, or plugins**, or a free **Command** string (e.g. Go+ Executor 101), on calendar time. Events can repeat every minute / day / week / month / year (and twilight modes).
 
-Open the viewer: Add Window → Tools → **Agenda Viewer**. View modes: Sheet, Year, Month, Week, Day (title-bar View Mode). Sheet is the property spreadsheet; create via New AgendaEvent (Edit + tap, or tap-hold).
+Open the viewer: Add Window → Tools → **Agenda Viewer**. **AgendaViewMode** (Official+typings): Sheet, Year, Month, Week, Day (title-bar View Mode). Sheet is the property spreadsheet; create via New AgendaEvent (Edit + tap, or tap-hold).
 
 ## CLI (Official examples)
 
@@ -37,9 +37,11 @@ Sets agenda event 2 mode to Dawn (twilight; needs location/date-time config — 
 Set Agenda 2 Property "Mode" "Dawn"
 ```
 
-Option on Agenda Official: [`/Date`](keywords/options/Date.md) — confirm before use. Agenda does **not** list `/NoConfirmation`.
+Option on Agenda Official: [`/Date`](keywords/options/Date.md) only. Agenda does **not** list `/NoConfirmation`. Official has **no** `Store Agenda`.
 
-Do not invent `Store Agenda` / property names beyond Official examples. Sheet properties (manual labels, GUI): Name, Appearance, Note, Mode (Absolute / Dawn / Sunrise / Sunset / Dusk), StartDate, StartTime, Daylight Offset, Valid Duration, Enabled, Object (Plugin / Macro / Sequence), Action, Command, Repeat (Schedule + Iterations). Read-only columns: Countdown, Planned Date/Time, Repeat Count Days/Total.
+**Mode** (Official+typings): Absolute, Dawn, Sunrise, Sunset, Dusk. Sheet properties (manual labels, GUI): Name, Appearance, Note, Mode, StartDate, StartTime, Daylight Offset, Valid Duration, Enabled, Object (Plugin / Macro / Sequence), Action, Command, Repeat (Schedule + Iterations). Read-only columns: Countdown, Planned Date/Time, Repeat Count Days/Total.
+
+**AgendaTool** (typings): Select, Store, Delete, Cut, Copy, Paste, Call, Edit.
 
 ## View modes and toolbar (GUI facts)
 
@@ -47,7 +49,7 @@ Do not invent `Store Agenda` / property names beyond Official examples. Sheet pr
 | --- | --- |
 | Sheet | Filterable; New AgendaEvent; Delete Old clears past events including valid duration |
 | Year / Month / Week / Day | Calendar layouts; disabled = red font; repeats show a marker |
-| Toolbar (Setup on) | Select / create / delete / execute-now / edit / cut / copy / paste |
+| Toolbar (Setup on) | AgendaTool: Select / Store / Delete / Call / Edit / Cut / Copy / Paste |
 
 Delete in calendar views: Delete key then tap the event (GUI). Confirm any `Delete Agenda …` on Keyword Specs before automation use.
 

@@ -69,6 +69,7 @@ Topic Spec / concept frontmatter `source`: `manual` | `observed` | `lab` | `mixe
 - Replace `## Official` only when crawling; never overwrite `## Extra` or blank `introduced`.
 - Filenames: PascalCase from HTML stem. Index via `rebuild_keyword_index.py` (Keyword + description, no shortcuts column).
 - Never invent Official text or options.
+- When a property or option has a **finite value set**, **list every value** (Keyword Official first, else Target manual, else grandma3-ts-types with a typings label). Do not write "do not invent" instead of that list.
 
 ## Syntax-first enrichment
 

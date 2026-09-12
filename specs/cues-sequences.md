@@ -81,7 +81,7 @@ Store options that matter for cues (confirm each Spec): [`/Merge`](keywords/opti
 
 ## Update
 
-[`Update`](keywords/Update.md) writes programmer changes back into cues (Update key / dialog). **Do not** invent `/NoConfirmation` here — Official does not list Update under that option. Prefer explicit Update flows from the Keyword Spec; for silent store-style writes use `Store … /Merge` (or other mode) instead.
+[`Update`](keywords/Update.md) writes programmer changes back into cues (Update key / dialog). **Update Official options:** [`/AddNewContent`](keywords/options/Addnewcontent.md), [`/ForceGlobal`](keywords/options/Forceglobal.md), [`/Global`](keywords/options/Global.md), [`/InputFilter`](keywords/options/Inputfilter.md), [`/OriginalContentOnly`](keywords/options/Originalcontentonly.md), [`/Selective`](keywords/options/Selective.md), [`/Universal`](keywords/options/Universal.md). Update Official does **not** list [`/NoConfirmation`](keywords/options/Noconfirmation.md). Prefer explicit Update flows from the Keyword Spec; for silent store-style writes use `Store … /Merge` (or other mode) instead.
 
 ## Copy / delete
 
@@ -193,7 +193,7 @@ Keywords: [`Cuefade`](keywords/Cuefade.md), [`Cuedelay`](keywords/Cuedelay.md), 
 
 ## Tracking / MIB / recipes
 
-Tracking is a **sequence setting** (On/Off). Cue Zero / Off Cue / Release / Cue Only / Tracking Distance / Tracking Shield are manual subtopics under [What is Tracking](https://help.malighting.com/grandMA3/2.5/HTML/cue_tracking.html) — do not invent CLI for GUI-only protect modes.
+Tracking is a **sequence setting** (On/Off). Cue Zero / Off Cue / Release / Cue Only / Tracking Distance / Tracking Shield are manual subtopics under [What is Tracking](https://help.malighting.com/grandMA3/2.5/HTML/cue_tracking.html) — largely GUI protect modes (no dedicated CLI keywords listed on Keyword Specs for those sheet toggles).
 
 Unblocks tracking in **sequence 2**:
 
@@ -201,23 +201,23 @@ Unblocks tracking in **sequence 2**:
 Unblock Sequence 2
 ```
 
-MIB (Move In Black) is configured per **cue part**, sequence MIB settings, and global Preferences — largely property/GUI. No invent MIB keyword CLI here; see sequence settings MIB Mode (Early / UponGo / Late / Never / Enabled).
+MIB (Move In Black) is configured per **cue part**, sequence MIB settings, and global Preferences — largely property/GUI (no separate MIB keyword CLI). Sequence MIB enums (**typings**): `sequMib` = `Enabled` | `Never` | `Force Early` | `Force UponGo` | `Force Late`; `sequMibMode` = `None` | `Early` | `UponGo` | `Late`.
 
-Cue recipes: recipe **Selection** must be a **group** — [`groups.md`](groups.md), [`concepts/recipes.md`](concepts/recipes.md), [`phaser-recipe.md`](phaser-recipe.md). Cook a cue/sequence after editing recipes ([`Cook`](keywords/Cook.md); `/NoConfirmation` listed for Cook):
+Cue recipes: recipe **Selection** must be a **group** — [`groups.md`](groups.md), [`concepts/recipes.md`](concepts/recipes.md), [`phaser-recipe.md`](phaser-recipe.md). Cook a cue/sequence after editing recipes ([`Cook`](keywords/Cook.md)):
 
 ```
 Cook Sequence 1 /Overwrite /NoConfirmation
 ```
 
-Confirm Cook options (`/Merge`, `/Overwrite`, `/Remove`, …) on the Keyword Spec before use.
+**Cook Official options:** [`/Merge`](keywords/options/Merge.md), [`/MergeLowPriority`](keywords/options/Mergelowpriority.md), [`/Overwrite`](keywords/options/Overwrite.md), [`/Remove`](keywords/options/Remove.md), `/Restart` (Cook Official). Plus [`/NoConfirmation`](keywords/options/Noconfirmation.md) (option Spec lists Cook).
 
 ## Renumber
 
-**No CLI keyword** to renumber cues (manual: Sequence Sheet → select cue numbers → Edit). Do not invent a `Renumber` command.
+There is **no** `Renumber` keyword. Renumber cues in the Sequence Sheet (select cue numbers → Edit).
 
 ## Sheets / settings (agent notes)
 
-Sequence Sheet / Content Sheet / Sequence Settings are primarily GUI. Agent-relevant settings names from the manual (not proven `Set Sequence … Property` CLI unless a Keyword Spec shows them): Tracking, Cue Zero Mode, Cue Command, Rate/Speed Master + Scale, Use Executor Time, MIB Mode / Enabled / Never, Soft LTP, priorities, LastGo exclusion.
+Sequence Sheet / Content Sheet / Sequence Settings are primarily GUI. Sequence props (**typings**, for settings — not proven `Set Sequence … Property` CLI unless a Keyword Spec shows them): `autoStart` / `autoStop` / `autoFix` / `autoStomp` / `autoPrePos`, `cueCommand` (`Enabled` | `Force No` | `Force Yes`), `executorDisplayMode` (`Data only` | `Appearance only` | `Both`), `includeLinkLastGo`, `killProtect`, `masterGoMode` (`None` | `Go` | `On` | `Top`), `offWhenOverridden`, `playbackMaster`, `preferCueAppearance`, `priority` (`Lowest` | `Low` | `LTP` | `High` | `Highest` | `HTP` | `Swap` | `Super`), `rateMaster` (Speed1–15 | BPM | None), `rateScale` / `speedScale` (Div256…Mul256), `releaseFirstCue`, `restartMode` (`Current Cue` | `First Cue` | `Next Cue`), `softLTP`, `speedFromRate`, `swapProtect`, `useExecutorTime`, `wrapAround`, `xFadeMode` (`Split` | `AB`), `xFadeReload`. Plus MIB enums above (`sequMib` / `sequMibMode`).
 
 ## Related
 
