@@ -8,7 +8,7 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/cue_sequence.html"
 
 Looks for playback live in **cues** inside **sequences**. Tracking, cue timing, MIB, recipes, store/update/copy/delete — manual subtopics.
 
-**Depth (store modes, copy/delete, playback, timing, cook, MIB notes):** [`../cues-sequences.md`](../cues-sequences.md).
+**Depth (store modes, Update/Cook Official options, MIB + Sequence props typings, no Renumber keyword):** [`../cues-sequences.md`](../cues-sequences.md).
 
 ## Objects
 
@@ -57,7 +57,7 @@ Goto Cue 5
 
 Playback keywords (Official on each Spec): `Go+` → [`Goplus`](../keywords/Goplus.md), `Go-` → [`Gominus`](../keywords/Gominus.md), [`Goto`](../keywords/Goto.md), plus Load/Pause/Off/On/Call as listed in the keyword index.
 
-Store options: [`../keywords/options/`](../keywords/options/). Unattended store/delete/copy: [`../automation.md`](../automation.md) (`/NoConfirmation` when Official lists it).
+Store / Update / Cook option lists: Topic Spec [`../cues-sequences.md`](../cues-sequences.md) and Keyword Official tables ([`Update`](../keywords/Update.md), [`Cook`](../keywords/Cook.md), [`../keywords/options/`](../keywords/options/)). Unattended store/delete/copy: [`../automation.md`](../automation.md) (`/NoConfirmation` when Official lists it — not on Update).
 
 ## Related
 

@@ -72,7 +72,7 @@ Calls **filter 4**:
 Filter 4
 ```
 
-(Confirm Call vs Select behavior / pool action on Official and window settings.)
+Official Filter option: [`/Overwrite`](keywords/options/Overwrite.md) only. FilterAction (typings): `Select` \| `Call` \| `None` (pool / window settings choose Call vs Select).
 
 ### Create a filter
 
@@ -94,7 +94,7 @@ Assign Group 2 At Filter 8
 
 Assigns **group 2** onto **filter 8** (manual syntax; Official shows `Assign Group X at Filter Y`).
 
-Filter **rules** (Attributes, Selected(), Parked(), ID Type, Patch, Name, Used In Object, …) are configured in the **GUI** editor. Dynamic rules show a marker on the pool object. Do **not** invent Set Property names for rule rows — confirm Keyword Spec / Object API if automating.
+Filter **rules** (Attributes, Selected(), Parked(), ID Type, Patch, Name, Used In Object, …) are configured in the **GUI** editor. Dynamic rules show a marker on the pool object. Rule-row enums (typings): FilterRuleTypes `Show` \| `Hide`; FilterRuleStatic `Yes` \| `No`. Automate via Object API / Keyword Spec — no evidenced CLI `Set` property names for rule rows on the Filter Keyword Spec.
 
 Import/export of filter objects: GUI Import/Export in the editor. Old exports from ≤2.2.5.2 are not fully supported on ≥2.3.2.0 (fixture patch filters discarded) — migrate via 2.2.5.2 first if needed.
 
@@ -108,7 +108,7 @@ Masks on **Fixture Sheet**, **Content Sheet**, **Track Sheet**. Assign Filter or
 
 Programming **layers** in filters are **not** compatible with sheet masking or input/output filtering (manual).
 
-Assigning masks is **GUI-first**; confirm Keyword Spec before inventing `Assign Filter … At …` sheet targets.
+Assigning masks is **GUI-first** (sheet settings → Mask Buttons). Official Assign for filters includes **Assign Filter At Preset** (see [`presets.md`](presets.md)); sheet Mask1–16 targets are GUI.
 
 ## Related
 

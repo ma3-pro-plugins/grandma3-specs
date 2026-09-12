@@ -8,9 +8,9 @@ manual_url: "https://help.malighting.com/grandMA3/2.5/HTML/executor.html"
 
 Executors are **handles** (physical keys, knobs, faders, or on-screen virtual executors) that control other objects. A sequence is often assigned to an executor; several executors can control the same object. The executor sends commands to the object in the pool.
 
-**Depth (assign, pages, functions, special):** [`../executors.md`](../executors.md).
+**Depth (assign, pages, AssignmentButtonFunctionsSequence / AssignmentFaderFunctions / SpecialExecutor typings):** [`../executors.md`](../executors.md).
 
-Assign / On / Off / Go family — confirm each Keyword Spec before use. Bare sequence `Go+` also works (see [`cues-sequences.md`](cues-sequences.md)).
+Assign / On / Off / Go family — Keyword Specs + finite key/fader/special lists on the Topic Spec. Bare sequence `Go+` also works (see [`cues-sequences.md`](cues-sequences.md)).
 
 ```
 Assign Sequence 1 At Executor 201

@@ -29,4 +29,4 @@ Menu "ArtNet"
 - Session Master outputs network DMX: [`networking.md`](networking.md), [`../multi-station.md`](../multi-station.md)
 - DMX Remotes: [`remote-in-out.md`](remote-in-out.md)
 
-Confirm related keywords (`DMXUniverse`, park/DMX tools, etc.) in [`../keywords/_index.md`](../keywords/_index.md) before use — do not invent.
+Related keywords: [`DMXUniverse`](../keywords/DmxUniverse.md), [`Park`](../keywords/Park.md), menus above. Merge Mode / Input Priority enums and sACN \| Art-Net only: [`../dmx.md`](../dmx.md).
