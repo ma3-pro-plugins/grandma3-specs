@@ -155,6 +155,8 @@ Go+ Executor 101
 
 ## Timing
 
+Cue-level [`Cuefade`](keywords/Cuefade.md) / [`Cuedelay`](keywords/Cuedelay.md) below. Per-attribute **Fade** / **Delay** (and Absolute / Relative / phaser layers) live on programmer and cue **layers** — [`programmer.md`](programmer.md).
+
 Sets cue 3 CueFade in/out **5/8**:
 
 ```
@@ -223,6 +225,6 @@ Sequence Sheet / Content Sheet / Sequence Settings are primarily GUI. Sequence p
 
 - Executors / handles: [`concepts/executors.md`](concepts/executors.md), [`executors.md`](executors.md)
 - Masters (selected / grand / timing): [`masters.md`](masters.md)
-- Programmer: [`concepts/programmer.md`](concepts/programmer.md)
+- Programmer (levels): [`concepts/programmer.md`](concepts/programmer.md). Layers: [`programmer.md`](programmer.md)
 - Automation: [`automation.md`](automation.md)
 - Multi-station / cue commands: [`multi-station.md`](multi-station.md)

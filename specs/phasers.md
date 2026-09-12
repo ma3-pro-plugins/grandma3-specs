@@ -72,7 +72,7 @@ Hold **Step** and tap presets to stamp steps (same-attribute preset = next step;
 
 ## Related
 
-- Programmer: [`concepts/programmer.md`](concepts/programmer.md)
+- Programmer (levels): [`concepts/programmer.md`](concepts/programmer.md). Layers catalog: [`programmer.md`](programmer.md).
 - Cues / sequences: [`cues-sequences.md`](cues-sequences.md)
 - Presets: [`presets.md`](presets.md)
 - Recipes: [`recipes.md`](recipes.md)
