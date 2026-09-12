@@ -38,7 +38,7 @@ Use a subfolder (and matching XML `path` attribute) only when the user asks, e.g
    - **`Installed="No"`** — default for **multi-station** labs: Lua is embedded in the **show** on import; other stations do not need the `.lua` under their local `gma3_library`.
    - **`Installed="Yes"`** — Lua loads from `datapools/plugins/<path>/` on **each** machine. A station without that `.lua` beside the XML will not load the plugin.
 4. Keep implementation in the `.lua` file, not in documentation.
-5. If the plugin needs object hooks, read [`references.md`](references.md).
+5. If the plugin **reads** show objects (`GetObject` / `ObjectList` / `:Get` / parent-children), follow [`../../../specs/plugin-access.md`](../../../specs/plugin-access.md). If it needs object hooks, also read [`references.md`](references.md).
 6. Read the files back and verify the XML `FileName` matches the Lua basename exactly.
 7. In the final response, state the plugin name, plugin `Note`, and full paths.
 

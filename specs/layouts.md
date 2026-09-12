@@ -112,6 +112,8 @@ A title-bar control can **push the current layout fixture arrangement into the S
 
 ## Plugin access
 
+Generic handle/Get/parent-children: [`plugin-access.md`](plugin-access.md).
+
 Lua plugins that **read** layout objects. Write path stays the Assign/Store CLI above.
 
 ```text

@@ -13,9 +13,6 @@ For agents **editing** this repo (Specs, concepts, skills, indexes). Consumers u
 
 Do **not** mass-move Topic Specs into `concepts/`.
 
-**Plugin access** — Topic Specs for objects in the show tree (recipes, layouts, groups, presets, macros, sequences, …) get a **Plugin access** section: the path from `ShowData()` / `DataPool()` to that object, plus Lua that **reads** handles/properties. Do not invent child class names (`GetClass()` / Help Dump / typings, labeled). GUI editor modes (e.g. Edit Recipe) stay **one line**. CLI store/set stays in the command sections.
-
-
 ## Concepts follow the manual TOC
 
 Concept pages under `specs/concepts/` use **kebab filenames that mirror grandMA3 help.html chapter hubs** (agent-relevant chapters), not ad-hoc subsystem nicknames. Live map: [`specs/concepts/_index.md`](../../specs/concepts/_index.md). Old filenames may remain under `specs/concepts/_legacy/` for reference only.
@@ -56,6 +53,8 @@ Hubs with a Topic Spec today: `system`, `show-file-handling`, `users`, `dmx`, `p
 Do **not** mass-move Topic Specs into `concepts/`.
 
 ## Cross-cutting topics
+
+**Plugin access** (Lua read of show objects: `GetObject`, `ObjectList`, `:Get`, `:Parent`, `:Count`, `:Ptr`, `:Children`) lives in **[`specs/plugin-access.md`](../../specs/plugin-access.md)** (concept: [`specs/concepts/plugin-access.md`](../../specs/concepts/plugin-access.md)). Topic Specs for show-tree objects keep a short **Plugin access** section with **that** object’s path only, and link the generic Spec. Do not invent child class names. GUI editor modes stay **one line**. The write-plugin skill points at `plugin-access.md` — do not duplicate the API there.
 
 **Multi-station** (sessions, master/follower, where CmdLine/Macro/Cue Command run, OSC relay in a session) lives in **[`specs/multi-station.md`](../../specs/multi-station.md)** (concept pointer: `specs/concepts/multi-station.md`).
 

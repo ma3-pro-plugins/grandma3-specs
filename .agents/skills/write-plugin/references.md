@@ -1,6 +1,6 @@
 # Pure Lua Plugin References
 
-Small snippets for specific pure-Lua plugin features. Runtime vs load-time args: see **Main function call arguments** in [`SKILL.md`](SKILL.md).
+Small snippets for specific pure-Lua plugin features. Runtime vs load-time args: see **Main function call arguments** in [`SKILL.md`](SKILL.md). Resolving handles and reading properties: [`../../../specs/plugin-access.md`](../../../specs/plugin-access.md).
 
 ## Object Hooks
 

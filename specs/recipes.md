@@ -153,6 +153,8 @@ EditRecipe
 
 ## Plugin access
 
+Generic handle/Get/parent-children: [`plugin-access.md`](plugin-access.md).
+
 For Lua plugins that **read** (or walk) show data. Write path stays the CLI above (`Cmd` / `Store` / `Assign`).
 
 Object tree (**observed** + **typings**; confirm `GetClass()` on Target):

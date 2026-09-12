@@ -104,6 +104,8 @@ Delete Group 5 /NoConfirmation
 
 ## Plugin access
 
+Generic handle/Get/parent-children: [`plugin-access.md`](plugin-access.md).
+
 Lua plugins that **read** groups. Write path stays `Store Group` / `Assign` CLI.
 
 ```text

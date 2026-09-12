@@ -178,7 +178,7 @@ That tag freezes Specs **as they were when that build was Target**. Use it to re
 1. Read `specs/versions.md` → Target
 2. If the subsystem is unfamiliar, open [`specs/concepts/`](specs/concepts/) (map), then the Topic Spec it points to
 3. Treat Topic Specs and live Keyword Specs as Target truth (automation/syntax-first)
-4. Open the Help Dump for that Target (or the closest dump we have) when you need the Lua/API listing
+4. Open the Help Dump for that Target (or the closest dump we have) when you need the Lua/API listing. Read objects (`GetObject` / `ObjectList` / `:Get` / parent-children): [`specs/plugin-access.md`](specs/plugin-access.md).
 5. For command tokens, open `specs/keywords/_index.md` then the one keyword file (include option keywords). Skip `archive/` unless decoding old syntax.
 6. If `deprecated` is set, do not use that keyword in new commands unless matching existing show syntax.
 7. Use `ma-bugs.md` for open issues; ignore or archive entries with **Fixed in** on or before Target when advising for current Target
